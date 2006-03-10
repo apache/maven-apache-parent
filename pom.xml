@@ -69,5 +69,14 @@
       <url>scp://minotaur.apache.org/www/cvs.apache.org/maven-snapshot-repository</url>
     </snapshotRepository>
   </distributionManagement>
+  <mailingLists>
+    <mailingList>
+      <name>Apache Announce List</name>
+      <subscribe>announce-subscribe@apache.org</subscribe>
+      <unsubscribe>announce-unsubscribe@apache.org</unsubscribe>
+      <post>announce@apache.org</post>
+      <archive>http://mail-archives.apache.org/mod_mbox/www-announce/</archive>
+    </mailingList>
+  </mailingLists>
 </project>
 
