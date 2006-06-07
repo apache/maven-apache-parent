@@ -50,7 +50,7 @@
     <repository>
       <id>apache.snapshots</id>
       <name>Apache Snapshot Repository</name>
-      <url>http://svn.apache.org/maven-snapshot-repository</url>
+      <url>http://people.apache.org/maven-snapshot-repository</url>
       <releases>
         <enabled>false</enabled>
       </releases>
@@ -61,12 +61,12 @@
     <repository>
       <id>apache.releases</id>
       <name>Apache Release Distribution Repository</name>
-      <url>scp://minotaur.apache.org/www/www.apache.org/dist/maven-repository</url>
+      <url>scp://people.apache.org/www/www.apache.org/dist/maven-repository</url>
     </repository>
     <snapshotRepository>
       <id>apache.snapshots</id>
       <name>Apache Development Snapshot Repository</name>
-      <url>scp://minotaur.apache.org/www/cvs.apache.org/maven-snapshot-repository</url>
+      <url>scp://people.apache.org/www/cvs.apache.org/maven-snapshot-repository</url>
     </snapshotRepository>
   </distributionManagement>
   <mailingLists>
