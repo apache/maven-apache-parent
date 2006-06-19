@@ -24,7 +24,7 @@
        define the settings common to all projects at Apache -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
-  <version>2-SNAPSHOT</version>
+  <version>2</version>
   <packaging>pom</packaging>
   <name>The Apache Software Foundation</name>
   <description>
