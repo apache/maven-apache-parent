@@ -78,5 +78,26 @@
       <archive>http://mail-archives.apache.org/mod_mbox/www-announce/</archive>
     </mailingList>
   </mailingLists>
+  <!--
+  <build>                                                                                                                                                               
+    <plugins>                                                                                                                                                           
+      <plugin>                                                                                                                                                          
+        <artifactId>maven-remote-resources-plugin</artifactId>                                                                                                          
+        <configuration>                                                                                                                                                 
+          <artifacts>                                                                                                                                                   
+            <artifact>org.apache:apache-distribution-resources:1.0-SNAPSHOT</artifact>                                                                                  
+          </artifacts>                                                                                                                                                  
+        </configuration>                                                                                                                                                
+        <executions>                                                                                                                                                    
+          <execution>                                                                                                                                                   
+            <goals>                                                                                                                                                     
+              <goal>process</goal>                                                                                                                                      
+            </goals>                                                                                                                                                    
+          </execution>                                                                                                                                                  
+        </executions>                                                                                                                                                   
+      </plugin>                                                                                                                                                         
+    </plugins>                                                                                                                                                          
+  </build>
+  -->              
 </project>
 
