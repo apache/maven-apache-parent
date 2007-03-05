@@ -26,7 +26,7 @@ under the License.
        define the settings common to all projects at Apache -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
-  <version>4</version>
+  <version>5-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>The Apache Software Foundation</name>
   <description>
@@ -105,9 +105,9 @@ under the License.
   </build>
   -->
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/tags/apache-4</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/tags/apache-4</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/pom/tags/apache-4</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/pom/trunk/asf</url>
   </scm>
 </project>
 
