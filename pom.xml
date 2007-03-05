@@ -19,15 +19,14 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <!-- Shared parent. Doesn't define a lot of things about Apache like general mailing lists, but does
        define the settings common to all projects at Apache -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
-  <version>4-SNAPSHOT</version>
+  <version>4</version>
   <packaging>pom</packaging>
   <name>The Apache Software Foundation</name>
   <description>
@@ -106,9 +105,9 @@ under the License.
   </build>
   -->
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/pom/trunk/asf</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/tags/apache-4</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/tags/apache-4</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/pom/tags/apache-4</url>
   </scm>
 </project>
 
