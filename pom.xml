@@ -52,23 +52,33 @@ under the License.
     <repository>
       <id>apache.snapshots</id>
       <name>Apache Snapshot Repository</name>
-      <url>http://people.apache.org/repo/m2-snapshot-repository</url>
+      <url>http://repository.apache.org/content/groups/snapshots/</url>
       <releases>
         <enabled>false</enabled>
       </releases>
     </repository>
   </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>apache.snapshots</id>
+      <name>Apache Snapshot Repository</name>
+      <url>http://repository.apache.org/content/groups/snapshots/</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </pluginRepository>
+  </pluginRepositories>
   <distributionManagement>
     <!-- Site omitted - each project must provide their own -->
     <repository>
-      <id>apache.releases</id>
+      <id>apache.releases.https</id>
       <name>Apache Release Distribution Repository</name>
-      <url>scp://people.apache.org/www/people.apache.org/repo/m2-ibiblio-rsync-repository</url>
+      <url>https://repository.apache.org/service/local/staging/deploy/maven2/</url>
     </repository>
     <snapshotRepository>
-      <id>apache.snapshots</id>
-      <name>Apache Development Snapshot Repository</name>
-      <url>scp://people.apache.org/www/people.apache.org/repo/m2-snapshot-repository</url>
+      <id>apache.snapshots.https</id>
+      <name>${distMgmtSnapshotsName}</name>
+      <url>${distMgmtSnapshotsUrl}</url>
     </snapshotRepository>
   </distributionManagement>
   <mailingLists>
@@ -81,29 +91,10 @@ under the License.
     </mailingList>
   </mailingLists>
   <properties>
+    <distMgmtSnapshotsName>Apache Development Snapshot Repository</distMgmtSnapshotsName>
+    <distMgmtSnapshotsUrl>https://repository.apache.org/content/repositories/snapshots</distMgmtSnapshotsUrl>
     <organization.logo>http://www.apache.org/images/asf_logo_wide.gif</organization.logo>
   </properties>
-  <!--
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-remote-resources-plugin</artifactId>
-        <configuration>
-          <artifacts>
-            <artifact>org.apache:apache-distribution-resources:1.0-SNAPSHOT</artifact>
-          </artifacts>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>process</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
-  -->
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</developerConnection>
