@@ -31,7 +31,7 @@ under the License.
        -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
-  <version>7-SNAPSHOT</version>
+  <version>6-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>The Apache Software Foundation</name>
   <description>
