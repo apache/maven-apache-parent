@@ -31,7 +31,7 @@ under the License.
        -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
-  <version>7</version>
+  <version>8-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>The Apache Software Foundation</name>
   <description>
@@ -94,9 +94,9 @@ under the License.
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
   </properties>
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/tags/apache-7</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/tags/apache-7</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/pom/tags/apache-7</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/pom/trunk/asf</url>
   </scm>
 
   <build>
