@@ -262,10 +262,10 @@ under the License.
           </execution>
         </executions>
       </plugin>
-    </plugins> 
- </build>
+    </plugins>
+  </build>
 
- <reporting>
+  <reporting>
     <plugins>
       <plugin>
         <artifactId>maven-project-info-reports-plugin</artifactId>
@@ -275,7 +275,7 @@ under the License.
   </reporting>
 
   <profiles>
-      <!-- START SNIPPET: release-profile -->
+    <!-- START SNIPPET: release-profile -->
     <profile>
       <id>apache-release</id>
       <build>
