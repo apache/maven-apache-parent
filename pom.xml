@@ -401,6 +401,15 @@ under the License.
         </plugins>
       </build>
     </profile>    
+    <profile>
+      <id>asf-pom-site</id>
+      <distributionManagement>
+        <site>
+          <id>apache.website</id>
+          <url>scp://people.apache.org/www/maven.apache.org/asf-pom</url>
+        </site>
+      </distributionManagement>
+    </profile>
   </profiles>
 </project>
 
