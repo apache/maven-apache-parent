@@ -53,6 +53,10 @@ under the License.
     <url>http://www.apache.org/</url>
   </organization>
   <url>http://www.apache.org/</url>
+  <issueManagement>
+    <system>jira</system>
+    <url>https://issues.apache.org/jira/browse/MPOM</url>
+  </issueManagement>
   <repositories>
     <repository>
       <id>apache.snapshots</id>
