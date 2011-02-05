@@ -52,7 +52,7 @@ under the License.
     <name>The Apache Software Foundation</name>
     <url>http://www.apache.org/</url>
   </organization>
-  <url>http://www.apache.org/</url>
+  <url>http://maven.apache.org/asf-pom/</url>
   <issueManagement>
     <system>jira</system>
     <url>https://issues.apache.org/jira/browse/MPOM</url>
