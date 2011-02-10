@@ -51,7 +51,7 @@ Apache Software Foundation Shared POM
     https://repository.apache.org/service/local/staging/deploy/maven2
     and snapshots to
     https://repository.apache.org/content/repositories/snapshots. Note
-    that there is are POM parameters that you can override to change
+    that there is POM parameters that you can override to change
     the snapshot location. 
     
  ** <<mailingLists>>: The POM sets up generic Apache announcement
