@@ -194,7 +194,8 @@ under the License.
           <version>2.1</version>
           <configuration>
             <useReleaseProfile>false</useReleaseProfile>
-            <goals>deploy</goals>            
+            <goals>deploy</goals>
+            <arguments>-Papache-release</arguments>
           </configuration>
         </plugin>
         <!-- END SNIPPET: release-plugin-configuration -->
