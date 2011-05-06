@@ -92,6 +92,7 @@ under the License.
     <organization.logo>http://www.apache.org/images/asf_logo_wide.gif</organization.logo>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
+    <gpg.useagent>true</gpg.useagent>
   </properties>
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
@@ -354,7 +355,7 @@ under the License.
             <artifactId>maven-gpg-plugin</artifactId>
             <configuration>
               <passphrase>${gpg.passphrase}</passphrase>
-              <useAgent>true</useAgent>
+              <useAgent>${gpg.useagent}</useAgent>
             </configuration>
             <executions>
               <execution>
