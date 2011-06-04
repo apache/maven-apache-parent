@@ -81,9 +81,15 @@ under the License.
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</developerConnection>
     <url>http://svn.apache.org/viewvc/maven/pom/trunk/asf</url>
   </scm>
+  <issueManagement>
+    <system>jira</system>
+    <url>http://issues.apache.org/jira/browse/MPOM/component/12314370</url>
+  </issueManagement>
 
   <distributionManagement>
     <!-- Site omitted - each project must provide their own -->
+    <!-- this project *has* a site, but it gets deployed manually
+         to avoid unwanted inheritance. -->
     <repository>
       <id>apache.releases.https</id>
       <name>Apache Release Distribution Repository</name>

@@ -1,0 +1,20 @@
+    --------------------------
+    ASF Shared Parent POM
+    --------------------------
+    Modified 4 June 2011
+    --------------------------
+
+Introduction
+
+    This project provides a shared parent POM for anything built 
+    with Maven at the Apache Software Foundation.
+
+    It defines the standard repositories, selects current versions
+    of commonly-used plugins, and defines a configuration for the
+    release plugin that is consistent with ASF requirements and 
+    conventions.
+
+    Note, in particular, that it enables a profile named <apache-release>
+    in all goals of the <maven-release-plugin>. This profile enables
+    gpg signing, source packaging, and other defaults.
+
