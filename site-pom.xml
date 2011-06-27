@@ -49,6 +49,12 @@ under the License.
     <system>Jenkins</system>
     <url>https://builds.apache.org//view/M-R/view/Maven/job/ASF%20Parent%20Pom/</url>
   </ciManagement>
+  <distributionManagement>
+    <site>
+      <id>apache.website</id>
+      <url>scp://people.apache.org/www/maven.apache.org/pom/asf/</url>
+    </site>
+  </distributionManagement>
 
   <build>
     <plugins>
