@@ -54,17 +54,14 @@ Apache Software Foundation Parent POM
      https://repository.apache.org/service/local/staging/deploy/maven2
      and snapshots to
      https://repository.apache.org/content/repositories/snapshots. Note
-     that there is POM parameters that you can override to change
+     that there are POM parameters that you can override to change
      the snapshot location. 
     
   ** <<mailingLists>>: The POM sets up generic Apache announcement
      lists. You should override this.
     
-  ** <<scm>>: The location <of this POM> in subversion. You must override
-     this for the release plugin to work correctly.
-
  * <<pluginManagement>>: The plugin management section specifies versions
-    of a list of plugins. See {{{./plugin-management.html}the report}} on this site for a list with versions. 
+    of a list of plugins. See {{{./plugin-management.html}the Dependencies report}} for a list with versions. 
     
   ** The compiler plugin is set to default to Java 1.4 and
     UTF-8 source.
@@ -88,7 +85,7 @@ Apache Software Foundation Parent POM
 The <<<apache-release>>> Profile
 
    As noted above, this pom configures the release plugin to enable
-    the apache-release profile for all executions of the release
+    the <<<apache-release>>> profile for all executions of the release
     plugin. The profile includes the following plugins:
 
  * maven-assemble-plugin:
@@ -105,10 +102,10 @@ The <<<apache-release>>> Profile
  * maven-javadoc-plugin: configured to build and attach a javadoc jar.
 
  * maven-gpg-plugin: configured to sign everything. It expects to find
-    a passphrase in $\{gpg.passphrase\}, presumably in your settings.xml.
+    a passphrase in $\{gpg.passphrase\}, presumably in your <<<settings.xml>>>.
     
 Settings Configuration
   
   You can have a look at the page in Apache website {{{http://www.apache.org/dev/publishing-maven-artifacts.html}Publishing Maven Artifacts}}.
   
-  You can test your environment setup using : <<<-Papache-release>>> with the command line.
+  You can test your environment setup using <<<-Papache-release>>> with the command line.

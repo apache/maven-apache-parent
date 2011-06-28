@@ -22,13 +22,7 @@ under the License.
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <!-- Shared parent. Doesn't define a lot of things about Apache like general mailing lists, but does
-       define the settings common to all projects at Apache 
-       
-       As of Version 6, this includes a standard release profile that all projects can use. If the profile is not appropriate for your project, define your own release profile and change the release plugin configuration parameter <arguments> </arguments> to activate your profile instead of the apache-release profile.
-       
-      Standard versions of plugins are also defined, these may be overridden by individual projects as well.
-       -->
+  <!-- for more information, see the documentation of this POM: http://maven.apache.org/pom/asf/ -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
   <version>10-SNAPSHOT</version>
@@ -77,9 +71,6 @@ under the License.
   </mailingLists>
 
   <distributionManagement>
-    <!-- Site omitted - each project must provide their own -->
-    <!-- this project *has* a site: http://maven.apache.org/pom/asf/
-         but it gets deployed manually to avoid unwanted inheritance. -->
     <repository>
       <id>apache.releases.https</id>
       <name>Apache Release Distribution Repository</name>
