@@ -61,7 +61,7 @@ Apache Software Foundation Parent POM
      lists. You should override this.
     
  * <<pluginManagement>>: The plugin management section specifies versions
-    of a list of plugins. See {{{./plugin-management.html}the Dependencies report}} for a list with versions. 
+    of a list of plugins. See the {{{./plugin-management.html}Plugin Management report}} for a list with versions. 
     
   ** The compiler plugin is set to default to Java 1.4 and
     UTF-8 source.
@@ -88,7 +88,7 @@ The <<<apache-release>>> Profile
     the <<<apache-release>>> profile for all executions of the release
     plugin. The profile includes the following plugins:
 
- * maven-assemble-plugin:
+ * maven-assembly-plugin:
     org.apache.apache.resources:apache-source-release-assembly-descriptor:1.0.3
     is in the dependencies, and an execution is configured.The plugin
     is configured to take a descriptorRef name from the
