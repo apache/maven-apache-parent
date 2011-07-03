@@ -349,6 +349,7 @@ under the License.
       </build>
     </profile>
     <!-- END SNIPPET: release-profile -->
+
     <profile>
       <id>maven-3</id>
       <activation>
@@ -364,9 +365,32 @@ under the License.
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-site-plugin</artifactId>
               <version>3.0-beta-3</version>
+              <dependencies>
+                <dependency><!-- users without native scp installed need to have the ssh wagon for site deployment at ASF -->
+                  <groupId>org.apache.maven.wagon</groupId>
+                  <artifactId>wagon-ssh</artifactId>
+                  <version>1.0-beta-7</version>
+                </dependency>
+              </dependencies>
             </plugin>
           </plugins>
         </pluginManagement>
+        <!-- we need to attach the site descriptor for this pom -->
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <inherited>false</inherited>
+            <executions>
+              <execution>
+                <id>attach-descriptor</id>
+                <goals>
+                  <goal>attach-descriptor</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
       </build>
     </profile>    
   </profiles>
