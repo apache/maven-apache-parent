@@ -53,6 +53,7 @@ under the License.
       <item name="Apache" href="http://www.apache.org/" />
       <item name="Maven"  href="http://maven.apache.org/index.html" />
       <item name="POMs"   href="http://maven.apache.org/pom/index.html" />
+      <item name="ASF"    href="http://maven.apache.org/pom/asf/index.html" />
     </breadcrumbs>
 
     <menu ref="reports" inherit="bottom" />
