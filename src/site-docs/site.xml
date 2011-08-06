@@ -37,6 +37,7 @@ under the License.
   </skin>
 
   <publishDate format="yyyy-MM-dd" position="right" />
+  <version position="right" />
 
   <body>
     <head>
