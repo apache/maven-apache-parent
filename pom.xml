@@ -70,6 +70,12 @@ under the License.
     </mailingList>
   </mailingLists>
 
+  <scm>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/pom/trunk/asf</url>
+  </scm>
+
   <distributionManagement>
     <repository>
       <id>apache.releases.https</id>
