@@ -25,7 +25,7 @@ under the License.
   <!-- for more information, see the documentation of this POM: http://maven.apache.org/pom/asf/ -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
-  <version>11</version>
+  <version>12-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>The Apache Software Foundation</name>
@@ -71,9 +71,9 @@ under the License.
   </mailingLists>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/tags/apache-11</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/tags/apache-11</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/pom/tags/apache-11</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/pom/trunk/asf</url>
   </scm>
 
   <distributionManagement>
