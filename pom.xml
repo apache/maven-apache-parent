@@ -96,6 +96,7 @@ under the License.
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
     <gpg.useagent>true</gpg.useagent>
+    <arguments></arguments>
   </properties>
 
   <build>
