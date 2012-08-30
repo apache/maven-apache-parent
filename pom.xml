@@ -272,12 +272,13 @@ under the License.
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>2.5</version>
+        <version>2.5.1</version>
         <reportSets>
           <reportSet>
             <reports>
               <report>index</report>
               <report>summary</report>
+              <report>dependency-info</report>
               <report>modules</report>
               <report>license</report>
               <report>project-team</report>
