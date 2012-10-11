@@ -145,7 +145,7 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-failsafe-plugin</artifactId>
-          <version>2.12</version>
+          <version>2.12.4</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -232,7 +232,7 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.12</version><!-- keep maven-failsafe-plugin in sync -->
+          <version>2.12.4</version><!-- keep maven-failsafe-plugin in sync -->
         </plugin>
         <plugin>
           <groupId>org.apache.rat</groupId>
