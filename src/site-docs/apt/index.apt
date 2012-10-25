@@ -115,6 +115,8 @@ History
 *--------------+------------+
 || <<Version>> || <<Release Date>> ||
 *--------------+------------+
+| {{{http://svn.apache.org/viewvc/maven/pom/tags/apache-12/pom.xml?view=markup}12}} ({{{http://svn.apache.org/viewvc/maven/pom/tags/apache-12/pom.xml?r1=HEAD&r2=1369674&diff_format=h}diff}}) |  |
+*--------------+------------+
 | {{{http://svn.apache.org/viewvc/maven/pom/tags/apache-11/pom.xml?view=markup}11}} ({{{http://svn.apache.org/viewvc/maven/pom/tags/apache-11/pom.xml?r1=HEAD&r2=1154610&diff_format=h}diff}}) | 2012-08-08 |
 *--------------+------------+
 | {{{http://svn.apache.org/viewvc/maven/pom/tags/apache-10/pom.xml?view=markup}10}} ({{{http://svn.apache.org/viewvc/maven/pom/tags/apache-10/pom.xml?r1=HEAD&r2=1069621&diff_format=h}diff}}) | 2011-08-09 |
