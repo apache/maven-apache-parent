@@ -25,7 +25,7 @@ under the License.
   <parent>
     <groupId>org.apache</groupId>
     <artifactId>apache</artifactId>
-    <version>12</version>
+    <version>13-SNAPSHOT</version>
     <relativePath>./pom.xml</relativePath>
   </parent>
 
@@ -52,20 +52,58 @@ under the License.
   <distributionManagement>
     <site>
       <id>apache.website</id>
-      <url>scp://people.apache.org/www/maven.apache.org/pom/asf/</url>
+      <url>scm:svn:https://svn.apache.org/repos/infra/websites/production/maventest/content/pom/asf/</url>
+      <!--url>scp://people.apache.org/www/maven.apache.org/pom/asf/</url-->
     </site>
   </distributionManagement>
 
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
         <configuration>
           <siteDirectory>${basedir}/src/site-docs</siteDirectory>
-          <stagingSiteURL>scp://people.apache.org/www/maven.apache.org/pom/asf-${project.version}/</stagingSiteURL>
+          <!--stagingSiteURL>scp://people.apache.org/www/maven.apache.org/pom/asf-${project.version}/</stagingSiteURL-->
+          <skipDeploy>true</skipDeploy><!-- don't deploy with maven-site-plugin -->
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-publish-plugin</artifactId>
+        <version>1.0-beta-2</version>
+        <configuration>
+          <content>${project.build.directory}/site</content>
+        </configuration>
+        <executions>
+          <execution>
+            <id>scm-publish</id>
+            <phase>site-deploy</phase><!-- deploy with maven-scm-publish-plugin -->
+            <goals>
+              <goal>publish-scm</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>staging</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-scm-publish-plugin</artifactId>
+            <configuration>
+              <checkinComment>Staging site checkin for project ${project.name}</checkinComment>
+              <pubScmUrl>${project.distributionManagement.site.url}../asf-${project.version}/</pubScmUrl>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
   
