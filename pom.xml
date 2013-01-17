@@ -25,7 +25,7 @@ under the License.
   <!-- for more information, see the documentation of this POM: http://maven.apache.org/pom/asf/ -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
-  <version>13-SNAPSHOT</version>
+  <version>13</version>
   <packaging>pom</packaging>
 
   <name>The Apache Software Foundation</name>
@@ -71,9 +71,9 @@ under the License.
   </mailingLists>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/pom/trunk/asf</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/tags/apache-13</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/tags/apache-13</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/pom/tags/apache-13</url>
   </scm>
 
   <distributionManagement>
