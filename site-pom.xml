@@ -58,7 +58,7 @@ under the License.
 
   <properties>
     <maven.site.cache>${user.home}/maven-sites</maven.site.cache>
-    <maven.site.path>pom-archives/asf-${project.version}</maven.site.path>
+    <maven.site.path>pom-archives/asf-LATEST</maven.site.path>
   </properties>
 
   <build>
@@ -92,15 +92,5 @@ under the License.
       </plugin>
     </plugins>
   </build>
-
-  <profiles>
-    <profile>
-      <id>site-release</id>
-      <properties>
-        <maven.site.path>pom/asf</maven.site.path>
-        <url>http://maven.apache.org/pom/asf/</url>
-      </properties>
-    </profile>
-  </profiles>
 </project>
   
