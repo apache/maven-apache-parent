@@ -49,17 +49,6 @@ under the License.
     </license>
   </licenses>
 
-  <repositories>
-    <repository>
-      <id>apache.snapshots</id>
-      <name>Apache Snapshot Repository</name>
-      <url>http://repository.apache.org/snapshots</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-    </repository>
-  </repositories>
-
   <mailingLists>
     <mailingList>
       <name>Apache Announce List</name>
@@ -69,6 +58,10 @@ under the License.
       <archive>http://mail-archives.apache.org/mod_mbox/www-announce/</archive>
     </mailingList>
   </mailingLists>
+
+  <prerequisites>
+    <maven>2.2.1</maven>
+  </prerequisites>
 
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
@@ -99,6 +92,17 @@ under the License.
     <gpg.useagent>true</gpg.useagent>
     <arguments />
   </properties>
+
+  <repositories>
+    <repository>
+      <id>apache.snapshots</id>
+      <name>Apache Snapshot Repository</name>
+      <url>http://repository.apache.org/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+    </repository>
+  </repositories>
 
   <build>
     <pluginManagement>
