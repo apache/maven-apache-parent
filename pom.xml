@@ -59,8 +59,8 @@ under the License.
     </mailingList>
   </mailingLists>
 
-  <prerequisites>
-    <maven>2.2.1</maven>
+  <prerequisites><!-- just for information: not inherited in child poms -->
+    <maven>2.2.1</maven><!-- prerequisite of some plugins -->
   </prerequisites>
 
   <scm>
