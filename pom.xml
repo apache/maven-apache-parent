@@ -60,7 +60,7 @@ under the License.
   </mailingLists>
 
   <prerequisites><!-- just for information: not inherited in child poms -->
-    <maven>3.0</maven><!-- prerequisite of maven-scm-publish-plugin -->
+    <maven>2.2.1</maven><!-- prerequisite of some plugins -->
   </prerequisites>
 
   <scm>
@@ -225,7 +225,7 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-scm-publish-plugin</artifactId>
-          <version>1.0</version>
+          <version>1.0-beta-2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -373,6 +373,15 @@ under the License.
         </file>
       </activation>
       <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-scm-publish-plugin</artifactId>
+              <version>1.0</version>
+            </plugin>
+          </plugins>
+        </pluginManagement>
         <plugins>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
