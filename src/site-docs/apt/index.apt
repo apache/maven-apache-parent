@@ -112,10 +112,12 @@ Settings Configuration
 
 History
 
- {{{http://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?view=markup}14-SNAPSHOT}} ({{{http://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?r1=HEAD&r2=1434717&diff_format=h}diff}})
+~~ {{{http://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?view=markup}14-SNAPSHOT}} ({{{http://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?r1=HEAD&r2=1434717&diff_format=h}diff}})
 
 *--------------+------------+
 || <<Version>> || <<Release Date>> ||
+*--------------+------------+
+| {{{http://svn.apache.org/viewvc/maven/pom/tags/apache-14/pom.xml?view=markup}14}} ({{{http://svn.apache.org/viewvc/maven/pom/tags/apache-14/pom.xml?r1=HEAD&r2=1434717&diff_format=h}diff}}) | 2014-03-06 |
 *--------------+------------+
 | {{{http://svn.apache.org/viewvc/maven/pom/tags/apache-13/pom.xml?view=markup}13}} ({{{http://svn.apache.org/viewvc/maven/pom/tags/apache-13/pom.xml?r1=HEAD&r2=1404788&diff_format=h}diff}}) | 2013-01-20 |
 *--------------+------------+
