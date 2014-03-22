@@ -58,5 +58,29 @@ under the License.
 
     <menu ref="reports" inherit="bottom" />
 
+    <!-- Copied from Maven parent's site.xml -->
+    <menu name="Maven Projects" inherit="bottom">
+      <item name="Ant Tasks"         href="http://maven.apache.org/ant-tasks/index.html" />
+      <item name="Archetype"         href="http://maven.apache.org/archetype/index.html" />
+      <item name="Doxia"             href="http://maven.apache.org/doxia/index.html" />
+      <item name="JXR"               href="http://maven.apache.org/jxr/index.html" />
+      <item name="Maven 1.x"         href="http://maven.apache.org/maven-1.x/index.html" />
+      <item name="Maven 2 &amp; 3"   href="http://maven.apache.org/index.html" />
+      <item name="Parent POMs"       href="http://maven.apache.org/pom/index.html" />
+      <item name="Plugins"           href="http://maven.apache.org/plugins/index.html" />
+      <item name="Plugin Tools"      href="http://maven.apache.org/plugin-tools/index.html" />
+      <item name="SCM"               href="http://maven.apache.org/scm/index.html" />
+      <item name="Shared Components" href="http://maven.apache.org/shared/index.html" />
+      <item name="Skins"             href="http://maven.apache.org/skins/index.html" />
+      <item name="Surefire"          href="http://maven.apache.org/surefire/index.html" />
+      <item name="Wagon"             href="http://maven.apache.org/wagon/index.html" />
+    </menu>
+    <menu name="ASF" inherit="bottom">
+      <item name="How Apache Works" href="http://www.apache.org/foundation/how-it-works.html"/> 
+      <item name="Foundation" href="http://www.apache.org/foundation/"/>
+      <item name="Sponsoring Apache" href="http://www.apache.org/foundation/sponsorship.html"/>
+      <item name="Thanks" href="http://www.apache.org/foundation/thanks.html"/>
+    </menu>
+
   </body>
 </project>
