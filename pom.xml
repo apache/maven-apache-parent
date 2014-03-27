@@ -91,6 +91,9 @@ under the License.
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
     <gpg.useagent>true</gpg.useagent>
     <arguments />
+    <!-- Specify the default ccompiler source/target as 1.4 for backwards compatibility -->
+    <maven.compiler.source>1.4</maven.compiler.source>
+    <maven.compiler.target>1.4</maven.compiler.target>    
   </properties>
 
   <repositories>
@@ -127,10 +130,6 @@ under the License.
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.1</version>
-          <configuration>
-            <source>1.4</source>
-            <target>1.4</target>
-          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
