@@ -91,7 +91,7 @@ under the License.
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
     <gpg.useagent>true</gpg.useagent>
     <arguments />
-    <!-- Specify the default ccompiler source/target as 1.4 for backwards compatibility -->
+    <!-- Specify the default compiler source/target as 1.4 for backwards compatibility -->
     <maven.compiler.source>1.4</maven.compiler.source>
     <maven.compiler.target>1.4</maven.compiler.target>    
   </properties>
