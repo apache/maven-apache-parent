@@ -203,6 +203,7 @@ under the License.
             <useReleaseProfile>false</useReleaseProfile>
             <goals>deploy</goals>
             <arguments>-Papache-release ${arguments}</arguments>
+            <waitBeforeTagging>10</waitBeforeTagging>
           </configuration>
         </plugin>
         <!-- END SNIPPET: release-plugin-configuration -->
