@@ -25,7 +25,7 @@ under the License.
   <!-- for more information, see the documentation of this POM: http://maven.apache.org/pom/asf/ -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
-  <version>16-SNAPSHOT</version>
+  <version>15-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>The Apache Software Foundation</name>
