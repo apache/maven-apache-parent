@@ -107,9 +107,9 @@ under the License.
         <tbody>
           <tr>
             <td>${project.name} ${project.version} (Source zip)</td>
-            <td><a href="[preferred]maven/pom/${project.artifactId}-${project.version}-source-release.zip">maven/pom/${project.artifactId}-${project.version}-source-release.zip</a></td>
-            <td><a href="http://www.apache.org/dist/maven/pom/${project.artifactId}-${project.version}-source-release.zip.md5">maven/pom/${project.artifactId}-${project.version}-source-release.zip.md5</a></td>
-            <td><a href="http://www.apache.org/dist/maven/pom/${project.artifactId}-${project.version}-source-release.zip.asc">maven/pom/${project.artifactId}-${project.version}-source-release.zip.asc</a></td>
+            <td><a href="[preferred]maven/pom/apache-${project.version}-source-release.zip">maven/pom/apache-${project.version}-source-release.zip</a></td>
+            <td><a href="http://www.apache.org/dist/maven/pom/apache-${project.version}-source-release.zip.md5">maven/pom/apache-${project.version}-source-release.zip.md5</a></td>
+            <td><a href="http://www.apache.org/dist/maven/pom/apache-${project.version}-source-release.zip.asc">maven/pom/apache-${project.version}-source-release.zip.asc</a></td>
           </tr>
         </tbody>
       </table>
