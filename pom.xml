@@ -25,7 +25,7 @@ under the License.
   <!-- for more information, see the documentation of this POM: http://maven.apache.org/pom/asf/ -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
-  <version>16</version>
+  <version>17-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>The Apache Software Foundation</name>
@@ -64,9 +64,9 @@ under the License.
   </prerequisites>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/tags/apache-16</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/tags/apache-16</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/pom/tags/apache-16</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</developerConnection>
+    <url>http://svn.apache.org/viewvc/maven/pom/trunk/asf</url>
   </scm>
 
   <distributionManagement>
