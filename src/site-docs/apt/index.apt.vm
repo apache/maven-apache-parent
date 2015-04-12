@@ -44,16 +44,16 @@ Apache Software Foundation Parent POM
     
   ** <<organization>>: The Apache Software Foundation
     
-  ** <<url>>: <<<http://www.apache.org/>>>. You should override this.
+  ** <<url>>: {{<<<http://www.apache.org/>>>}}. You should override this.
     
   ** <<repositories>>: The pom adds the Apache snapshot
-     repository (<<<http://repository.apache.org/snapshots>>>)
+     repository ({{<<<http://repository.apache.org/snapshots>>>}})
     
   ** <<distributionManagement>>: The POM sets up for releases to the Apache Nexus
      instance at
-     <<<https://repository.apache.org/service/local/staging/deploy/maven2>>>
+     {{<<<https://repository.apache.org/service/local/staging/deploy/maven2>>>}}
      and snapshots to
-     <<<https://repository.apache.org/content/repositories/snapshots>>>. Note
+     {{<<<https://repository.apache.org/content/repositories/snapshots>>>}}. Note
      that there are POM parameters (<<<distMgmtSnapshotsName>>> and <<<distMgmtSnapshotsUrl>>>)
      that you can override to change the snapshot location. 
     
@@ -78,7 +78,7 @@ Apache Software Foundation Parent POM
 
  * <<plugins>>: The plugins section configures one execution:
     
-  ** maven-remote-resources-plugin for org.apache:apache-jar-resource-bundle:1.4.
+  ** maven-remote-resources-plugin for {{{/apache-resource-bundles/}org.apache:apache-jar-resource-bundle:1.4}}.
 
   ** maven-site-plugin:attach-descriptor
 
@@ -89,11 +89,11 @@ The <<<apache-release>>> Profile
     plugin. The profile includes the following plugins:
 
  * maven-assembly-plugin:
-    org.apache.apache.resources:apache-source-release-assembly-descriptor:1.0.5
+    {{{/apache-resource-bundles/}org.apache.apache.resources:apache-source-release-assembly-descriptor:1.0.5}}
     is in the dependencies, and an execution is configured. The plugin
-    is configured to take a descriptorRef name from the
+    is configured to take a <<<descriptorRef>>> name from the
     <<sourceReleaseAssemblyDescriptor>> property, which by default is
-    set to 'source-release'.
+    set to <<<source-release>>>.
 
  * maven-deploy-plugin
 
