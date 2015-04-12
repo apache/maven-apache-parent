@@ -34,7 +34,7 @@ under the License.
 
   <name>Apache Software Foundation Parent POM</name>
   <description>This project consists of a POM that contains settings that are likely to be useful to any Apache project that is building and releasing code with Maven 2/3.</description>
-  <url>http://maven.apache.org/pom/asf</url>
+  <url>http://maven.apache.org/pom/asf/</url>
 
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
