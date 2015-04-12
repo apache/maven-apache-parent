@@ -31,7 +31,7 @@ Apache Software Foundation Parent POM
 
     This project consists of a POM that contains settings that are
     likely to be useful to any Apache project that is building and
-    releasing code with Maven 2/3. By using this project as a parent,
+    releasing code with Maven 3 (Maven 2.x is not supported any more since version 17). By using this project as a parent,
     a project gets these settings.
 
     Most project will want to override some of these settings.
@@ -78,8 +78,9 @@ Apache Software Foundation Parent POM
 
  * <<plugins>>: The plugins section configures one execution:
     
-  ** maven-remote-resources-plugin for
-    org.apache:apache-jar-resource-bundle:1.4.
+  ** maven-remote-resources-plugin for org.apache:apache-jar-resource-bundle:1.4.
+
+  ** maven-site-plugin:attach-descriptor
 
 The <<<apache-release>>> Profile
 
@@ -88,8 +89,8 @@ The <<<apache-release>>> Profile
     plugin. The profile includes the following plugins:
 
  * maven-assembly-plugin:
-    org.apache.apache.resources:apache-source-release-assembly-descriptor:1.0.3
-    is in the dependencies, and an execution is configured.The plugin
+    org.apache.apache.resources:apache-source-release-assembly-descriptor:1.0.5
+    is in the dependencies, and an execution is configured. The plugin
     is configured to take a descriptorRef name from the
     <<sourceReleaseAssemblyDescriptor>> property, which by default is
     set to 'source-release'.
@@ -101,7 +102,7 @@ The <<<apache-release>>> Profile
  * maven-javadoc-plugin: configured to build and attach a javadoc jar.
 
  * maven-gpg-plugin: configured to sign everything. It expects to find
-    a passphrase in $\{gpg.passphrase\}, presumably in your <<<settings.xml>>>.
+    a passphrase in <<<$\{gpg.passphrase\}>>>, presumably in your <<<settings.xml>>>.
     
 Settings Configuration
   
@@ -113,7 +114,7 @@ Settings Configuration
 History
 
 #if( $project.version.endsWith( "SNAPSHOT" ) )
-  trunk: {{{http://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?view=markup}16-SNAPSHOT}} ({{{http://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?r1=HEAD&r2=1627336&diff_format=h}diff}})
+  trunk: {{{http://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?view=markup}$project.version}} ({{{http://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?r1=HEAD&r2=1627336&diff_format=h}diff}})
 #end
 
 *--------------+------------+
