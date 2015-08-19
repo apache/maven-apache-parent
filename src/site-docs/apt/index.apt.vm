@@ -115,7 +115,8 @@ Settings Configuration
 History
 
 #if( $project.version.endsWith( "SNAPSHOT" ) )
-  trunk: {{{http://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?view=markup}$project.version}} ({{{http://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?r1=HEAD&r2=1627336&diff_format=h}diff}})
+  trunk: {{{http://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?view=markup}$project.version}}
+  ({{{http://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?r1=HEAD&r2=1675930&diff_format=h}diff}})
 #end
 
 *--------------+------------+

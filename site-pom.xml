@@ -25,7 +25,7 @@ under the License.
   <parent>
     <groupId>org.apache</groupId>
     <artifactId>apache</artifactId>
-    <version>17</version>
+    <version>18-SNAPSHOT</version>
     <relativePath>./pom.xml</relativePath>
   </parent>
 
@@ -47,7 +47,7 @@ under the License.
   </issueManagement>
   <ciManagement>
     <system>Jenkins</system>
-    <url>https://builds.apache.org//view/M-R/view/Maven/job/ASF%20Parent%20Pom/</url>
+    <url>https://builds.apache.org/view/M-R/view/Maven/job/ASF%20Parent%20Pom/</url>
   </ciManagement>
   <distributionManagement>
     <site>
