@@ -165,6 +165,9 @@ under the License.
           <artifactId>maven-install-plugin</artifactId>
           <version>2.5.2</version>
         </plugin>
+        <!--
+           ! Upgrade to 2.0.0 only possible if the ASF pom will be changed to Java 1.6
+        -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-invoker-plugin</artifactId>
