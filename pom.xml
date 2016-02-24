@@ -237,30 +237,7 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>3.4</version>
-          <dependencies><!-- TODO remove when upgrading m-site-p to 3.4.1: see MSITE-724 -->
-            <dependency>
-              <groupId>org.apache.maven</groupId>
-              <artifactId>maven-archiver</artifactId>
-              <version>2.5</version>
-            </dependency>
-            <dependency>
-              <groupId>org.codehaus.plexus</groupId>
-              <artifactId>plexus-archiver</artifactId>
-              <version>2.4.4</version>
-            </dependency>
-            <dependency><!-- TODO remove when m-site-p uses Doxia 1.6.1, see DOXIA-526 -->
-              <groupId>org.apache.maven.doxia</groupId>
-              <artifactId>doxia-core</artifactId>
-              <version>1.6</version>
-              <exclusions>
-                <exclusion>
-                  <groupId>xerces</groupId>
-                  <artifactId>xercesImpl</artifactId>
-                </exclusion>
-              </exclusions>
-            </dependency>
-          </dependencies>
+          <version>3.5</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
