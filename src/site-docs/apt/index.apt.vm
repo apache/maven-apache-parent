@@ -94,7 +94,8 @@ The <<<apache-release>>> Profile
     is in the dependencies, and an execution is configured. The plugin
     is configured to take a <<<descriptorRef>>> name from the
     <<sourceReleaseAssemblyDescriptor>> property, which by default is
-    set to <<<source-release>>>.
+    set to <<<source-release>>> (zip only): you can override the property with
+    <<<source-release-zip-tar>>> (both zip and tar) or <<<source-release-tar>>> (tar only) values.
 
  * maven-deploy-plugin
 
