@@ -330,7 +330,7 @@ under the License.
               <dependency>
                 <groupId>org.apache.apache.resources</groupId>
                 <artifactId>apache-source-release-assembly-descriptor</artifactId>
-                <version>1.0.5</version>
+                <version>1.0.6</version>
               </dependency>
             </dependencies>
             <executions>

@@ -90,7 +90,7 @@ The <<<apache-release>>> Profile
     plugin. The profile includes the following plugins:
 
  * maven-assembly-plugin:
-    {{{/apache-resource-bundles/}org.apache.apache.resources:apache-source-release-assembly-descriptor:1.0.5}}
+    {{{/apache-resource-bundles/}org.apache.apache.resources:apache-source-release-assembly-descriptor:1.0.6}}
     is in the dependencies, and an execution is configured. The plugin
     is configured to take a <<<descriptorRef>>> name from the
     <<sourceReleaseAssemblyDescriptor>> property, which by default is
