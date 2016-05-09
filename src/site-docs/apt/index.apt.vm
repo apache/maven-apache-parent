@@ -5,7 +5,7 @@
  Hervé Boutemy
  Karl Heinz Marbaise
  -----
- 2015-04-24
+ 2016-05-09
  -----
 
 ~~ Licensed to the Apache Software Foundation (ASF) under one
@@ -122,6 +122,8 @@ History
 
 *--------------+------------+
 || <<Version>> || <<Release Date>> ||
+*--------------+------------+
+| {{{http://svn.apache.org/viewvc/maven/pom/tags/apache-18/pom.xml?view=markup}18}} ({{{http://svn.apache.org/viewvc/maven/pom/tags/apache-18/pom.xml?r1=HEAD&r2=1675930&diff_format=h}diff}}) | 2016-05-12 |
 *--------------+------------+
 | {{{http://svn.apache.org/viewvc/maven/pom/tags/apache-17/pom.xml?view=markup}17}} ({{{http://svn.apache.org/viewvc/maven/pom/tags/apache-17/pom.xml?r1=HEAD&r2=1639452&diff_format=h}diff}}) | 2015-04-24 |
 *--------------+------------+
