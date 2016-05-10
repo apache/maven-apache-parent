@@ -325,6 +325,7 @@ under the License.
                project directory source structure. This is the artifact which is
                the official subject of any release vote. -->
           <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-assembly-plugin</artifactId>
             <dependencies>
               <dependency>
