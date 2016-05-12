@@ -24,13 +24,13 @@ under the License.
 
   <bannerLeft>
     <name>${project.name}</name>
-    <src>http://maven.apache.org/images/apache-maven-project.png</src>
+    <src>https://maven.apache.org/images/apache-maven-project.png</src>
     <href>http://www.apache.org/</href>
   </bannerLeft>
 
   <bannerRight>
-    <src>http://maven.apache.org/images/maven-logo-black-on-white.png</src>
-    <href>http://maven.apache.org/</href>
+    <src>https://maven.apache.org/images/maven-logo-black-on-white.png</src>
+    <href>https://maven.apache.org/</href>
   </bannerRight>
 
   <skin>
@@ -44,7 +44,7 @@ under the License.
 
   <body>
     <head><![CDATA[
-      <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+      <script src="https://www.google-analytics.com/urchin.js" type="text/javascript">
       </script>
       <script type="text/javascript">
         _uacct = "UA-140879-1";
@@ -53,16 +53,16 @@ under the License.
     </head>
 
     <breadcrumbs>
-      <item name="Apache" href="http://www.apache.org/" />
-      <item name="Maven"  href="http://maven.apache.org/index.html" />
-      <item name="Parent POMs" href="http://maven.apache.org/pom/index.html" />
-      <item name="ASF"    href="http://maven.apache.org/pom/asf/index.html" />
+      <item name="Apache" href="https://www.apache.org/" />
+      <item name="Maven"  href="https://maven.apache.org/index.html" />
+      <item name="Parent POMs" href="https://maven.apache.org/pom/index.html" />
+      <item name="ASF"    href="https://maven.apache.org/pom/asf/index.html" />
     </breadcrumbs>
 
     <menu name="Overview">
       <item name="Introduction" href="index.html"/>
-      <!-- According to http://jira.codehaus.org/browse/MNGSITE-152 -->
-      <item name="License" href="http://www.apache.org/licenses/"/>
+      <!-- According to https://issues.apache.org/jira/browse/MNGSITE-152 -->
+      <item name="License" href="https://www.apache.org/licenses/"/>
       <item name="Download" href="download.html"/>
     </menu>
 
@@ -70,26 +70,26 @@ under the License.
 
     <!-- Copied from Maven parent's site.xml -->
     <menu name="Maven Projects" inherit="bottom">
-      <item name="Ant Tasks"         href="http://maven.apache.org/ant-tasks/index.html" />
-      <item name="Archetype"         href="http://maven.apache.org/archetype/index.html" />
-      <item name="Doxia"             href="http://maven.apache.org/doxia/index.html" />
-      <item name="JXR"               href="http://maven.apache.org/jxr/index.html" />
-      <item name="Maven 1.x"         href="http://maven.apache.org/maven-1.x/index.html" />
-      <item name="Maven 2 &amp; 3"   href="http://maven.apache.org/index.html" />
-      <item name="Parent POMs"       href="http://maven.apache.org/pom/index.html" />
-      <item name="Plugins"           href="http://maven.apache.org/plugins/index.html" />
-      <item name="Plugin Tools"      href="http://maven.apache.org/plugin-tools/index.html" />
-      <item name="SCM"               href="http://maven.apache.org/scm/index.html" />
-      <item name="Shared Components" href="http://maven.apache.org/shared/index.html" />
-      <item name="Skins"             href="http://maven.apache.org/skins/index.html" />
-      <item name="Surefire"          href="http://maven.apache.org/surefire/index.html" />
-      <item name="Wagon"             href="http://maven.apache.org/wagon/index.html" />
+      <item name="Ant Tasks"         href="https://maven.apache.org/ant-tasks/index.html" />
+      <item name="Archetype"         href="https://maven.apache.org/archetype/index.html" />
+      <item name="Doxia"             href="https://maven.apache.org/doxia/index.html" />
+      <item name="JXR"               href="https://maven.apache.org/jxr/index.html" />
+      <item name="Maven 1.x"         href="https://maven.apache.org/maven-1.x/index.html" />
+      <item name="Maven 2 &amp; 3"   href="https://maven.apache.org/index.html" />
+      <item name="Parent POMs"       href="https://maven.apache.org/pom/index.html" />
+      <item name="Plugins"           href="https://maven.apache.org/plugins/index.html" />
+      <item name="Plugin Tools"      href="https://maven.apache.org/plugin-tools/index.html" />
+      <item name="SCM"               href="https://maven.apache.org/scm/index.html" />
+      <item name="Shared Components" href="https://maven.apache.org/shared/index.html" />
+      <item name="Skins"             href="https://maven.apache.org/skins/index.html" />
+      <item name="Surefire"          href="https://maven.apache.org/surefire/index.html" />
+      <item name="Wagon"             href="https://maven.apache.org/wagon/index.html" />
     </menu>
     <menu name="ASF" inherit="bottom">
-      <item name="How Apache Works" href="http://www.apache.org/foundation/how-it-works.html"/> 
-      <item name="Foundation" href="http://www.apache.org/foundation/"/>
-      <item name="Sponsoring Apache" href="http://www.apache.org/foundation/sponsorship.html"/>
-      <item name="Thanks" href="http://www.apache.org/foundation/thanks.html"/>
+      <item name="How Apache Works"  href="https://www.apache.org/foundation/how-it-works.html"/> 
+      <item name="Foundation"        href="https://www.apache.org/foundation/"/>
+      <item name="Sponsoring Apache" href="https://www.apache.org/foundation/sponsorship.html"/>
+      <item name="Thanks"            href="https://www.apache.org/foundation/thanks.html"/>
     </menu>
 
   </body>

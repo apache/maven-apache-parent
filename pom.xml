@@ -19,7 +19,8 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <!-- for more information, see the documentation of this POM: http://maven.apache.org/pom/asf/ -->
@@ -39,12 +40,12 @@ under the License.
   <url>http://www.apache.org/</url>
   <organization>
     <name>The Apache Software Foundation</name>
-    <url>http://www.apache.org/</url>
+    <url>https://www.apache.org/</url>
   </organization>
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
@@ -55,7 +56,7 @@ under the License.
       <subscribe>announce-subscribe@apache.org</subscribe>
       <unsubscribe>announce-unsubscribe@apache.org</unsubscribe>
       <post>announce@apache.org</post>
-      <archive>http://mail-archives.apache.org/mod_mbox/www-announce/</archive>
+      <archive>https://mail-archives.apache.org/mod_mbox/www-announce/</archive>
     </mailingList>
   </mailingLists>
 
@@ -64,9 +65,9 @@ under the License.
   </prerequisites>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
+    <connection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/pom/trunk/asf</url>
+    <url>https://svn.apache.org/viewvc/maven/pom/trunk/asf</url>
   </scm>
 
   <distributionManagement>
@@ -85,7 +86,7 @@ under the License.
   <properties>
     <distMgmtSnapshotsName>Apache Development Snapshot Repository</distMgmtSnapshotsName>
     <distMgmtSnapshotsUrl>https://repository.apache.org/content/repositories/snapshots</distMgmtSnapshotsUrl>
-    <organization.logo>http://www.apache.org/images/asf_logo_wide.gif</organization.logo>
+    <organization.logo>https://www.apache.org/images/asf_logo_wide.gif</organization.logo>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
@@ -404,4 +405,3 @@ under the License.
     <!-- END SNIPPET: release-profile -->
   </profiles>
 </project>
-

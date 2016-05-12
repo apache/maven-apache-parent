@@ -34,16 +34,16 @@ under the License.
 
   <name>Apache Software Foundation Parent POM</name>
   <description>This project consists of a POM that contains settings that are likely to be useful to any Apache project that is building and releasing code with Maven 2/3.</description>
-  <url>http://maven.apache.org/pom/asf/</url>
+  <url>https://maven.apache.org/pom/asf/</url>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
+    <connection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/pom/trunk/asf</url>
+    <url>https://svn.apache.org/viewvc/maven/pom/trunk/asf</url>
   </scm>
   <issueManagement>
     <system>jira</system>
-    <url>http://issues.apache.org/jira/browse/MPOM/component/12314370</url>
+    <url>https://issues.apache.org/jira/browse/MPOM/component/12314370</url>
   </issueManagement>
   <ciManagement>
     <system>Jenkins</system>
@@ -82,4 +82,3 @@ under the License.
     </plugins>
   </build>
 </project>
-  
