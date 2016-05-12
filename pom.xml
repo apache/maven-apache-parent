@@ -289,6 +289,7 @@ under the License.
         <artifactId>maven-remote-resources-plugin</artifactId>
         <executions>
           <execution>
+            <id>process-resource-bundles</id>
             <goals>
               <goal>process</goal>
             </goals>
@@ -390,6 +391,7 @@ under the License.
             <artifactId>maven-gpg-plugin</artifactId>
             <executions>
               <execution>
+                <id>sign-release-artifacts</id>
                 <goals>
                   <goal>sign</goal>
                 </goals>
