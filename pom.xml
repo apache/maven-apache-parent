@@ -37,7 +37,7 @@ under the License.
     We consider ourselves not simply a group of projects sharing a server, but rather a community of developers
     and users.
   </description>
-  <url>http://www.apache.org/</url>
+  <url>https://www.apache.org/</url>
   <organization>
     <name>The Apache Software Foundation</name>
     <url>https://www.apache.org/</url>
@@ -278,7 +278,7 @@ under the License.
               <artifactId>doxia-core</artifactId>
               <version>1.2</version>
               <exclusions>
-                <exclusion><!-- see http://jira.codehaus.org/browse/DOXIA-526 -->
+                <exclusion><!-- see https://issues.apache.org/jira/browse/DOXIA-526 -->
                   <groupId>xerces</groupId>
                   <artifactId>xercesImpl</artifactId>
                 </exclusion>
