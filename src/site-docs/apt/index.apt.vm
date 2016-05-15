@@ -45,7 +45,7 @@ Apache Software Foundation Parent POM
     
   ** <<organization>>: The Apache Software Foundation
     
-  ** <<url>>: {{<<<http://www.apache.org/>>>}}. You should override this.
+  ** <<url>>: {{<<<https://www.apache.org/>>>}}. You should override this.
     
   ** <<repositories>>: The pom adds the Apache snapshot
      repository ({{<<<https://repository.apache.org/snapshots>>>}})
@@ -123,7 +123,7 @@ History
 *--------------+------------+
 || <<Version>> || <<Release Date>> ||
 *--------------+------------+
-| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-18/pom.xml?view=markup}18}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-18/pom.xml?r1=HEAD&r2=1675930&diff_format=h}diff}}) | 2016-05-12 |
+| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-18/pom.xml?view=markup}18}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-18/pom.xml?r1=HEAD&r2=1675930&diff_format=h}diff}}) | 2016-05-18 |
 *--------------+------------+
 | {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-17/pom.xml?view=markup}17}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-17/pom.xml?r1=HEAD&r2=1639452&diff_format=h}diff}}) | 2015-04-24 |
 *--------------+------------+
