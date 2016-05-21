@@ -65,7 +65,7 @@ Apache Software Foundation Parent POM
     of a list of plugins. See the {{{./plugin-management.html}Plugin Management report}} for
     the complete list with versions. 
     
-  ** The compiler plugin is set to default to Java 1.4 and UTF-8 source.
+  ** The compiler plugin is set to default to Java 1.6 and UTF-8 source.
     
   ** the jar plugin is set to add default specification and implementation entries.
     
