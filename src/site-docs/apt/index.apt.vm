@@ -65,11 +65,11 @@ Apache Software Foundation Parent POM
     of a list of plugins. See the {{{./plugin-management.html}Plugin Management report}} for
     the complete list with versions. 
     
-  ** The compiler plugin is set to default to Java 1.6 and UTF-8 source.
+  ** The compiler plugin is set to default to Java $context.get("maven.compiler.source") and $context.get("project.build.sourceEncoding") source.
     
   ** the jar plugin is set to add default specification and implementation entries.
     
-  ** the resources plugin is set for UTF-8.
+  ** the resources plugin is set for $context.get("project.build.sourceEncoding").
     
   ** the release plugin: the release plugin is set, via the
     \<arguments\> configuration element, to enable the
@@ -117,7 +117,7 @@ History
 
 #if( $project.version.endsWith( "SNAPSHOT" ) )
   trunk: {{{https://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?view=markup}$project.version}}
-  ({{{https://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?r1=HEAD&r2=1675930&diff_format=h}diff}})
+  ({{{https://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?r1=HEAD&r2=1743964&diff_format=h}diff}})
 #end
 
 *--------------+------------+
