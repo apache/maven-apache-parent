@@ -94,6 +94,7 @@ under the License.
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
     <surefire.version>2.19.1</surefire.version>
+    <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
   </properties>
 
   <repositories>
