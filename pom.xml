@@ -59,10 +59,6 @@ under the License.
     </mailingList>
   </mailingLists>
 
-  <prerequisites><!-- just for information: not inherited in child poms -->
-    <maven>3.0</maven><!-- prerequisite of some plugins -->
-  </prerequisites>
-
   <scm>
     <connection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</developerConnection>
@@ -295,6 +291,25 @@ under the License.
               <resourceBundles>
                 <resourceBundle>org.apache:apache-jar-resource-bundle:1.4</resourceBundle>
               </resourceBundles>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforce-maven-version</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>3.0</version>
+                </requireMavenVersion>
+              </rules>
             </configuration>
           </execution>
         </executions>
