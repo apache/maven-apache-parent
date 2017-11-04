@@ -37,9 +37,10 @@ under the License.
   <url>https://maven.apache.org/pom/asf/</url>
 
   <scm>
-    <connection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/pom/trunk/asf</developerConnection>
-    <url>https://svn.apache.org/viewvc/maven/pom/trunk/asf</url>
+    <connection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</connection>
+    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</developerConnection>
+    <url>https://github.com/apache/maven-apache-parent/tree/${project.scm.tag}</url>
+    <tag>HEAD</tag>
   </scm>
   <issueManagement>
     <system>jira</system>
