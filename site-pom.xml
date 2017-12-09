@@ -48,7 +48,15 @@ under the License.
   </issueManagement>
   <ciManagement>
     <system>Jenkins</system>
-    <url>https://builds.apache.org/view/M-R/view/Maven/job/ASF%20Parent%20Pom/</url>
+    <url>https://builds.apache.org/view/M-R/view/Maven/job/maven-box/job/maven-apache-parent/</url>
+    <notifiers>
+      <notifier>
+        <type>mail</type>
+        <configuration>
+          <address>notifications@maven.apache.org</address>
+        </configuration>
+      </notifier>
+    </notifiers>
   </ciManagement>
   <distributionManagement>
     <site>
