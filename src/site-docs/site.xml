@@ -39,18 +39,12 @@ under the License.
     <version>1.5</version>
   </skin>
 
+  <googleAnalyticsAccountId>UA-140879-1</googleAnalyticsAccountId>
+
   <publishDate position="right" />
   <version position="right" />
 
   <body>
-    <head><![CDATA[
-      <script src="https://www.google-analytics.com/urchin.js" type="text/javascript">
-      </script>
-      <script type="text/javascript">
-        _uacct = "UA-140879-1";
-        urchinTracker();
-      </script>]]>
-    </head>
 
     <breadcrumbs>
       <item name="Apache" href="https://www.apache.org/" />
