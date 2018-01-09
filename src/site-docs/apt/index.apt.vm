@@ -116,37 +116,42 @@ Settings Configuration
 History
 
 #if( $project.version.endsWith( "SNAPSHOT" ) )
-  trunk: {{{https://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?view=markup}$project.version}}
-  ({{{https://svn.apache.org/viewvc/maven/pom/trunk/asf/pom.xml?r1=HEAD&r2=1743964&diff_format=h}diff}})
+  HEAD: {{{https://github.com/apache/maven-apache-parent/tree/HEAD/pom.xml}$project.version}}
+  ({{{https://gitbox.apache.org/repos/asf?p=maven-apache-parent.git;a=blobdiff;f=pom.xml;hb=master;hpb=apache-18}diff}},
+  {{{https://github.com/apache/maven-apache-parent/compare/HEAD...apache-18}commits}})
+#end
+#macro ( display $version $date )
+#**##set( $prev = $version - 1 )
+| {{{https://github.com/apache/maven-apache-parent/tree/apache-$version/pom.xml}$version}} ({{{https://gitbox.apache.org/repos/asf?p=maven-apache-parent.git;a=blobdiff;f=pom.xml;hb=apache-$version;hpb=apache-$prev}diff}}) | $date |
 #end
 
 *--------------+------------+
 || <<Version>> || <<Release Date>> ||
 *--------------+------------+
-| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-18/pom.xml?view=markup}18}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-18/pom.xml?r1=HEAD&r2=1675930&diff_format=h}diff}}) | 2016-05-18 |
+#display( 18, '2016-05-18' )
 *--------------+------------+
-| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-17/pom.xml?view=markup}17}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-17/pom.xml?r1=HEAD&r2=1639452&diff_format=h}diff}}) | 2015-04-24 |
+#display( 17, '2015-04-24' )
 *--------------+------------+
-| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-16/pom.xml?view=markup}16}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-16/pom.xml?r1=HEAD&r2=1627336&diff_format=h}diff}}) | 2014-11-13 |
+#display( 16, '2014-11-13' )
 *--------------+------------+
-| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-15/pom.xml?view=markup}15}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-15/pom.xml?r1=HEAD&r2=1575044&diff_format=h}diff}}) | 2014-09-24 |
+#display( 15, '2014-09-24' )
 *--------------+------------+
-| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-14/pom.xml?view=markup}14}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-14/pom.xml?r1=HEAD&r2=1434717&diff_format=h}diff}}) | 2014-03-06 |
+#display( 14, '2014-03-06' )
 *--------------+------------+
-| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-13/pom.xml?view=markup}13}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-13/pom.xml?r1=HEAD&r2=1404788&diff_format=h}diff}}) | 2013-01-20 |
+#display( 13, '2013-01-20' )
 *--------------+------------+
-| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-12/pom.xml?view=markup}12}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-12/pom.xml?r1=HEAD&r2=1369674&diff_format=h}diff}}) | 2012-11-01 |
+#display( 12, '2012-11-01' )
 *--------------+------------+
-| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-11/pom.xml?view=markup}11}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-11/pom.xml?r1=HEAD&r2=1154610&diff_format=h}diff}}) | 2012-08-08 |
+#display( 11, '2012-08-08' )
 *--------------+------------+
-| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-10/pom.xml?view=markup}10}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-10/pom.xml?r1=HEAD&r2=1069621&diff_format=h}diff}}) | 2011-08-09 |
+#display( 10, '2011-08-09' )
 *--------------+------------+
-| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-9/pom.xml?view=markup}9}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-9/pom.xml?r1=HEAD&r2=1038252&diff_format=h}diff}}) | 2011-02-15 |
+#display( 9, '2011-02-15' )
 *--------------+------------+
-| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-8/pom.xml?view=markup}8}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-8/pom.xml?r1=HEAD&r2=893967&diff_format=h}diff}}) | 2010-11-26 |
+#display( 8, '2010-11-26' )
 *--------------+------------+
-| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-7/pom.xml?view=markup}7}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-7/pom.xml?r1=HEAD&r2=766952&diff_format=h}diff}}) | 2009-12-29 |
+#display( 7, '2009-12-29' )
 *--------------+------------+
-| {{{https://svn.apache.org/viewvc/maven/pom/tags/apache-6/pom.xml?view=markup}6}} ({{{https://svn.apache.org/viewvc/maven/pom/tags/apache-6/pom.xml?r1=HEAD&r2=766946&diff_format=h}diff}}) | 2009-04-24 |
+#display( 6, '2009-04-24' )
 *--------------+------------+
   
