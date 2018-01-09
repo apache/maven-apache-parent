@@ -122,7 +122,9 @@ History
 #end
 #macro ( display $version $date )
 #**##set( $prev = $version - 1 )
-| {{{https://github.com/apache/maven-apache-parent/tree/apache-$version/pom.xml}$version}} ({{{https://gitbox.apache.org/repos/asf?p=maven-apache-parent.git;a=blobdiff;f=pom.xml;hb=apache-$version;hpb=apache-$prev}diff}}) | $date |
+|  {{{https://github.com/apache/maven-apache-parent/tree/apache-$version/pom.xml}$version}}
+| ({{{https://gitbox.apache.org/repos/asf?p=maven-apache-parent.git;a=blobdiff;f=pom.xml;hb=apache-$version;hpb=apache-$prev}diff}},
+|  {{{https://github.com/apache/maven-apache-parent/compare/apache-$version...apache-$prev}commits}}) | $date |
 #end
 
 *--------------+------------+
@@ -154,4 +156,3 @@ History
 *--------------+------------+
 #display( 6, '2009-04-24' )
 *--------------+------------+
-  
