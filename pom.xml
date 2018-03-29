@@ -90,7 +90,7 @@ under the License.
     <arguments />
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
-    <surefire.version>2.20.1</surefire.version>
+    <surefire.version>2.21.0</surefire.version>
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
   </properties>
 
