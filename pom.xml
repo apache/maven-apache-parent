@@ -308,7 +308,7 @@ under the License.
             <configuration>
               <rules>
                 <requireMavenVersion>
-                  <version>3.0</version>
+                  <version>3.0.5</version>
                 </requireMavenVersion>
               </rules>
             </configuration>
