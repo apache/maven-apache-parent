@@ -25,7 +25,7 @@ under the License.
   <parent>
     <groupId>org.apache</groupId>
     <artifactId>apache</artifactId>
-    <version>20-SNAPSHOT</version>
+    <version>20</version>
     <relativePath>./pom.xml</relativePath>
   </parent>
 
@@ -40,7 +40,7 @@ under the License.
     <connection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</connection>
     <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</developerConnection>
     <url>https://github.com/apache/maven-apache-parent/tree/${project.scm.tag}</url>
-    <tag>apache-19</tag>
+    <tag>apache-${project.version}</tag>
   </scm>
   <issueManagement>
     <system>jira</system>
