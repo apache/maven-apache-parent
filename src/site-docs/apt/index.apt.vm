@@ -108,6 +108,9 @@ The <<<apache-release>>> Profile
  * maven-gpg-plugin: configured to sign everything. It expects to find
     a passphrase in <<<$\{gpg.passphrase\}>>>, presumably in your <<<settings.xml>>>.
 
+ * checksum-maven-plugin: configured to create a checksum file(s) for source release as
+    required by {{{http://www.apache.org/dev/release-distribution#sigs-and-sums}Apache release distribution policy}}.
+
  []
 
   When doing a release with maven-release-plugin, this will create files in <<<target/checkout/target>>> ready
@@ -115,6 +118,8 @@ The <<<apache-release>>> Profile
   directory:
 
  * <<<$\{artifactId\}-$\{version\}-source-release.[zip|tar.gz]>>>: the source release archive(s)
+
+ * <<<$\{artifactId\}-$\{version\}-source-release.[zip|tar.gz].sha512>>>: their checksum(s)
 
  * <<<$\{artifactId\}-$\{version\}-source-release.[zip|tar.gz].asc>>>: their signature(s)
 
