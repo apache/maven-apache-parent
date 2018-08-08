@@ -87,7 +87,9 @@ The <<<apache-release>>> Profile
 
    As noted above, this pom configures the release plugin to enable
     the <<<apache-release>>> profile for all executions of the release
-    plugin. The profile includes the following plugins:
+    plugin.
+
+   The profile includes the following plugins:
 
  * maven-assembly-plugin:
     {{{/apache-resource-bundles/}org.apache.apache.resources:apache-source-release-assembly-descriptor:1.0.6}}
@@ -97,7 +99,7 @@ The <<<apache-release>>> Profile
     set to <<<source-release>>> (zip only): you can override the property with
     <<<source-release-zip-tar>>> (both zip and tar) or <<<source-release-tar>>> (tar only) values.
 
- * maven-deploy-plugin
+ * maven-deploy-plugin: configured to activate <<<updateReleaseInfo>>>
 
  * maven-source-plugin: configured to build and attach a source jar.
 
@@ -105,12 +107,22 @@ The <<<apache-release>>> Profile
 
  * maven-gpg-plugin: configured to sign everything. It expects to find
     a passphrase in <<<$\{gpg.passphrase\}>>>, presumably in your <<<settings.xml>>>.
-    
+
+ []
+
+  When doing a release with maven-release-plugin, this will create files in <<<target/checkout/target>>> ready
+  to be copied to projects' {{{http://www.apache.org/dev/release-distribution}Apache <<</dist/>>> release distribution}}
+  directory:
+
+ * <<<$\{artifactId\}-$\{version\}-source-release.[zip|tar.gz]>>>: the source release archive(s)
+
+ * <<<$\{artifactId\}-$\{version\}-source-release.[zip|tar.gz].asc>>>: their signature(s)
+
 Settings Configuration
   
   You can have a look at the page in Apache website
   {{{https://www.apache.org/dev/publishing-maven-artifacts.html}Publishing Maven Artifacts}}.
-  
+
   You can test your environment setup using <<<-Papache-release>>> with the command line.
 
 History
