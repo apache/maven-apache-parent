@@ -77,7 +77,7 @@ Apache Software Foundation Parent POM
     \<useReleaseProfiles\>.  You can remove this with an empty
     \<arguments/\> element in the configuration of the release plugin.
 
- * <<plugins>>: The plugins section configures one execution:
+ * <<plugins>>: The plugins section configures two executions:
     
   ** maven-remote-resources-plugin for {{{/apache-resource-bundles/}org.apache:apache-jar-resource-bundle:1.4}}.
 
