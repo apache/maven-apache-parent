@@ -134,8 +134,8 @@ History
 
 #if( $project.version.endsWith( "SNAPSHOT" ) )
   master: {{{https://github.com/apache/maven-apache-parent/tree/master/pom.xml}$project.version}}
-  ({{{https://gitbox.apache.org/repos/asf?p=maven-apache-parent.git;a=blobdiff;f=pom.xml;hb=master;hpb=apache-19}diff}},
-  {{{https://github.com/apache/maven-apache-parent/compare/apache-19...master}commits}})
+  ({{{https://gitbox.apache.org/repos/asf?p=maven-apache-parent.git;a=blobdiff;f=pom.xml;hb=master;hpb=apache-21}diff}},
+  {{{https://github.com/apache/maven-apache-parent/compare/apache-21...master}commits}})
 #end
 #macro ( display $version $date )
 #**##set( $prev = $version - 1 )
@@ -146,6 +146,8 @@ History
 
 *--------------+------------+
 || <<Version>> || <<Release Date>> ||
+*--------------+------------+
+#display( 21, '2018-08-21' )
 *--------------+------------+
 #display( 20, '2018-07-07' )
 *--------------+------------+
