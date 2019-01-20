@@ -44,7 +44,7 @@ under the License.
   </scm>
   <issueManagement>
     <system>jira</system>
-    <url>https://issues.apache.org/jira/browse/MPOM/component/12314370</url>
+    <url>https://issues.apache.org/jira/issues/?jql=project%3DMPOM+AND+component%3Dasf</url>
   </issueManagement>
   <ciManagement>
     <system>Jenkins</system>
