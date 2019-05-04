@@ -82,7 +82,7 @@ under the License.
   <properties>
     <distMgmtSnapshotsName>Apache Development Snapshot Repository</distMgmtSnapshotsName>
     <distMgmtSnapshotsUrl>https://repository.apache.org/content/repositories/snapshots</distMgmtSnapshotsUrl>
-    <organization.logo>https://www.apache.org/images/asf_logo_wide.gif</organization.logo>
+    <organization.logo>https://www.apache.org/images/asf_logo_wide_2016.png</organization.logo>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
