@@ -65,7 +65,7 @@ Apache Software Foundation Parent POM
     of a list of plugins. See the {{{./plugin-management.html}Plugin Management report}} for
     the complete list with versions. 
     
-  ** The compiler plugin is set to default to Java $context.get("maven.compiler.source") and $context.get("project.build.sourceEncoding") source.
+  ** The compiler plugin is set to default to <<Java $context.get("maven.compiler.source")>> and $context.get("project.build.sourceEncoding") source.
     
   ** the jar plugin is set to add default specification and implementation entries.
     
