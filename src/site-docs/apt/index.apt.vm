@@ -35,7 +35,7 @@ Apache Software Foundation Parent POM
     releasing code with Maven 3 (Maven 2.x is not supported any more since version 17). By using this project as a parent,
     a project gets these settings.
 
-    Most project will want to override some of these settings.
+    Most projects will want to override some of these settings.
 
     The following is a list of the items configured in this POM:
 
@@ -67,11 +67,11 @@ Apache Software Foundation Parent POM
     
   ** The compiler plugin is set to default to <<Java $context.get("maven.compiler.source")>> and $context.get("project.build.sourceEncoding") source.
     
-  ** the jar plugin is set to add default specification and implementation entries.
+  ** The jar plugin is set to add default specification and implementation entries.
     
-  ** the resources plugin is set for $context.get("project.build.sourceEncoding").
+  ** The resources plugin is set for $context.get("project.build.sourceEncoding").
     
-  ** the release plugin: the release plugin is set, via the
+  ** The release plugin is set, via the
     \<arguments\> configuration element, to enable the
     <<apache-release>> profile for <<all>> executions and to disable
     \<useReleaseProfiles\>.  You can remove this with an empty
@@ -115,7 +115,7 @@ The <<<apache-release>>> Profile
 
  []
 
-  When doing a release with maven-release-plugin, this will create files in <<<target/checkout/target>>> ready
+  When doing a release with maven-release-plugin, this creates files in <<<target/checkout/target>>> ready
   to be copied to projects' {{{http://www.apache.org/dev/release-distribution}Apache <<</dist/>>> release distribution}}
   directory:
 
