@@ -83,6 +83,21 @@ Apache Software Foundation Parent POM
 
   ** maven-site-plugin:attach-descriptor
 
+ * <<Reproducible Builds>>: since version 22, plugins are expected to be compliant with {{{https://reproducible-builds.org/}Reproducible Builds}}.
+
+   To choose the timestamp in output archives, projects using this POM as parent should define a property in their root POM:
+
++------+
+  <properties>
+    <project.build.outputTimestamp>2019-10-02T08:04:00Z</project.build.outputTimestamp>
+  </properties>
++------+
+
+   The value will be updated by Maven Release Plugin during releases. If a project wants to disable Reproducible Builds, just define
+   the property value with any single character.
+
+ []
+
 The <<<apache-release>>> Profile
 
    As noted above, this pom configures the release plugin to enable

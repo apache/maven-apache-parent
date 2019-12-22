@@ -92,7 +92,7 @@ under the License.
     <maven.compiler.target>1.7</maven.compiler.target>
     <surefire.version>2.22.0</surefire.version>
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
-    <!--project.build.outputTimestamp>2019-10-02T08:04:00Z</project.build.outputTimestamp--><!-- Reproducible Builds can be activated by defining property -->
+    <project.build.outputTimestamp>2019-10-02T08:04:00Z</project.build.outputTimestamp>
   </properties>
 
   <repositories>
