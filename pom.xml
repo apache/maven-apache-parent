@@ -25,7 +25,7 @@ under the License.
   <!-- for more information, see the documentation of this POM: http://maven.apache.org/pom/asf/ -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
-  <version>22</version>
+  <version>23-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>The Apache Software Foundation</name>
@@ -63,7 +63,7 @@ under the License.
     <connection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</connection>
     <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</developerConnection>
     <url>https://github.com/apache/maven-apache-parent/tree/${project.scm.tag}</url>
-    <tag>apache-22</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
@@ -92,7 +92,7 @@ under the License.
     <maven.compiler.target>1.7</maven.compiler.target>
     <surefire.version>2.22.0</surefire.version>
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
-    <project.build.outputTimestamp>2020-01-05T17:24:32Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2020-01-05T17:24:56Z</project.build.outputTimestamp>
   </properties>
 
   <repositories>
