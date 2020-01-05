@@ -83,7 +83,7 @@ Apache Software Foundation Parent POM
 
   ** maven-site-plugin:attach-descriptor
 
- * <<Reproducible Builds>>: since version 22, plugins are expected to be compliant with {{{https://reproducible-builds.org/}Reproducible Builds}}.
+ * <<Reproducible Builds>>: since version 22 of this parent POM, managed plugins versions are expected to be compliant with {{{https://reproducible-builds.org/}Reproducible Builds}}.
 
    To choose the timestamp in output archives, projects using this POM as parent should define a property in their root POM:
 
@@ -151,7 +151,7 @@ History
 
 #if( $project.version.endsWith( "SNAPSHOT" ) )
   master: {{{https://github.com/apache/maven-apache-parent/tree/master/pom.xml}$project.version}}
-  ({{{https://github.com/apache/maven-apache-parent/compare/apache-21...master}diff}})
+  ({{{https://github.com/apache/maven-apache-parent/compare/apache-22...master}diff}})
 #end
 #macro ( display $version $date )
 #**##set( $prev = $version - 1 )
@@ -161,6 +161,8 @@ History
 
 *--------------+------------+
 || <<Version>> || <<Release Date>> ||
+*--------------+------------+
+#display( 22, '2020-01-08' )
 *--------------+------------+
 #display( 21, '2018-08-21' )
 *--------------+------------+
