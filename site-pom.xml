@@ -36,6 +36,16 @@ under the License.
   <description>This project consists of a POM that contains settings that are likely to be useful to any Apache project that is building and releasing code with Maven 2/3.</description>
   <url>https://maven.apache.org/pom/asf/</url>
 
+  <mailingLists>
+    <mailingList>
+      <name>Apache Release Discuss</name>
+      <subscribe>mailto:release-discuss-subscribe@apache.org</subscribe>
+      <unsubscribe>mailto:release-discuss-unsubscribe@apache.org</unsubscribe>
+      <post>mailto:release-discuss@apache.org</post>
+      <archive>https://lists.apache.org/list.html?release-discuss@apache.org</archive>
+    </mailingList>
+  </mailingLists>
+
   <scm>
     <connection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</connection>
     <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</developerConnection>
