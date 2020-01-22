@@ -151,7 +151,7 @@ History
 
 #if( $project.version.endsWith( "SNAPSHOT" ) )
   master: {{{https://github.com/apache/maven-apache-parent/tree/master/pom.xml}$project.version}}
-  ({{{https://github.com/apache/maven-apache-parent/compare/apache-22...master}diff}})
+  ({{{https://github.com/apache/maven-apache-parent/compare/apache-23...master}diff}})
 #end
 #macro ( display $version $date )
 #**##set( $prev = $version - 1 )
@@ -161,6 +161,8 @@ History
 
 *--------------+------------+
 || <<Version>> || <<Release Date>> ||
+*--------------+------------+
+#display( 23, '2020-01-25' )
 *--------------+------------+
 #display( 22, '2020-01-08' )
 *--------------+------------+
