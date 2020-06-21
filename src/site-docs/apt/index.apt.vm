@@ -32,7 +32,7 @@ Apache Software Foundation Parent POM
 
     This project consists of a POM that contains settings that are
     likely to be useful to any Apache project that is building and
-    releasing code with Maven 3 (Maven 2.x is not supported any more since version 17). By using this project as a parent,
+    releasing code with Maven. By using this project as a parent,
     a project gets these settings.
 
     Most projects will want to override some of these settings.
