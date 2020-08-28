@@ -20,7 +20,7 @@ Contributing to [Apache Software Foundation Parent POM](https://maven.apache.org
 [![ASF Jira](https://img.shields.io/endpoint?url=https%3A%2F%2Fmaven.apache.org%2Fbadges%2Fasf_jira-MPOM.json)][jira]
 [![Apache License, Version 2.0, January 2004](https://img.shields.io/github/license/apache/maven.svg?label=License)][license]
 [![Maven Central](https://img.shields.io/maven-central/v/org.apache/apache.svg?label=Maven%20Central)](https://search.maven.org/artifact/org.apache/apache)
-[![Jenkins Status](https://img.shields.io/jenkins/s/https/builds.apache.org/job/maven-box/job/maven-apache-parent/job/master.svg)][build]
+[![Jenkins Status](https://img.shields.io/jenkins/s/https/ci-builds.apache.org/job/Maven/job/maven-box/job/maven-apache-parent/job/master.svg)][build]
 
 
 You have found a bug or you have an idea for a cool new feature? Contributing
@@ -94,4 +94,4 @@ Additional Resources
 [code-style]: https://maven.apache.org/developers/conventions/code.html
 [cla]: https://www.apache.org/licenses/#clas
 [maven-wiki]: https://cwiki.apache.org/confluence/display/MAVEN/Index
-[build]: https://builds.apache.org/job/maven-box/job/maven-apache-parent/job/master/
+[build]: https://ci-builds.apache.org/job/Maven/job/maven-box/job/maven-apache-parent/job/master/
