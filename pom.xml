@@ -88,6 +88,7 @@ under the License.
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
     <gpg.useagent>true</gpg.useagent>
     <arguments />
+    <minimalMavenBuildVersion>3.1.1</minimalMavenBuildVersion>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <surefire.version>2.22.2</surefire.version>
@@ -328,7 +329,7 @@ under the License.
             <configuration>
               <rules>
                 <requireMavenVersion>
-                  <version>3.1.1</version>
+                  <version>${minimalMavenBuildVersion}</version>
                 </requireMavenVersion>
               </rules>
             </configuration>
