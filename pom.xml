@@ -91,6 +91,7 @@ under the License.
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <surefire.version>2.22.2</surefire.version>
+    <maven.javadoc.version>3.2.0</maven.javadoc.version>
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
     <!-- set this property for all derived projects:
     <project.build.outputTimestamp>2020-01-22T15:10:38Z</project.build.outputTimestamp>
@@ -213,7 +214,11 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.2.0</version>
+          <version>${maven.javadoc.version}</version>
+          <!-- due to https://issues.apache.org/jira/browse/MNG-7006 duplicate reporting configuration -->
+          <configuration>
+            <notimestamp>true</notimestamp>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -351,6 +356,19 @@ under the License.
       </plugin>
     </plugins>
   </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>${maven.javadoc.version}</version>
+        <configuration>
+          <notimestamp>true</notimestamp>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
 
   <profiles>
     <!-- START SNIPPET: release-profile -->
