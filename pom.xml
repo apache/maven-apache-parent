@@ -441,31 +441,26 @@ under the License.
           <plugin>
             <groupId>net.nicoulaj.maven.plugins</groupId>
             <artifactId>checksum-maven-plugin</artifactId>
-            <version>1.9</version>
+            <version>1.10</version>
             <executions>
               <execution>
                 <id>source-release-checksum</id>
                 <goals>
-                  <goal>files</goal>
+                  <goal>artifacts</goal>
                 </goals>
+                <configuration>
+                  <algorithms>
+                    <algorithm>SHA-512</algorithm>
+                  </algorithms>
+                  <!-- https://maven.apache.org/apache-resource-bundles/#source-release-assembly-descriptor -->
+                  <includeClassifiers>source-release,source-release-tar</includeClassifiers>
+                  <csvSummary>false</csvSummary>
+                  <!-- attach SHA-512 checksum as well to upload to Maven Staging Repo, 
+                       as this eases uploading from stage to dist and doesn't do harm in Maven Central -->
+                  <attachChecksums>true</attachChecksums>
+                </configuration>
               </execution>
             </executions>
-            <configuration>
-              <algorithms>
-                <algorithm>SHA-512</algorithm>
-              </algorithms>
-              <csvSummary>false</csvSummary>
-              <fileSets>
-                <fileSet>
-                  <directory>${project.build.directory}</directory>
-                  <includes>
-                    <include>${project.artifactId}-${project.version}-source-release.zip</include>
-                    <include>${project.artifactId}-${project.version}-source-release.tar*</include>
-                  </includes>
-                </fileSet>
-              </fileSets>
-              <failIfNoFiles>false</failIfNoFiles><!-- usually, no file to do checksum: don't consider error -->
-            </configuration>
           </plugin>
         </plugins>
       </build>
