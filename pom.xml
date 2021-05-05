@@ -424,19 +424,6 @@ under the License.
               </execution>
             </executions>
           </plugin>
-          <!-- We want to sign the artifact, the POM, and all attached artifacts -->
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>sign-release-artifacts</id>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
           <!-- calculate checksums of source release for Apache dist area -->
           <plugin>
             <groupId>net.nicoulaj.maven.plugins</groupId>
@@ -454,10 +441,30 @@ under the License.
                   </algorithms>
                   <!-- https://maven.apache.org/apache-resource-bundles/#source-release-assembly-descriptor -->
                   <includeClassifiers>source-release</includeClassifiers>
+                  <excludeMainArtifact>true</excludeMainArtifact>
                   <csvSummary>false</csvSummary>
                   <!-- attach SHA-512 checksum as well to upload to Maven Staging Repo, 
                        as this eases uploading from stage to dist and doesn't do harm in Maven Central -->
                   <attachChecksums>true</attachChecksums>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <!-- We want to sign the artifact, the POM, and all attached artifacts -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>sign-release-artifacts</id>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+                <configuration>
+                  <!-- don't sign SHA-512 checksums (in addition to default MD5 and SHA1) -->
+                  <excludes>
+                    <exclude>**/*.sha512</exclude>
+                  </excludes>
                 </configuration>
               </execution>
             </executions>
