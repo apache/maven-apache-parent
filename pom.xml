@@ -462,6 +462,7 @@ under the License.
                 </goals>
                 <configuration>
                   <!-- don't sign SHA-512 checksums (in addition to default MD5 and SHA1) -->
+                  <!-- This does not work due to https://issues.apache.org/jira/browse/MGPG-66 -->
                   <excludes>
                     <exclude>**/*.sha512</exclude>
                   </excludes>
