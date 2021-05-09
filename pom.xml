@@ -175,7 +175,7 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-gpg-plugin</artifactId>
-          <version>1.6</version>
+          <version>3.0.1</version>
           <configuration>
             <gpgArguments>
               <arg>--digest-algo=SHA512</arg>
@@ -450,7 +450,7 @@ under the License.
               </execution>
             </executions>
           </plugin>
-          <!-- We want to sign the artifact, the POM, and all attached artifacts -->
+          <!-- We want to sign the artifact, the POM, and all attached artifacts (except for SHA-512 checksum) -->
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
@@ -460,13 +460,6 @@ under the License.
                 <goals>
                   <goal>sign</goal>
                 </goals>
-                <configuration>
-                  <!-- don't sign SHA-512 checksums (in addition to default MD5 and SHA1) -->
-                  <!-- This does not work due to https://issues.apache.org/jira/browse/MGPG-66 -->
-                  <excludes>
-                    <exclude>**/*.sha512</exclude>
-                  </excludes>
-                </configuration>
               </execution>
             </executions>
           </plugin>
