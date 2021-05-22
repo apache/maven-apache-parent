@@ -435,6 +435,8 @@ under the License.
                 <goals>
                   <goal>artifacts</goal>
                 </goals>
+                <!-- execute prior to maven-gpg-plugin:sign due to https://github.com/nicoulaj/checksum-maven-plugin/issues/112 -->
+                <phase>post-integration-test</phase>
                 <configuration>
                   <algorithms>
                     <algorithm>SHA-512</algorithm>
