@@ -424,7 +424,35 @@ under the License.
               </execution>
             </executions>
           </plugin>
-          <!-- We want to sign the artifact, the POM, and all attached artifacts -->
+          <!-- calculate checksums of source release for Apache dist area -->
+          <plugin>
+            <groupId>net.nicoulaj.maven.plugins</groupId>
+            <artifactId>checksum-maven-plugin</artifactId>
+            <version>1.10</version>
+            <executions>
+              <execution>
+                <id>source-release-checksum</id>
+                <goals>
+                  <goal>artifacts</goal>
+                </goals>
+                <!-- execute prior to maven-gpg-plugin:sign due to https://github.com/nicoulaj/checksum-maven-plugin/issues/112 -->
+                <phase>post-integration-test</phase>
+                <configuration>
+                  <algorithms>
+                    <algorithm>SHA-512</algorithm>
+                  </algorithms>
+                  <!-- https://maven.apache.org/apache-resource-bundles/#source-release-assembly-descriptor -->
+                  <includeClassifiers>source-release</includeClassifiers>
+                  <excludeMainArtifact>true</excludeMainArtifact>
+                  <csvSummary>false</csvSummary>
+                  <!-- attach SHA-512 checksum as well to upload to Maven Staging Repo, 
+                       as this eases uploading from stage to dist and doesn't do harm in Maven Central -->
+                  <attachChecksums>true</attachChecksums>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <!-- We want to sign the artifact, the POM, and all attached artifacts (except for SHA-512 checksum) -->
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
@@ -436,36 +464,6 @@ under the License.
                 </goals>
               </execution>
             </executions>
-          </plugin>
-          <!-- calculate checksums of source release for Apache dist area -->
-          <plugin>
-            <groupId>net.nicoulaj.maven.plugins</groupId>
-            <artifactId>checksum-maven-plugin</artifactId>
-            <version>1.9</version>
-            <executions>
-              <execution>
-                <id>source-release-checksum</id>
-                <goals>
-                  <goal>files</goal>
-                </goals>
-              </execution>
-            </executions>
-            <configuration>
-              <algorithms>
-                <algorithm>SHA-512</algorithm>
-              </algorithms>
-              <csvSummary>false</csvSummary>
-              <fileSets>
-                <fileSet>
-                  <directory>${project.build.directory}</directory>
-                  <includes>
-                    <include>${project.artifactId}-${project.version}-source-release.zip</include>
-                    <include>${project.artifactId}-${project.version}-source-release.tar*</include>
-                  </includes>
-                </fileSet>
-              </fileSets>
-              <failIfNoFiles>false</failIfNoFiles><!-- usually, no file to do checksum: don't consider error -->
-            </configuration>
           </plugin>
         </plugins>
       </build>
