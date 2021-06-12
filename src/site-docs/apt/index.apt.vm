@@ -139,6 +139,10 @@ The <<<apache-release>>> Profile
  * <<<$\{artifactId\}-$\{version\}-source-release.[zip|tar.gz].sha512>>>: their checksum(s)
 
  * <<<$\{artifactId\}-$\{version\}-source-release.[zip|tar.gz].asc>>>: their signature(s)
+ 
+ []
+
+ Those files also end up in the staging repository and Maven Central.
 
 Settings Configuration
   
