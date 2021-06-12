@@ -66,6 +66,8 @@ Apache Software Foundation Parent POM
     the complete list with versions. 
     
   ** The compiler plugin is set to default to <<Java $context.get("maven.compiler.source")>> and $context.get("project.build.sourceEncoding") source.
+
+     Notice that some plugins require Java 8 to run.
     
   ** The jar plugin is set to add default specification and implementation entries.
     
