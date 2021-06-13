@@ -88,6 +88,7 @@ under the License.
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
     <gpg.useagent>true</gpg.useagent>
     <minimalMavenBuildVersion>3.1.1</minimalMavenBuildVersion>
+    <minimalJavaBuildVersion>1.8</minimalJavaBuildVersion>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <surefire.version>2.22.2</surefire.version><!-- for surefire, failsafe and surefire-report -->
@@ -335,6 +336,19 @@ under the License.
                 <requireMavenVersion>
                   <version>${minimalMavenBuildVersion}</version>
                 </requireMavenVersion>
+              </rules>
+            </configuration>
+          </execution>
+          <execution>
+            <id>enforce-java-version</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireJavaVersion>
+                  <version>${minimalJavaBuildVersion}</version>
+                </requireJavaVersion>
               </rules>
             </configuration>
           </execution>
