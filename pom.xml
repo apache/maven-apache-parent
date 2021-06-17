@@ -370,6 +370,44 @@ under the License.
   </build>
 
   <profiles>
+    <profile>
+      <id>jdk9-or-higher</id>
+      <activation>
+        <!-- Syntax according to http://maven.apache.org/enforcer/enforcer-rules/versionRanges.html -->
+        <jdk>[9,)</jdk>
+      </activation>
+      <build>
+        <plugins>
+          <!-- Set property "maven.compiler.release" for m-compiler-p with 
+          https://www.mojohaus.org/build-helper-maven-plugin/regex-property-mojo.html.
+          "maven.compiler.release" sets API classpath, source and target, see 
+          https://docs.oracle.com/javase/9/tools/javac.htm#GUID-AEEC9F07-CB49-4E96-8BC7-BCC2C7F725C9__GUID-D343F6B4-3FDD-43A8-AD24-43DD70214471.
+          This takes precedence over "maven.compile.source" and "maven.compiler.target"
+          (https://github.com/codehaus-plexus/plexus-compiler/blob/0a0aab0b8ef16ea91460ff9878877137e5ddc2bc/plexus-compilers/plexus-compiler-javac/src/main/java/org/codehaus/plexus/compiler/javac/JavacCompiler.java#L344) -->
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>build-helper-maven-plugin</artifactId>
+            <version>3.2.0</version>
+            <executions>
+              <execution>
+                <id>set-compiler-release-parameter</id>
+                <goals>
+                  <goal>regex-property</goal>
+                </goals>
+                <configuration>
+                  <name>maven.compiler.release</name>
+                  <!-- strip leading "1." from maven.compiler.target -->
+                  <regex>1\.(.*)</regex>
+                  <replacement>$1</replacement>
+                  <value>${maven.compiler.target}</value>
+                  <failIfNoMatch>false</failIfNoMatch>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
     <!-- START SNIPPET: release-profile -->
     <profile>
       <id>apache-release</id>
