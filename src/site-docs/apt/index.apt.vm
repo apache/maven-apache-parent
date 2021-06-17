@@ -54,8 +54,8 @@ Apache Software Foundation Parent POM
      instance at
      {{<<<https://repository.apache.org/service/local/staging/deploy/maven2>>>}}
      and snapshots to
-     {{<<<https://repository.apache.org/content/repositories/snapshots>>>}}. Note
-     that there are POM parameters (<<<distMgmtSnapshotsName>>> and <<<distMgmtSnapshotsUrl>>>)
+     {{<<<https://repository.apache.org/content/repositories/snapshots>>>}}.\
+     Note that there are POM properties (<<<distMgmtSnapshotsName>>> and <<<distMgmtSnapshotsUrl>>>)
      that you can override to change the snapshot location. 
     
   ** <<mailingLists>>: The POM sets up generic Apache announcement
