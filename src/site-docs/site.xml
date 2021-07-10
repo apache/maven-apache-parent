@@ -61,10 +61,10 @@ under the License.
       <item name="Download" href="download.html"/>
     </menu>
 
-    <menu ref="reports" inherit="bottom" />
+    <menu ref="reports" />
 
-    <!-- Copied from Maven parent's site.xml -->
-    <menu name="Maven Projects" inherit="bottom">
+    <!-- Copied from Maven parent's site.xml, removing inherit="bottom" -->
+    <menu name="Maven Projects">
       <item name="Archetype"         href="https://maven.apache.org/archetype/index.html" />
       <item name="Artifact Resolver" href="https://maven.apache.org/resolver/index.html" />
       <item name="Doxia"             href="https://maven.apache.org/doxia/index.html" />
@@ -81,7 +81,7 @@ under the License.
       <item name="Surefire"          href="https://maven.apache.org/surefire/index.html" />
       <item name="Wagon"             href="https://maven.apache.org/wagon/index.html" />
     </menu>
-    <menu name="ASF" inherit="bottom">
+    <menu name="ASF">
       <item name="How Apache Works"  href="https://www.apache.org/foundation/how-it-works.html"/> 
       <item name="Foundation"        href="https://www.apache.org/foundation/"/>
       <item name="Sponsoring Apache" href="https://www.apache.org/foundation/sponsorship.html"/>
