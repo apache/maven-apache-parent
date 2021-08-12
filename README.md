@@ -22,8 +22,7 @@ Contributing to [Apache Software Foundation Parent POM](https://maven.apache.org
 [![Maven Central](https://img.shields.io/maven-central/v/org.apache/apache.svg?label=Maven%20Central)](https://search.maven.org/artifact/org.apache/apache)
 [![Jenkins Status](https://img.shields.io/jenkins/s/https/ci-maven.apache.org/job/Maven/job/maven-box/job/maven-apache-parent/job/master.svg)][build]
 
-
-You have found a bug or you have an idea for a cool new feature? Contributing
+Have you found a bug or have an idea for a cool new feature? Contributing
 code is a great way to give something back to the open source community. Before
 you dig right into the code, there are a few guidelines that we need
 contributors to follow so that we can have a chance of keeping on top of
@@ -34,8 +33,8 @@ Getting Started
 
 + Make sure you have a [JIRA account](https://issues.apache.org/jira/).
 + Make sure you have a [GitHub account](https://github.com/signup/free).
-+ If you're planning to implement a new feature, it makes sense to discuss your changes 
-  on the [dev list][ml-list] first. 
++ If you're planning to implement a new feature, please discuss your changes 
+  on the [developer mailing list][ml-list] first. 
   This way you can make sure you're not wasting your time on something that isn't 
   considered to be in Apache Maven's scope.
 + Submit a ticket for your issue, assuming one does not already exist.
