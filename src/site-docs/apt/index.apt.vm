@@ -98,7 +98,7 @@ Apache Software Foundation Parent POM
 
 +------+
   <properties>
-    <project.build.outputTimestamp>1</project.build.outputTimestamp>
+    <project.build.outputTimestamp>10</project.build.outputTimestamp>
   </properties>
 +------+
 
