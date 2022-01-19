@@ -92,9 +92,20 @@ under the License.
     <maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <surefire.version>2.22.2</surefire.version><!-- for surefire, failsafe and surefire-report -->
+    <maven.plugin.tools.version>3.6.4</maven.plugin.tools.version><!-- for m-plugin-p and maven-plugin-annotations -->
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
     <project.build.outputTimestamp>2021-07-14T15:10:38Z</project.build.outputTimestamp>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.apache.maven.plugin-tools</groupId>
+        <artifactId>maven-plugin-annotations</artifactId>
+        <version>${maven.plugin.tools.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <repositories>
     <repository>
@@ -220,7 +231,7 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-plugin-plugin</artifactId>
-          <version>3.6.2</version>
+          <version>${maven.plugin.tools.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
