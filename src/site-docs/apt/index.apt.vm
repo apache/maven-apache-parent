@@ -164,7 +164,7 @@ History
 
 #if( $project.version.endsWith( "SNAPSHOT" ) )
   master: {{{https://github.com/apache/maven-apache-parent/tree/master/pom.xml}$project.version}}
-  ({{{https://github.com/apache/maven-apache-parent/compare/apache-23...master}diff}})
+  ({{{https://github.com/apache/maven-apache-parent/compare/apache-24...master}diff}})
 #end
 #macro ( display $version $date )
 #**##set( $prev = $version - 1 )
