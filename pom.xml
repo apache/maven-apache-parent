@@ -87,7 +87,7 @@ under the License.
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
     <gpg.useagent>true</gpg.useagent>
-    <minimalMavenBuildVersion>3.1.1</minimalMavenBuildVersion>
+    <minimalMavenBuildVersion>3.2.5</minimalMavenBuildVersion>
     <minimalJavaBuildVersion>1.8</minimalJavaBuildVersion>
     <maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
