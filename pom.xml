@@ -25,7 +25,7 @@ under the License.
   <!-- for more information, see the documentation of this POM: http://maven.apache.org/pom/asf/ -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
-  <version>26-SNAPSHOT</version>
+  <version>26</version>
   <packaging>pom</packaging>
 
   <name>The Apache Software Foundation</name>
@@ -63,7 +63,7 @@ under the License.
     <connection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</connection>
     <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</developerConnection>
     <url>https://github.com/apache/maven-apache-parent/tree/${project.scm.tag}</url>
-    <tag>HEAD</tag>
+    <tag>apache-26</tag>
   </scm>
 
   <distributionManagement>
@@ -94,7 +94,7 @@ under the License.
     <surefire.version>2.22.2</surefire.version><!-- for surefire, failsafe and surefire-report -->
     <maven.plugin.tools.version>3.6.4</maven.plugin.tools.version><!-- for m-plugin-p and maven-plugin-annotations -->
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
-    <project.build.outputTimestamp>2022-02-17T22:08:27Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2022-04-09T17:39:22Z</project.build.outputTimestamp>
   </properties>
 
   <dependencyManagement>
