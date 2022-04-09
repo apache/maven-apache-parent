@@ -58,7 +58,7 @@ under the License.
   </issueManagement>
   <ciManagement>
     <system>Jenkins</system>
-    <url>https://ci-maven.apache.org/job/Maven/job/maven-box/job/maven-parent/</url>
+    <url>https://ci-maven.apache.org/job/Maven/job/maven-box/job/maven-apache-parent/</url>
     <notifiers>
       <notifier>
         <type>mail</type>
