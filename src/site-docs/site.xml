@@ -104,6 +104,7 @@ under the License.
     <menu name="ASF">
       <item name="How Apache Works"  href="https://www.apache.org/foundation/how-it-works.html"/> 
       <item name="Foundation"        href="https://www.apache.org/foundation/"/>
+      <item name="Data Privacy"      href="https://privacy.apache.org/policies/privacy-policy-public.html"/>
       <item name="Sponsoring Apache" href="https://www.apache.org/foundation/sponsorship.html"/>
       <item name="Thanks"            href="https://www.apache.org/foundation/thanks.html"/>
     </menu>
