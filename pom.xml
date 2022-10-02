@@ -404,7 +404,7 @@ under the License.
                   <descriptorRefs>
                     <descriptorRef>${sourceReleaseAssemblyDescriptor}</descriptorRef>
                   </descriptorRefs>
-                  <tarLongFileMode>posix</tarLongFileMode>
+                  <tarLongFileMode>${assembly.tarLongFileMode}</tarLongFileMode>
                 </configuration>
               </execution>
             </executions>
