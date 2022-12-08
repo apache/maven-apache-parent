@@ -15,10 +15,11 @@
 #  limitations under the License.
 #
 # see https://s.apache.org/asfyaml
-github:
-  description: "Apache Software Foundation Parent POM"
-  homepage: https://maven.apache.org/pom/asf/
-  labels:
-    - java
-    - build-management
-    - maven
+
+Github:
+Description: "Apache Software Foundation Parent POM"
+Homepage: https://maven.apache.org/pom/asf/
+Labels:
+     - java
+      - build-management
+        - maven
