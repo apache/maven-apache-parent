@@ -41,9 +41,9 @@ Apache Software Foundation Parent POM
 
  * Top-level project properties:
     
-  ** <<license>>: Apache License, version 2.0.
+  ** <<license>>: {{{https://www.apache.org/licenses/LICENSE-2.0.txt}Apache-2.0}}.
     
-  ** <<organization>>: The Apache Software Foundation
+  ** <<organization>>: ${project.organization.name}
     
   ** <<url>>: {{<<<https://www.apache.org/>>>}}. You should override this.
     
@@ -55,8 +55,8 @@ Apache Software Foundation Parent POM
      {{<<<https://repository.apache.org/service/local/staging/deploy/maven2>>>}}
      and snapshots to
      {{<<<https://repository.apache.org/content/repositories/snapshots>>>}}.\
-     Note that there are POM properties (<<<distMgmtSnapshotsName>>> and <<<distMgmtSnapshotsUrl>>>)
-     that you can override to change the snapshot location. 
+     Note that there are <<<distMgmt(Releases|Snapshots)(Name|Url)>>> POM properties (<<<distMgmtReleasesName>>>, <<<distMgmtReleasesUrl>>>, <<<distMgmtSnapshotsName>>> and <<<distMgmtSnapshotsUrl>>>)
+     that you can override to change the names and locations.
     
   ** <<mailingLists>>: The POM sets up generic Apache announcement
      lists. You should override this.
@@ -73,10 +73,9 @@ Apache Software Foundation Parent POM
   ** The resources plugin is set for $context.get("project.build.sourceEncoding").
     
   ** The release plugin is set, via the
-    \<arguments\> configuration element, to enable the
-    <<apache-release>> profile for <<all>> executions and to disable
-    \<useReleaseProfiles\>.  You can remove this with an empty
-    \<arguments/\> element in the configuration of the release plugin.
+    \<useReleaseProfiles\> configuration element, to enable the
+    <<apache-release>> profile during <<<release:perform>>> execution and to disable
+    \<useReleaseProfiles\>.
 
  * <<plugins>>: The plugins section configures three executions:
     
@@ -94,7 +93,7 @@ Apache Software Foundation Parent POM
 
  * <<Reproducible Builds>>: since version 22 of this parent POM, managed plugins versions are expected to be compliant with {{{https://reproducible-builds.org/}Reproducible Builds}}.
 
-   To choose the timestamp in output archives, projects using this POM as parent should define a property in their root POM:
+   To choose their own release timestamp in output archives, projects using this POM as parent should override with a property in their root POM:
 
 +------+
   <properties>
