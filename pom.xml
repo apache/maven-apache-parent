@@ -93,7 +93,7 @@ under the License.
     <minimalJavaBuildVersion>1.8</minimalJavaBuildVersion>
     <maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
-    <surefire.version>2.22.2</surefire.version><!-- for surefire, failsafe and surefire-report -->
+    <surefire.version>3.0.0</surefire.version><!-- for surefire, failsafe and surefire-report -->
     <maven.plugin.tools.version>3.8.1</maven.plugin.tools.version><!-- for m-plugin-p and maven-plugin-annotations -->
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
     <project.build.outputTimestamp>2022-12-11T19:18:25Z</project.build.outputTimestamp>
