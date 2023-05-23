@@ -96,6 +96,34 @@ under the License.
     <surefire.version>3.1.0</surefire.version><!-- for surefire, failsafe and surefire-report -->
     <maven.plugin.tools.version>3.9.0</maven.plugin.tools.version><!-- for m-plugin-p and maven-plugin-annotations -->
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
+
+    <!-- plugins versions -->
+    <apacheRatPluginVersion>0.15</apacheRatPluginVersion>
+    <mavenAntrunPluginVersion>3.1.0</mavenAntrunPluginVersion>
+    <mavenAssemblyPluginVersion>3.6.0</mavenAssemblyPluginVersion>
+    <mavenCleanPluginVersion>3.2.0</mavenCleanPluginVersion>
+    <mavenCompilerPluginVersion>3.11.0</mavenCompilerPluginVersion>
+    <mavenDependencyPluginVersion>3.6.0</mavenDependencyPluginVersion>
+    <mavenDeployPluginVersion>3.1.1</mavenDeployPluginVersion>
+    <mavenEarPluginVersion>3.3.0</mavenEarPluginVersion>
+    <mavenEnforcerPluginVersion>3.3.0</mavenEnforcerPluginVersion>
+    <mavenGpgPluginVersion>3.1.0</mavenGpgPluginVersion>
+    <mavenHelpPluginVersion>3.4.0</mavenHelpPluginVersion>
+    <mavenInstallPluginVersion>3.1.1</mavenInstallPluginVersion>
+    <mavenInvokerPluginVersion>3.5.1</mavenInvokerPluginVersion>
+    <mavenJarPluginVersion>3.3.0</mavenJarPluginVersion>
+    <mavenJavadocPluginVersion>3.5.0</mavenJavadocPluginVersion>
+    <mavenProjectInfoReportsPluginVersion>3.4.3</mavenProjectInfoReportsPluginVersion>
+    <mavenReleasePluginVersion>3.0.0</mavenReleasePluginVersion>
+    <mavenRemoteResourcesPluginVersion>3.1.0</mavenRemoteResourcesPluginVersion>
+    <mavenResourcesPluginVersion>3.3.1</mavenResourcesPluginVersion>
+    <mavenScmPluginVersion>2.0.1</mavenScmPluginVersion>
+    <mavenScmPublishPluginVersion>3.2.1</mavenScmPublishPluginVersion>
+    <mavenShadePluginVersion>3.4.1</mavenShadePluginVersion>
+    <mavenSitePluginVersion>3.12.1</mavenSitePluginVersion>
+    <mavenSourcePluginVersion>3.3.0</mavenSourcePluginVersion>
+    <mavenWarPluginVersion>3.3.2</mavenWarPluginVersion>
+
     <project.build.outputTimestamp>2022-12-11T19:18:25Z</project.build.outputTimestamp>
   </properties>
 
@@ -137,42 +165,42 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-antrun-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>${mavenAntrunPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>3.6.0</version>
+          <version>${mavenAssemblyPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>3.2.0</version>
+          <version>${mavenCleanPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.11.0</version>
+          <version>${mavenCompilerPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
-          <version>3.6.0</version>
+          <version>${mavenDependencyPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>3.1.1</version>
+          <version>${mavenDeployPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-ear-plugin</artifactId>
-          <version>3.3.0</version>
+          <version>${mavenEarPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.3.0</version>
+          <version>${mavenEnforcerPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -182,7 +210,7 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-gpg-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>${mavenGpgPluginVersion}</version>
           <configuration>
             <gpgArguments>
               <arg>--digest-algo=SHA512</arg>
@@ -192,22 +220,22 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-help-plugin</artifactId>
-          <version>3.4.0</version>
+          <version>${mavenHelpPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-install-plugin</artifactId>
-          <version>3.1.1</version>
+          <version>${mavenInstallPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-invoker-plugin</artifactId>
-          <version>3.5.1</version>
+          <version>${mavenInvokerPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>3.3.0</version>
+          <version>${mavenJarPluginVersion}</version>
           <configuration>
             <archive>
               <manifest>
@@ -220,7 +248,7 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.5.0</version>
+          <version>${mavenJavadocPluginVersion}</version>
           <configuration>
             <notimestamp>true</notimestamp><!-- avoid noise for svn/gitpubsub -->
           </configuration>
@@ -238,7 +266,7 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>3.4.3</version>
+          <version>${mavenProjectInfoReportsPluginVersion}</version>
           <configuration>
             <pluginManagementExcludes>
               <exclude>org.eclipse.m2e:lifecycle-mapping</exclude>
@@ -249,7 +277,7 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>${mavenReleasePluginVersion}</version>
           <configuration>
             <useReleaseProfile>false</useReleaseProfile>
             <goals>deploy</goals>
@@ -260,32 +288,32 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-remote-resources-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>${mavenRemoteResourcesPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.3.1</version>
+          <version>${mavenResourcesPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-scm-plugin</artifactId>
-          <version>2.0.1</version>
+          <version>${mavenScmPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-scm-publish-plugin</artifactId>
-          <version>3.2.1</version>
+          <version>${mavenScmPublishPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>3.12.1</version>
+          <version>${mavenSitePluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
-          <version>3.3.0</version>
+          <version>${mavenSourcePluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -300,17 +328,17 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
-          <version>3.3.2</version>
+          <version>${mavenWarPluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-shade-plugin</artifactId>
-          <version>3.4.1</version>
+          <version>${mavenShadePluginVersion}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.rat</groupId>
           <artifactId>apache-rat-plugin</artifactId>
-          <version>0.15</version>
+          <version>${apacheRatPluginVersion}</version>
         </plugin>
       </plugins>
     </pluginManagement>
