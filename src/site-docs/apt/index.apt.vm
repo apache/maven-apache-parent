@@ -64,7 +64,15 @@ Apache Software Foundation Parent POM
  * <<pluginManagement>>: The plugin management section specifies versions
     of a list of plugins. See the {{{./plugin-management.html}Plugin Management report}} for
     the complete list with versions. 
-    
+
+  ** There are used properties <<<version.\<artifactId\>>>> for defining each version of plugin, except:
+
+   *** <<<version.maven-plugin-tools>>> is used for: <maven-plugin-annotations>, <maven-plugin-plugin> and <maven-plugin-report-plugin>
+
+   *** <<<version.maven-surefire>>> is used for: <maven-failsafe-plugin>, <maven-surefire-plugin> and <maven-surefire-report-plugin>
+
+   []
+
   ** The compiler plugin is set to default to <<Java $context.get("maven.compiler.target")>> (<<<maven.compiler.target>>> property)
      and $context.get("project.build.sourceEncoding") source (<<<project.build.sourceEncoding>>> property).
     
