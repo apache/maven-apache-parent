@@ -134,8 +134,6 @@ The <<<apache-release>>> Profile
     If you want to avoid this default assembly execution to provide your own mechanism to produce the source release archive,
     you can disable the execution by configuring <<<skipAssembly>>> parameter for this <<<source-release-assembly>>> execution id
 
- * maven-deploy-plugin: configured to activate <<<updateReleaseInfo>>>
-
  * maven-source-plugin: configured to build and attach a source jar.
 
  * maven-javadoc-plugin: configured to build and attach a javadoc jar.
@@ -173,7 +171,7 @@ History
 
 #if( $project.version.endsWith( "SNAPSHOT" ) )
   master: {{{https://github.com/apache/maven-apache-parent/tree/master/pom.xml}$project.version}}
-  ({{{https://github.com/apache/maven-apache-parent/compare/apache-29...master}diff}})
+  ({{{https://github.com/apache/maven-apache-parent/compare/apache-30...master}diff}})
 #end
 #macro ( display $version $date )
 #**##set( $prev = $version - 1 )
@@ -183,6 +181,8 @@ History
 
 *--------------+------------+
 || <<Version>> || <<Release Date>> ||
+*--------------+------------+
+#display( 30, '2023-06-11' )
 *--------------+------------+
 #display( 29, '2022-12-11' )
 *--------------+------------+
