@@ -67,6 +67,8 @@ Apache Software Foundation Parent POM
 
   ** There are used properties <<<version.\<artifactId\>>>> for defining each version of plugin, except:
 
+   *** <<<version.apache-resource-bundles>>> is used for: <apache-jar-resource-bundle> and <apache-source-release-assembly-descriptor>
+
    *** <<<version.maven-plugin-tools>>> is used for: <maven-plugin-annotations>, <maven-plugin-plugin> and <maven-plugin-report-plugin>
 
    *** <<<version.maven-surefire>>> is used for: <maven-failsafe-plugin>, <maven-surefire-plugin> and <maven-surefire-report-plugin>
@@ -87,7 +89,7 @@ Apache Software Foundation Parent POM
 
  * <<plugins>>: The plugins section configures three executions:
     
-  ** maven-remote-resources-plugin for {{{/apache-resource-bundles/}org.apache:apache-jar-resource-bundle:1.4}}.
+  ** maven-remote-resources-plugin for {{{/apache-resource-bundles/jar/}org.apache.apache.resources:apache-jar-resource-bundle:$context.get("version.apache-resource-bundles")}}.
 
   ** maven-site-plugin:attach-descriptor
 
@@ -123,7 +125,7 @@ The <<<apache-release>>> Profile
    The profile includes the following plugins:
 
  * maven-assembly-plugin:
-    {{{/apache-resource-bundles/}org.apache.apache.resources:apache-source-release-assembly-descriptor:1.0.6}}
+    {{{/apache-resource-bundles/source-release/}org.apache.apache.resources:apache-source-release-assembly-descriptor:$context.get("version.apache-resource-bundles")}}
     is added as dependency, and an execution is configured with <<<source-release-assembly>>> id.\
     The plugin is configured to take a <<<descriptorRef>>> name from the
     <<sourceReleaseAssemblyDescriptor>> property, which by default is

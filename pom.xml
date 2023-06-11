@@ -101,7 +101,7 @@ under the License.
     <project.build.outputTimestamp>2022-12-11T19:18:25Z</project.build.outputTimestamp>
 
     <version.apache-rat-plugin>0.15</version.apache-rat-plugin>
-    <version.apache-source-release-assembly-descriptor>1.5</version.apache-source-release-assembly-descriptor>
+    <version.apache-resource-bundles>1.5</version.apache-resource-bundles>
     <version.checksum-maven-plugin>1.11</version.checksum-maven-plugin>
     <version.maven-antrun-plugin>3.1.0</version.maven-antrun-plugin>
     <version.maven-assembly-plugin>3.6.0</version.maven-assembly-plugin>
@@ -359,7 +359,7 @@ under the License.
             </goals>
             <configuration>
               <resourceBundles>
-                <resourceBundle>org.apache:apache-jar-resource-bundle:1.4</resourceBundle>
+                <resourceBundle>org.apache.apache.resources:apache-jar-resource-bundle:${version.apache-resource-bundles}</resourceBundle>
               </resourceBundles>
             </configuration>
           </execution>
@@ -428,7 +428,7 @@ under the License.
               <dependency>
                 <groupId>org.apache.apache.resources</groupId>
                 <artifactId>apache-source-release-assembly-descriptor</artifactId>
-                <version>${version.apache-source-release-assembly-descriptor}</version>
+                <version>${version.apache-resource-bundles}</version>
               </dependency>
             </dependencies>
             <executions>
