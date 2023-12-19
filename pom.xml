@@ -107,7 +107,7 @@ under the License.
     <version.maven-assembly-plugin>3.6.0</version.maven-assembly-plugin>
     <version.maven-clean-plugin>3.3.2</version.maven-clean-plugin>
     <version.maven-checkstyle-plugin>3.3.1</version.maven-checkstyle-plugin>
-    <version.maven-compiler-plugin>3.11.0</version.maven-compiler-plugin>
+    <version.maven-compiler-plugin>3.12.0</version.maven-compiler-plugin>
     <version.maven-dependency-plugin>3.6.1</version.maven-dependency-plugin>
     <version.maven-deploy-plugin>3.1.1</version.maven-deploy-plugin>
     <version.maven-ear-plugin>3.3.0</version.maven-ear-plugin>
