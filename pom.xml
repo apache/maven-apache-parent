@@ -68,20 +68,22 @@ under the License.
 
   <distributionManagement>
     <repository>
-      <id>apache.releases.https</id>
+      <id>${distMgmtReleasesId}</id>
       <name>${distMgmtReleasesName}</name>
       <url>${distMgmtReleasesUrl}</url>
     </repository>
     <snapshotRepository>
-      <id>apache.snapshots.https</id>
+      <id>${distMgmtSnapshotsId}</id>
       <name>${distMgmtSnapshotsName}</name>
       <url>${distMgmtSnapshotsUrl}</url>
     </snapshotRepository>
   </distributionManagement>
 
   <properties>
+    <distMgmtReleasesId>apache.releases.https</distMgmtReleasesId>
     <distMgmtReleasesName>Apache Release Distribution Repository</distMgmtReleasesName>
     <distMgmtReleasesUrl>https://repository.apache.org/service/local/staging/deploy/maven2</distMgmtReleasesUrl>
+    <distMgmtSnapshotsId>apache.snapshots.https</distMgmtSnapshotsId>
     <distMgmtSnapshotsName>Apache Development Snapshot Repository</distMgmtSnapshotsName>
     <distMgmtSnapshotsUrl>https://repository.apache.org/content/repositories/snapshots</distMgmtSnapshotsUrl>
     <organization.logo>https://www.apache.org/images/asf_logo_wide_2016.png</organization.logo>
