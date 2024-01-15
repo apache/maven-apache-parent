@@ -404,6 +404,26 @@ under the License.
               </rules>
             </configuration>
           </execution>
+          <execution>
+            <id>enforce-maven.compiler.target-version</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireProperty>
+                  <property>maven.compiler.target</property>
+                  <regex>(?!1\.).*</regex>
+                  <regexMessage>The value of property maven.compiler.target must not start with "1.", use for example "8" instead of "1.8"!</regexMessage>
+                </requireProperty>
+                <requireProperty>
+                  <property>maven.compiler.source</property>
+                  <regex>(?!1\.).*</regex>
+                  <regexMessage>The value of property maven.compiler.source must not start with "1.", use for example "8" instead of "1.8"!</regexMessage>
+                </requireProperty>
+              </rules>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
       <plugin>
