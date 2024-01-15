@@ -63,7 +63,7 @@ There are some guidelines which will make applying PRs easier for us:
  Optional supplemental description.
 ```
 + Make sure you have added the necessary tests (JUnit/IT) for your changes.
-+ Run all the tests with `mvn -Prun-its verify` to assure nothing else was accidentally broken.
++ Update the [site documentation](https://maven.apache.org/pom/asf/) accordingly in `src/site-docs` and build it via `mvn site -f site-pom.xml` (uses a dedicated POM to not be inherited)
 + Submit a pull request to the repository in the Apache organization.
 + Update your JIRA ticket and include a link to the pull request in the ticket.
 
