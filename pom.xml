@@ -94,7 +94,7 @@ under the License.
     <minimalMavenBuildVersion>3.6.3</minimalMavenBuildVersion>
     <minimalJavaBuildVersion>1.8</minimalJavaBuildVersion>
     <maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.target>7</maven.compiler.target><!-- use version numbers without the "1." prefix (supported since javac 8) -->
     <surefire.version>3.2.2</surefire.version><!-- for surefire, failsafe and surefire-report -->
     <maven.plugin.tools.version>3.10.2</maven.plugin.tools.version><!-- for m-plugin-p and maven-plugin-annotations -->
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
@@ -525,6 +525,17 @@ under the License.
       </build>
     </profile>
     <!-- END SNIPPET: release-profile -->
+    <profile>
+      <id>jdk9+</id>
+      <activation>
+        <!-- this does not support toolchains, https://issues.apache.org/jira/browse/MNG-6943 -->
+        <jdk>[9,)</jdk>
+      </activation>
+      <properties>
+        <!-- https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-release.html, affects m-compiler-p and m-javadoc-p -->
+        <maven.compiler.release>${maven.compiler.target}</maven.compiler.release>
+      </properties>
+    </profile>
     <profile>
       <id>only-eclipse</id>
       <activation>
