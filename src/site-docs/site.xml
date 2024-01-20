@@ -19,8 +19,8 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<project xmlns="http://maven.apache.org/DECORATION/1.8.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0 http://maven.apache.org/xsd/decoration-1.8.0.xsd">
+<project xmlns="http://maven.apache.org/DECORATION/1.8.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.1 https://maven.apache.org/xsd/decoration-1.8.1.xsd">
 
   <bannerLeft>
     <name>${project.name}</name>
@@ -94,7 +94,7 @@ under the License.
       <item name="Wagon"             href="https://maven.apache.org/wagon/index.html" />
     </menu>
     <menu name="ASF">
-      <item name="How Apache Works"  href="https://www.apache.org/foundation/how-it-works.html"/> 
+      <item name="How Apache Works"  href="https://www.apache.org/foundation/how-it-works.html"/>
       <item name="Foundation"        href="https://www.apache.org/foundation/"/>
       <item name="Data Privacy"      href="https://privacy.apache.org/policies/privacy-policy-public.html"/>
       <item name="Sponsoring Apache" href="https://www.apache.org/foundation/sponsorship.html"/>
