@@ -75,8 +75,10 @@ Apache Software Foundation Parent POM
 
    []
 
-  ** The compiler plugin is set to default to <<Java $context.get("maven.compiler.target")>> (<<<maven.compiler.target>>> property)
-     and $context.get("project.build.sourceEncoding") source (<<<project.build.sourceEncoding>>> property).
+  ** The compiler plugin is set target <<Java $context.get("maven.compiler.target")>> (<<<maven.compiler.target>>> property)
+     and assume $context.get("project.build.sourceEncoding") source encoding (<<<project.build.sourceEncoding>>> property). When being executed
+     with JDK 9 or newer also <<<maven.compiler.release>>> is set to the value of property <<<maven.compiler.target>>>.
+     Therefore its value must not start with <<<1.>>> (use for example <<<8>>> instead of <<<1.8>>>).
     
   ** The jar plugin is set to add default specification and implementation entries.
     
