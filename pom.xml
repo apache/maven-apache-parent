@@ -96,7 +96,6 @@ under the License.
     <maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
     <maven.compiler.target>7</maven.compiler.target><!-- use version numbers without the "1." prefix (supported since javac 5) -->
     <surefire.version>3.2.5</surefire.version><!-- for surefire, failsafe and surefire-report -->
-    <maven.plugin.tools.version>3.10.2</maven.plugin.tools.version><!-- for m-plugin-p and maven-plugin-annotations -->
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
 
     <version.maven-fluido-skin>1.11.2</version.maven-fluido-skin>
@@ -120,7 +119,7 @@ under the License.
     <version.maven-invoker-plugin>3.6.0</version.maven-invoker-plugin>
     <version.maven-jar-plugin>3.3.0</version.maven-jar-plugin>
     <version.maven-javadoc-plugin>3.6.3</version.maven-javadoc-plugin>
-    <version.maven-plugin-tools>${maven.plugin.tools.version}</version.maven-plugin-tools>
+    <version.maven-plugin-tools>3.10.2</version.maven-plugin-tools>
     <version.maven-project-info-reports-plugin>3.5.0</version.maven-project-info-reports-plugin>
     <version.maven-release-plugin>3.0.1</version.maven-release-plugin>
     <version.maven-remote-resources-plugin>3.2.0</version.maven-remote-resources-plugin>
