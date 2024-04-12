@@ -124,7 +124,8 @@ The <<<apache-release>>> Profile
 
    The profile includes the following plugins:
 
- * maven-assembly-plugin:
+ * maven-assembly-plugin
+
     {{{/apache-resource-bundles/source-release/}org.apache.apache.resources:apache-source-release-assembly-descriptor:$context.get("version.apache-resource-bundles")}}
     is added as dependency, and an execution is configured with <<<source-release-assembly>>> id.\
     The plugin is configured to take a <<<descriptorRef>>> name from the
@@ -134,15 +135,25 @@ The <<<apache-release>>> Profile
     If you want to avoid this default assembly execution to provide your own mechanism to produce the source release archive,
     you can disable the execution by configuring <<<skipAssembly>>> parameter for this <<<source-release-assembly>>> execution id
 
- * maven-source-plugin: configured to build and attach a source jar.
+ * maven-source-plugin
 
- * maven-javadoc-plugin: configured to build and attach a javadoc jar.
+   Configured to build and attach a source jar.
 
- * maven-gpg-plugin: configured to sign everything. It expects to find
-    a passphrase in <<<$\{gpg.passphrase\}>>>, presumably in your <<<settings.xml>>>.
+ * maven-javadoc-plugin
 
- * checksum-maven-plugin: configured to create a checksum file(s) for source release as
-    required by {{{http://www.apache.org/dev/release-distribution#sigs-and-sums}Apache release distribution policy}}.
+   Configured to build and attach a javadoc jar.
+
+ * maven-gpg-plugin
+
+   Configured to sign everything.
+
+   On developer workstations it expects GnuPG agent to be available to get passphrases,
+   while on fully unattended (CI-like) workflows the use of <<<MAVEN_GPG_PASSPHRASE>>> environment variable use is recommended.
+
+ * checksum-maven-plugin
+
+   Configured to create a checksum file(s) for source release as
+   required by {{{http://www.apache.org/dev/release-distribution#sigs-and-sums}Apache release distribution policy}}.
 
  []
 
