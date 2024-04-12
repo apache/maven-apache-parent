@@ -59,6 +59,10 @@ under the License.
     </mailingList>
   </mailingLists>
 
+  <modules>
+    <module>docs</module>
+  </modules>
+
   <scm>
     <connection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</connection>
     <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</developerConnection>
@@ -403,6 +407,16 @@ under the License.
             </configuration>
           </execution>
         </executions>
+      </plugin>
+
+      <!-- we have dedicated module for documentation, so skip site plugin at all -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <inherited>false</inherited>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
       </plugin>
     </plugins>
   </build>

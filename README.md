@@ -62,8 +62,7 @@ There are some guidelines which will make applying PRs easier for us:
 [MPOM-XXX] - Subject of the JIRA Ticket
  Optional supplemental description.
 ```
-+ Make sure you have added the necessary tests (JUnit/IT) for your changes.
-+ Update the [site documentation](https://maven.apache.org/pom/asf/) accordingly in `src/site-docs` and build it via `mvn site -f site-pom.xml` (uses a dedicated POM to not be inherited)
++ Update the [site documentation](https://maven.apache.org/pom/asf/) accordingly in `docs/src/site` and build it via `mvn site -f docs`
 + Submit a pull request to the repository in the Apache organization.
 + Update your JIRA ticket and include a link to the pull request in the ticket.
 
