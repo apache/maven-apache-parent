@@ -25,7 +25,7 @@ under the License.
   <!-- for more information, see the documentation of this POM: http://maven.apache.org/pom/asf/ -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
-  <version>32-SNAPSHOT</version>
+  <version>32</version>
   <packaging>pom</packaging>
 
   <name>The Apache Software Foundation</name>
@@ -67,7 +67,7 @@ under the License.
     <connection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</connection>
     <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</developerConnection>
     <url>https://github.com/apache/maven-apache-parent/tree/${project.scm.tag}</url>
-    <tag>HEAD</tag>
+    <tag>apache-32</tag>
   </scm>
 
   <distributionManagement>
@@ -103,7 +103,7 @@ under the License.
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
 
     <version.maven-fluido-skin>1.11.2</version.maven-fluido-skin>
-    <project.build.outputTimestamp>2023-11-08T22:14:34Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2024-04-13T16:31:25Z</project.build.outputTimestamp>
 
     <version.apache-rat-plugin>0.16.1</version.apache-rat-plugin>
     <version.apache-resource-bundles>1.5</version.apache-resource-bundles>
