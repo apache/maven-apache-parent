@@ -85,9 +85,14 @@ Apache Software Foundation Parent POM
   ** The resources plugin is set for $context.get("project.build.sourceEncoding").
     
   ** The release plugin is set, via the
-    \<useReleaseProfiles\> configuration element, to enable the
-    <<apache-release>> profile during <<<release:perform>>> execution and to disable
-    \<useReleaseProfiles\>.
+
+    *** \<useReleaseProfiles\> configuration element, to enable the<<apache-release>> profile during <<<release:perform>>> execution
+
+    *** disable \<useReleaseProfiles\>
+
+    *** enable \<autoVersionSubmodules\>
+
+    []
 
  * <<plugins>>: The plugins section configures three executions:
     
