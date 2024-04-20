@@ -17,10 +17,10 @@
 Contributing to [Apache Software Foundation Parent POM](https://maven.apache.org/pom/asf/)
 ======================
 
-[![ASF Jira](https://img.shields.io/endpoint?url=https%3A%2F%2Fmaven.apache.org%2Fbadges%2Fasf_jira-MPOM.json)][jira]
 [![Apache License, Version 2.0, January 2004](https://img.shields.io/github/license/apache/maven.svg?label=License)][license]
 [![Maven Central](https://img.shields.io/maven-central/v/org.apache/apache.svg?label=Maven%20Central)](https://search.maven.org/artifact/org.apache/apache)
 [![Jenkins Status](https://img.shields.io/jenkins/s/https/ci-maven.apache.org/job/Maven/job/maven-box/job/maven-apache-parent/job/master.svg)][build]
+[![Verify](https://github.com/apache/maven-apache-parent/actions/workflows/maven-verify.yml/badge.svg)](https://github.com/apache/maven-apache-parent/actions/workflows/maven-verify.yml)
 
 Have you found a bug or have an idea for a cool new feature? Contributing
 code is a great way to give something back to the open source community. Before
@@ -31,8 +31,7 @@ things.
 Getting Started
 ---------------
 
-+ Make sure you have a [JIRA account](https://issues.apache.org/jira/).
-+ Make sure you have a [GitHub account](https://github.com/signup/free).
++ Make sure you have a [GitHub account](https://github.com/signup).
 + If you're planning to implement a new feature, please discuss your changes 
   on the [developer mailing list][ml-list] first. 
   This way you can make sure you're not wasting your time on something that isn't 
@@ -57,39 +56,34 @@ There are some guidelines which will make applying PRs easier for us:
   + Create minimal diffs - disable on save actions like reformat source code or organize imports. 
     If you feel the source code should be reformatted, create a separate PR for this change.
   + Check for unnecessary whitespace with `git diff --check` before committing.
-+ Make sure your commit messages are in the proper format. Your commit message should contain the key of the JIRA issue.
++ Make sure your commit messages are in the proper format. Your commit message should contain the key of the issue.
 ```
-[MPOM-XXX] - Subject of the JIRA Ticket
+[#issue-numebr] - Subject of the issue
  Optional supplemental description.
 ```
 + Update the [site documentation](https://maven.apache.org/pom/asf/) accordingly in `docs/src/site` and build it via `mvn site -f docs`
 + Submit a pull request to the repository in the Apache organization.
-+ Update your JIRA ticket and include a link to the pull request in the ticket.
 
 If you plan to contribute on a regular basis, please consider filing a [contributor license agreement][cla].
 
 Making Trivial Changes
 ----------------------
 
-For changes of a trivial nature to comments and documentation, it is not always
-necessary to create a new ticket in JIRA.  In this case, it is appropriate to
-start the first line of a commit with '(doc)' instead of a ticket number.
+For changes of a trivial nature to comments and documentation, or other simple changes
+it is not always necessary to create a new issue.  
+In this case, it is appropriate to skip the issue from a commit message.
 
 Additional Resources
 --------------------
 
 + [Contributing patches](https://maven.apache.org/guides/development/guide-maven-development.html#Creating_and_submitting_a_patch)
-+ [Apache Maven POMs JIRA project page][jira]
 + [Contributor License Agreement][cla]
-+ [General GitHub documentation](https://help.github.com/)
-+ [GitHub pull request documentation](https://help.github.com/send-pull-requests/)
++ [General GitHub documentation](https://docs.github.com/)
++ [GitHub pull request documentation](https://docs.github.com/pull-requests)
 + [Apache Maven Twitter Account](https://twitter.com/ASFMavenProject)
-+ #Maven IRC channel on freenode.org
 
-[jira]: https://issues.apache.org/jira/projects/MPOM/
 [license]: https://www.apache.org/licenses/LICENSE-2.0
 [ml-list]: https://maven.apache.org/mailing-lists.html
 [code-style]: https://maven.apache.org/developers/conventions/code.html
 [cla]: https://www.apache.org/licenses/#clas
-[maven-wiki]: https://cwiki.apache.org/confluence/display/MAVEN/Index
 [build]: https://ci-maven.apache.org/job/Maven/job/maven-box/job/maven-apache-parent/job/master/
