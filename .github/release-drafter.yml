@@ -18,6 +18,6 @@
 # under the License.
 
 _extends: maven-gh-actions-shared
-name-template: $NEXT_MAJOR_VERSION
-version-template: $NEXT_MAJOR_VERSION
-tag-template: apache-$NEXT_MAJOR_VERSION
+name-template: $NEXT_PATCH_VERSION
+version-template: $NEXT_PATCH_VERSION
+tag-template: apache-$NEXT_PATCH_VERSION
