@@ -18,5 +18,7 @@
 # under the License.
 
 _extends: maven-gh-actions-shared
-tag-template: apache-$NEXT_MINOR_VERSION
+tag-template: apache-$RESOLVED_VERSION
 
+version-resolver:
+  default: major
