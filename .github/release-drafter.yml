@@ -18,7 +18,6 @@
 # under the License.
 
 _extends: maven-gh-actions-shared
-tag-template: apache-$RESOLVED_VERSION
-
-version-resolver:
-  default: major
+version-template: '$MAJOR'
+name-template: 'Apache Parent POM version $NEXT_MAJOR_VERSION'
+tag-template: 'apache-$NEXT_MAJOR_VERSION'
