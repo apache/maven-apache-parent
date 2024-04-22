@@ -46,8 +46,8 @@ under the License.
   </mailingLists>
 
   <issueManagement>
-    <system>jira</system>
-    <url>https://issues.apache.org/jira/issues/?jql=project%3DMPOM+AND+component%3Dasf</url>
+    <system>GitHub</system>
+    <url>https://github.com/apache/maven-apache-parent/issues</url>
   </issueManagement>
 
   <ciManagement>
