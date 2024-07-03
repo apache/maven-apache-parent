@@ -23,7 +23,6 @@ under the License.
   xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.1 https://maven.apache.org/xsd/decoration-1.8.1.xsd">
 
   <bannerLeft>
-    <name>${project.name}</name>
     <src>https://maven.apache.org/images/apache-maven-project.png</src>
     <href>https://www.apache.org/</href>
   </bannerLeft>

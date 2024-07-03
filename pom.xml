@@ -102,7 +102,6 @@ under the License.
     <surefire.version>3.3.0</surefire.version><!-- for surefire, failsafe and surefire-report -->
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
 
-    <version.maven-fluido-skin>1.11.2</version.maven-fluido-skin>
     <project.build.outputTimestamp>2024-04-13T16:31:35Z</project.build.outputTimestamp>
 
     <version.apache-rat-plugin>0.16.1</version.apache-rat-plugin>
@@ -117,6 +116,7 @@ under the License.
     <version.maven-deploy-plugin>3.1.2</version.maven-deploy-plugin>
     <version.maven-ear-plugin>3.3.0</version.maven-ear-plugin>
     <version.maven-enforcer-plugin>3.5.0</version.maven-enforcer-plugin>
+    <version.maven-fluido-skin>1.12.0</version.maven-fluido-skin>
     <version.maven-gpg-plugin>3.2.4</version.maven-gpg-plugin>
     <version.maven-help-plugin>3.4.1</version.maven-help-plugin>
     <version.maven-install-plugin>3.1.2</version.maven-install-plugin>
