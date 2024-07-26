@@ -105,7 +105,7 @@ under the License.
     <project.build.outputTimestamp>2024-07-04T18:52:57Z</project.build.outputTimestamp>
 
     <version.apache-rat-plugin>0.16.1</version.apache-rat-plugin>
-    <version.apache-resource-bundles>1.5</version.apache-resource-bundles>
+    <version.apache-resource-bundles>1.7</version.apache-resource-bundles>
     <version.checksum-maven-plugin>1.11</version.checksum-maven-plugin>
     <version.maven-antrun-plugin>3.1.0</version.maven-antrun-plugin>
     <version.maven-assembly-plugin>3.7.1</version.maven-assembly-plugin>
