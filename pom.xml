@@ -137,16 +137,6 @@ under the License.
     <version.maven-war-plugin>3.4.0</version.maven-war-plugin>
   </properties>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.apache.maven.plugin-tools</groupId>
-        <artifactId>maven-plugin-annotations</artifactId>
-        <version>${version.maven-plugin-tools}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
   <repositories>
     <repository>
       <id>apache.snapshots</id>
