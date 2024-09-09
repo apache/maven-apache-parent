@@ -119,7 +119,7 @@ under the License.
     <version.maven-fluido-skin>1.12.0</version.maven-fluido-skin>
     <version.maven-gpg-plugin>3.2.4</version.maven-gpg-plugin>
     <version.maven-help-plugin>3.4.1</version.maven-help-plugin>
-    <version.maven-install-plugin>3.1.2</version.maven-install-plugin>
+    <version.maven-install-plugin>3.1.3</version.maven-install-plugin>
     <version.maven-invoker-plugin>3.7.0</version.maven-invoker-plugin>
     <version.maven-jar-plugin>3.4.2</version.maven-jar-plugin>
     <version.maven-javadoc-plugin>3.7.0</version.maven-javadoc-plugin>
