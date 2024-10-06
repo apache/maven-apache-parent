@@ -19,17 +19,15 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<project xmlns="http://maven.apache.org/DECORATION/1.8.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.1 https://maven.apache.org/xsd/decoration-1.8.1.xsd">
+<site xmlns="http://maven.apache.org/SITE/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SITE/2.0.0 https://maven.apache.org/xsd/site-2.0.0.xsd">
 
-  <bannerLeft>
-    <src>https://maven.apache.org/images/apache-maven-project.png</src>
-    <href>https://www.apache.org/</href>
+  <bannerLeft href="https://www.apache.org/">
+    <image src="https://maven.apache.org/images/apache-maven-project.png"/>
   </bannerLeft>
 
-  <bannerRight>
-    <src>https://maven.apache.org/images/maven-logo-black-on-white.png</src>
-    <href>https://maven.apache.org/</href>
+  <bannerRight href="https://www.apache.org/">
+    <image src="https://maven.apache.org/images/maven-logo-black-on-white.png"/>
   </bannerRight>
 
   <skin>
@@ -101,4 +99,4 @@ under the License.
     </menu>
 
   </body>
-</project>
+</site>
