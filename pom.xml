@@ -99,7 +99,7 @@ under the License.
     <minimalJavaBuildVersion>${maven.compiler.target}</minimalJavaBuildVersion>
     <maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target><!-- use version numbers without the "1." prefix (supported since javac 5) -->
-    <surefire.version>3.3.0</surefire.version><!-- for surefire, failsafe and surefire-report -->
+    <surefire.version>3.5.2</surefire.version><!-- for surefire, failsafe and surefire-report -->
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
 
     <project.build.outputTimestamp>2024-07-04T18:52:57Z</project.build.outputTimestamp>
