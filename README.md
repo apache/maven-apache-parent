@@ -58,7 +58,7 @@ There are some guidelines which will make applying PRs easier for us:
   + Check for unnecessary whitespace with `git diff --check` before committing.
 + Make sure your commit messages are in the proper format. Your commit message should contain the key of the issue.
 ```
-[#issue-numebr] - Subject of the issue
+[#issue-number] - Subject of the issue
  Optional supplemental description.
 ```
 + Update the [site documentation](https://maven.apache.org/pom/asf/) accordingly in `docs/src/site` and build it via `mvn site -f docs`
