@@ -47,8 +47,10 @@ Apache Software Foundation Parent POM
     
   ** <<url>>: {{<<<https://www.apache.org/>>>}}. You should override this.
     
-  ** <<repositories>>: The pom adds the Apache snapshot
+  ** <<repositories>>: Optional: the pom adds the Apache snapshot
      repository ({{<<<https://repository.apache.org/snapshots>>>}})
+     This only happens if the <<<apache.snapshots>>> property is set,
+     or the <<<use-apache-snapshots>>> profile is active.
     
   ** <<distributionManagement>>: The POM sets up for releases to the Apache Nexus
      instance at
