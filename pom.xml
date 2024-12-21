@@ -101,6 +101,8 @@ under the License.
     <maven.compiler.target>8</maven.compiler.target><!-- use version numbers without the "1." prefix (supported since javac 5) -->
     <surefire.version>3.5.2</surefire.version><!-- for surefire, failsafe and surefire-report -->
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
+    <jacoco.append.ut.file>false</jacoco.append.ut.file><!-- set to true to always append for unit test coverage, overwrites default due to  https://github.com/jacoco/jacoco/issues/1676 -->
+    <jacoco.append.it.file>false</jacoco.append.it.file><!-- set to true to always append for integration test coverage, overwrites default due to https://github.com/jacoco/jacoco/issues/1676 -->
 
     <project.build.outputTimestamp>2024-07-04T18:52:57Z</project.build.outputTimestamp>
 
@@ -135,6 +137,7 @@ under the License.
     <version.maven-source-plugin>3.3.1</version.maven-source-plugin>
     <version.maven-surefire>${surefire.version}</version.maven-surefire>
     <version.maven-war-plugin>3.4.0</version.maven-war-plugin>
+    <version.jacoco-maven-plugin>0.8.12</version.jacoco-maven-plugin>
   </properties>
 
   <repositories>
@@ -346,6 +349,44 @@ under the License.
           <artifactId>apache-rat-plugin</artifactId>
           <version>${version.apache-rat-plugin}</version>
         </plugin>
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>${version.jacoco-maven-plugin}</version>
+          <!-- generate reports for UT and IT coverage separately -->
+          <executions>
+            <execution>
+              <id>default-prepare-agent</id>
+              <goals>
+                <goal>prepare-agent</goal>
+              </goals>
+              <configuration>
+                <append>${jacoco.append.ut.file}</append>
+              </configuration>
+            </execution>
+            <execution>
+              <id>default-prepare-agent-integration</id>
+              <goals>
+                <goal>prepare-agent-integration</goal>
+              </goals>
+              <configuration>
+                <append>${jacoco.append.it.file}</append>
+              </configuration>
+            </execution>
+            <execution>
+              <id>default-report</id>
+              <goals>
+                <goal>report</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>default-report-integration</id>
+              <goals>
+                <goal>report-integration</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
@@ -517,6 +558,17 @@ under the License.
       </build>
     </profile>
     <!-- END SNIPPET: release-profile -->
+    <profile>
+      <id>coverage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
     <profile>
       <id>jdk9+</id>
       <activation>
