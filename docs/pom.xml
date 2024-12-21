@@ -77,6 +77,8 @@ under the License.
     <!-- module with documentation not need to install and deploy -->
     <maven.install.skip>true</maven.install.skip>
     <maven.deploy.skip>true</maven.deploy.skip>
+    <version.maven-site-plugin>3.21.0</version.maven-site-plugin>
+    <version.maven-fluido-skin>2.0.1</version.maven-fluido-skin>
   </properties>
 
   <build>
