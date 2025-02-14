@@ -121,6 +121,8 @@ Apache Software Foundation Parent POM
    The value will be updated by Maven Release Plugin during releases. If a project wants to disable Reproducible Builds, just define
    the property value with any single non-numeric character.
 
+   In version 34, Reproducible Central Report is added to report on Reproducible Builds checks for the project and it dependencies.
+
  []
 
 The <<<apache-release>>> Profile
