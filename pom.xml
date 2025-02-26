@@ -264,7 +264,6 @@ under the License.
           <version>${version.maven-release-plugin}</version>
           <configuration>
             <autoVersionSubmodules>true</autoVersionSubmodules>
-            <useReleaseProfile>false</useReleaseProfile>
             <goals>deploy</goals>
             <releaseProfiles>apache-release</releaseProfiles>
           </configuration>
