@@ -252,6 +252,7 @@ under the License.
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>${version.maven-project-info-reports-plugin}</version>
           <configuration>
+            <externalAvatarImages>false</externalAvatarImages>
             <pluginManagementExcludes>
               <exclude>org.eclipse.m2e:lifecycle-mapping</exclude>
             </pluginManagementExcludes>
