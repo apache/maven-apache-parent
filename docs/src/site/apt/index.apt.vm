@@ -96,7 +96,12 @@ Apache Software Foundation Parent POM
 
  * <<plugins>>: The plugins section configures three executions:
     
-  ** maven-remote-resources-plugin for {{{/apache-resource-bundles/jar/}org.apache.apache.resources:apache-jar-resource-bundle:$context.get("version.apache-resource-bundles")}}.
+  ** maven-remote-resources-plugin for {{{/apache-resource-bundles/jar/}org.apache.apache.resources:${resourceBundleArtifact}:$context.get("version.apache-resource-bundles")}}.
+
+    *** there is a property <<<resourceBundleArtifact>>> with default value <<${resourceBundleArtifact}>> for {{{/apache-resource-bundles/jar/}Apache JAR Resource Bundle}}
+    - can be changed to <<apache-jar-txt-resource-bundle>> for {{{/apache-resource-bundles/jar-txt/}Apache JAR (.txt) Resource Bundle}}
+
+   []
 
   ** maven-enforcer-plugin to check Maven and Java build prerequisites, configured via properties:
  
