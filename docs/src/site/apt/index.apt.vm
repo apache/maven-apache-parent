@@ -88,11 +88,9 @@ Apache Software Foundation Parent POM
     
   ** The release plugin is set, via the
 
-    *** \<useReleaseProfiles\> configuration element, to enable the<<apache-release>> profile during <<<release:perform>>> execution
+    *** <<<\<releaseProfiles\>>>> configuration element, to enable the <<apache-release>> profile during <<<release:perform>>> execution
 
-    *** disable \<useReleaseProfiles\>
-
-    *** enable \<autoVersionSubmodules\>
+    *** enable <<<\<autoVersionSubmodules\>>>>
 
     []
 
