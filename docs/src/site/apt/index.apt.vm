@@ -193,11 +193,6 @@ Notices
 
    When you need publish site descriptor in your project you should add, like:
 
- * Since version <<34>> <<<repositories>>> section has been moved to the <<<use-apache-snapshots>>> profile.
-
-   Apache snapshot repository is now optional, and is only added when the profile is activated.
-
-   It can be activated by setting the <<<apache.snapshots>>> property or activating the <<<use-apache-snapshots>>> profile directly.
 +------+
 <build>
   <plugins>
@@ -217,5 +212,11 @@ Notices
   </plugins>
 </build>
 +------+
+
+ * Since version <<34>> <<<repositories>>> section has been moved to the <<<use-apache-snapshots>>> profile.
+
+   Apache snapshot repository is now optional, and is only added when the profile is activated.
+
+   It can be activated by setting the <<<apache.snapshots>>> property or activating the <<<use-apache-snapshots>>> profile directly.
 
  []
