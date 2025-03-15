@@ -25,7 +25,7 @@ under the License.
   <parent>
     <groupId>org.apache</groupId>
     <artifactId>apache</artifactId>
-    <version>34</version>
+    <version>35-SNAPSHOT</version>
   </parent>
 
   <artifactId>docs</artifactId>
