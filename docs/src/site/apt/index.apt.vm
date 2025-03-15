@@ -99,7 +99,7 @@ Apache Software Foundation Parent POM
   ** maven-remote-resources-plugin for {{{/apache-resource-bundles/jar/}org.apache.apache.resources:${resourceBundleArtifact}:$context.get("version.apache-resource-bundles")}}.
 
     *** The value of <<${resourceBundleArtifact}>> is defined in a property called <<<resourceBundleArtifact>>>. Using the default value for this property will create a {{{/apache-resource-bundles/jar/}Apache JAR Resource Bundle}}
-    - can be changed to <<apache-jar-txt-resource-bundle>> for {{{/apache-resource-bundles/jar-txt/}Apache JAR (.txt) Resource Bundle}}
+    Changing the property value to <<apache-jar-txt-resource-bundle>> will create a {{{/apache-resource-bundles/jar-txt/}Apache JAR (.txt) Resource Bundle}} instead.
 
    []
 
