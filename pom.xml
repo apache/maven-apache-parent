@@ -94,6 +94,7 @@ under the License.
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
+    <resourceBundleArtifact>apache-jar-resource-bundle</resourceBundleArtifact>
     <gpg.useagent>true</gpg.useagent>
     <minimalMavenBuildVersion>3.6.3</minimalMavenBuildVersion>
     <minimalJavaBuildVersion>${maven.compiler.target}</minimalJavaBuildVersion>
@@ -340,7 +341,7 @@ under the License.
             </goals>
             <configuration>
               <resourceBundles>
-                <resourceBundle>org.apache.apache.resources:apache-jar-resource-bundle:${version.apache-resource-bundles}</resourceBundle>
+                <resourceBundle>org.apache.apache.resources:${resourceBundleArtifact}:${version.apache-resource-bundles}</resourceBundle>
               </resourceBundles>
             </configuration>
           </execution>
