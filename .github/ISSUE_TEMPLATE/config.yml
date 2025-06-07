@@ -22,7 +22,7 @@ blank_issues_enabled: false
 contact_links:
 
   - name: Project Mailing Lists
-    url: https://maven.apache.org/mailing-lists.html
+    url: https://maven.apache.org/pom/asf/mailing-lists.html
     about: Please ask a question or discuss here
 
   - name: Old JIRA Issues
