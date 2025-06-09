@@ -25,7 +25,7 @@ under the License.
   <!-- for more information, see the documentation of this POM: http://maven.apache.org/pom/asf/ -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
-  <version>35-SNAPSHOT</version>
+  <version>35</version>
   <packaging>pom</packaging>
 
   <name>The Apache Software Foundation</name>
@@ -67,7 +67,7 @@ under the License.
     <connection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</connection>
     <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</developerConnection>
     <url>https://github.com/apache/maven-apache-parent/tree/${project.scm.tag}</url>
-    <tag>HEAD</tag>
+    <tag>apache-35</tag>
   </scm>
 
   <distributionManagement>
@@ -103,7 +103,7 @@ under the License.
     <surefire.version>3.5.3</surefire.version><!-- for surefire, failsafe and surefire-report -->
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
 
-    <project.build.outputTimestamp>2025-03-15T11:45:36Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2025-06-09T20:48:22Z</project.build.outputTimestamp>
 
     <version.apache-rat-plugin>0.16.1</version.apache-rat-plugin>
     <version.apache-resource-bundles>1.7</version.apache-resource-bundles>
