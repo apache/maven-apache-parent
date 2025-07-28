@@ -96,7 +96,7 @@ under the License.
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
     <resourceBundleArtifact>apache-jar-resource-bundle</resourceBundleArtifact>
     <gpg.useagent>true</gpg.useagent>
-    <minimalMavenBuildVersion>3.6.3</minimalMavenBuildVersion>
+    <minimalMavenBuildVersion>3.9.11</minimalMavenBuildVersion>
     <minimalJavaBuildVersion>${maven.compiler.target}</minimalJavaBuildVersion>
     <maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target><!-- use version numbers without the "1." prefix (supported since javac 5) -->
