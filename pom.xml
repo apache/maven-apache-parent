@@ -98,7 +98,7 @@ under the License.
     <gpg.useagent>true</gpg.useagent>
     <!-- java version used to to set maven.compiler.* -->
     <javaVersion>8</javaVersion>
-    <minimalMavenBuildVersion>3.6.3</minimalMavenBuildVersion>
+    <minimalMavenBuildVersion>3.9</minimalMavenBuildVersion>
     <minimalJavaBuildVersion>${javaVersion}</minimalJavaBuildVersion>
     <!-- for surefire, failsafe and surefire-report -->
     <surefire.version>3.5.4</surefire.version>
