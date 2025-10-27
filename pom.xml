@@ -97,9 +97,6 @@ under the License.
     <resourceBundleArtifact>apache-jar-resource-bundle</resourceBundleArtifact>
     <gpg.useagent>true</gpg.useagent>
     <minimalMavenBuildVersion>3.6.3</minimalMavenBuildVersion>
-    <minimalJavaBuildVersion>${maven.compiler.target}</minimalJavaBuildVersion>
-    <maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
-    <maven.compiler.target>8</maven.compiler.target><!-- use version numbers without the "1." prefix (supported since javac 5) -->
     <surefire.version>3.5.4</surefire.version><!-- for surefire, failsafe and surefire-report -->
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
 
@@ -498,6 +495,17 @@ under the License.
     </profile>
     <!-- END SNIPPET: release-profile -->
     <profile>
+      <id>jdk8</id>
+      <activation>
+        <jdk>[,9)</jdk>
+      </activation>
+      <properties>
+        <maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <minimalJavaBuildVersion>${maven.compiler.target}</minimalJavaBuildVersion>
+      </properties>
+    </profile>
+    <profile>
       <id>jdk9+</id>
       <activation>
         <!-- this does not support toolchains, https://issues.apache.org/jira/browse/MNG-6943 -->
@@ -505,7 +513,8 @@ under the License.
       </activation>
       <properties>
         <!-- https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-release.html, affects m-compiler-p and m-javadoc-p -->
-        <maven.compiler.release>${maven.compiler.target}</maven.compiler.release>
+        <maven.compiler.release>8</maven.compiler.release>
+        <minimalJavaBuildVersion>${maven.compiler.release}</minimalJavaBuildVersion>
       </properties>
     </profile>
     <profile>
