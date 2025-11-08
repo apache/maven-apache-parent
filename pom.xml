@@ -99,8 +99,10 @@ under the License.
     <minimalMavenBuildVersion>3.6.3</minimalMavenBuildVersion>
     <minimalJavaBuildVersion>${maven.compiler.target}</minimalJavaBuildVersion>
     <maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
-    <maven.compiler.target>8</maven.compiler.target><!-- use version numbers without the "1." prefix (supported since javac 5) -->
-    <surefire.version>3.5.4</surefire.version><!-- for surefire, failsafe and surefire-report -->
+    <!-- use version numbers without the "1." prefix (supported since javac 5) -->
+    <maven.compiler.target>8</maven.compiler.target>
+    <!-- for surefire, failsafe and surefire-report -->
+    <surefire.version>3.5.4</surefire.version>
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
 
     <project.build.outputTimestamp>2025-06-09T20:48:32Z</project.build.outputTimestamp>
@@ -235,7 +237,14 @@ under the License.
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>${version.maven-javadoc-plugin}</version>
           <configuration>
-            <notimestamp>true</notimestamp><!-- avoid noise for svn/gitpubsub -->
+            <!-- avoid noise for svn/gitpubsub -->
+            <notimestamp>true</notimestamp>
+            <archive>
+              <manifest>
+                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              </manifest>
+            </archive>
           </configuration>
         </plugin>
         <plugin>
@@ -300,6 +309,14 @@ under the License.
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
           <version>${version.maven-source-plugin}</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              </manifest>
+            </archive>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
