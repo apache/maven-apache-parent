@@ -97,20 +97,25 @@ under the License.
     <resourceBundleArtifact>apache-jar-resource-bundle</resourceBundleArtifact>
     <gpg.useagent>true</gpg.useagent>
     <minimalMavenBuildVersion>3.6.3</minimalMavenBuildVersion>
-    <surefire.version>3.5.4</surefire.version><!-- for surefire, failsafe and surefire-report -->
+    <minimalJavaBuildVersion>${maven.compiler.target}</minimalJavaBuildVersion>
+    <maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
+    <!-- use version numbers without the "1." prefix (supported since javac 5) -->
+    <maven.compiler.target>8</maven.compiler.target>
+    <!-- for surefire, failsafe and surefire-report -->
+    <surefire.version>3.5.4</surefire.version>
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
 
     <project.build.outputTimestamp>2025-06-09T20:48:32Z</project.build.outputTimestamp>
 
-    <version.apache-rat-plugin>0.16.1</version.apache-rat-plugin>
+    <version.apache-rat-plugin>0.17</version.apache-rat-plugin>
     <version.apache-resource-bundles>1.7</version.apache-resource-bundles>
     <version.checksum-maven-plugin>1.11</version.checksum-maven-plugin>
-    <version.maven-antrun-plugin>3.1.0</version.maven-antrun-plugin>
+    <version.maven-antrun-plugin>3.2.0</version.maven-antrun-plugin>
     <version.maven-assembly-plugin>3.7.1</version.maven-assembly-plugin>
     <version.maven-clean-plugin>3.5.0</version.maven-clean-plugin>
     <version.maven-checkstyle-plugin>3.6.0</version.maven-checkstyle-plugin>
     <version.maven-compiler-plugin>3.14.1</version.maven-compiler-plugin>
-    <version.maven-dependency-plugin>3.8.1</version.maven-dependency-plugin>
+    <version.maven-dependency-plugin>3.9.0</version.maven-dependency-plugin>
     <version.maven-deploy-plugin>3.1.4</version.maven-deploy-plugin>
     <version.maven-ear-plugin>3.4.0</version.maven-ear-plugin>
     <version.maven-enforcer-plugin>3.6.2</version.maven-enforcer-plugin>
@@ -121,9 +126,9 @@ under the License.
     <version.maven-invoker-plugin>3.9.1</version.maven-invoker-plugin>
     <version.maven-jar-plugin>3.4.2</version.maven-jar-plugin>
     <version.maven-javadoc-plugin>3.12.0</version.maven-javadoc-plugin>
-    <version.maven-plugin-tools>3.15.1</version.maven-plugin-tools>
+    <version.maven-plugin-tools>3.15.2</version.maven-plugin-tools>
     <version.maven-project-info-reports-plugin>3.9.0</version.maven-project-info-reports-plugin>
-    <version.maven-release-plugin>3.1.1</version.maven-release-plugin>
+    <version.maven-release-plugin>3.2.0</version.maven-release-plugin>
     <version.maven-remote-resources-plugin>3.3.0</version.maven-remote-resources-plugin>
     <version.maven-resources-plugin>3.3.1</version.maven-resources-plugin>
     <version.maven-scm-plugin>2.2.1</version.maven-scm-plugin>
@@ -132,7 +137,7 @@ under the License.
     <version.maven-site-plugin>3.21.0</version.maven-site-plugin>
     <version.maven-source-plugin>3.3.1</version.maven-source-plugin>
     <version.maven-surefire>${surefire.version}</version.maven-surefire>
-    <version.maven-war-plugin>3.4.0</version.maven-war-plugin>
+    <version.maven-war-plugin>3.5.0</version.maven-war-plugin>
   </properties>
 
   <build>
@@ -232,7 +237,14 @@ under the License.
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>${version.maven-javadoc-plugin}</version>
           <configuration>
-            <notimestamp>true</notimestamp><!-- avoid noise for svn/gitpubsub -->
+            <!-- avoid noise for svn/gitpubsub -->
+            <notimestamp>true</notimestamp>
+            <archive>
+              <manifest>
+                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              </manifest>
+            </archive>
           </configuration>
         </plugin>
         <plugin>
@@ -297,6 +309,14 @@ under the License.
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
           <version>${version.maven-source-plugin}</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              </manifest>
+            </archive>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
