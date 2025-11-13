@@ -96,11 +96,10 @@ under the License.
     <sourceReleaseAssemblyDescriptor>source-release</sourceReleaseAssemblyDescriptor>
     <resourceBundleArtifact>apache-jar-resource-bundle</resourceBundleArtifact>
     <gpg.useagent>true</gpg.useagent>
+    <!-- java version used to to set maven.compiler.* -->
+    <javaVersion>8</javaVersion>
     <minimalMavenBuildVersion>3.6.3</minimalMavenBuildVersion>
-    <minimalJavaBuildVersion>${maven.compiler.target}</minimalJavaBuildVersion>
-    <maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
-    <!-- use version numbers without the "1." prefix (supported since javac 5) -->
-    <maven.compiler.target>8</maven.compiler.target>
+    <minimalJavaBuildVersion>${javaVersion}</minimalJavaBuildVersion>
     <!-- for surefire, failsafe and surefire-report -->
     <surefire.version>3.5.4</surefire.version>
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
@@ -520,9 +519,8 @@ under the License.
         <jdk>[,9)</jdk>
       </activation>
       <properties>
-        <maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <minimalJavaBuildVersion>${maven.compiler.target}</minimalJavaBuildVersion>
+        <maven.compiler.source>${javaVersion}</maven.compiler.source>
+        <maven.compiler.target>${javaVersion}</maven.compiler.target>
       </properties>
     </profile>
     <profile>
@@ -533,8 +531,7 @@ under the License.
       </activation>
       <properties>
         <!-- https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-release.html, affects m-compiler-p and m-javadoc-p -->
-        <maven.compiler.release>8</maven.compiler.release>
-        <minimalJavaBuildVersion>${maven.compiler.release}</minimalJavaBuildVersion>
+        <maven.compiler.release>${javaVersion}</maven.compiler.release>
       </properties>
     </profile>
     <profile>

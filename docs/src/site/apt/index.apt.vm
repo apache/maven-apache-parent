@@ -63,6 +63,29 @@ Apache Software Foundation Parent POM
   ** <<mailingLists>>: The POM sets up generic Apache announcement
      lists. You should override this.
 
+  ** <<javaVersion>>: Java version used for compilation, default value is <<$context.get("javaVersion")>>.
+
+    You can override this property in your project POM to set different Java version for compilation.
+
+    The <<<javaVersion>>> property is used to set the <<<maven.compiler.*>>> properties, so they should not be set directly in your project POM.
+
+    They will be set automatically according to the JDK used for the project build:
+
+    *** for JDK 8 and older
+
++------+
+  <maven.compiler.source>\${javaVersion}</maven.compiler.source>
+  <maven.compiler.target>\${javaVersion}</maven.compiler.target>
++------+
+
+    *** for JDK 9 and newer
+
++------+
+  <maven.compiler.release>\${javaVersion}</maven.compiler.release>
++------+
+
+    []
+
  * <<pluginManagement>>: The plugin management section specifies versions
     of a list of plugins. See the {{{./plugin-management.html}Plugin Management report}} for
     the complete list with versions. 
@@ -77,11 +100,6 @@ Apache Software Foundation Parent POM
 
    []
 
-  ** The compiler plugin is set target <<Java $context.get("maven.compiler.target")>> (<<<maven.compiler.target>>> property)
-     and assume $context.get("project.build.sourceEncoding") source encoding (<<<project.build.sourceEncoding>>> property). When being executed
-     with JDK 9 or newer also <<<maven.compiler.release>>> is set to the value of property <<<maven.compiler.target>>>.
-     Therefore its value must not start with <<<1.>>> (use for example <<<8>>> instead of <<<1.8>>>).
-    
   ** The jar plugin is set to add default specification and implementation entries.
     
   ** The resources plugin is set for $context.get("project.build.sourceEncoding").
@@ -108,7 +126,7 @@ Apache Software Foundation Parent POM
  
     *** <<<minimalMavenBuildVersion>>> property: default value is <<Maven $context.get("minimalMavenBuildVersion")>>
 
-    *** <<<minimalJavaBuildVersion>>> property: default value is <<Java $context.get("minimalJavaBuildVersion")>>
+    *** <<<minimalJavaBuildVersion>>> property: default is <<<javaVersion>>> property value.
 
     []
 
@@ -190,6 +208,9 @@ Settings Configuration
   You can test your environment setup using <<<-Papache-release>>> with the command line.
 
 Notices
+
+ * Since version <<36>>, the <<<javaVersion>>> property has been introduced
+   to define the Java version used for the <<<maven.compiler.*>>> properties.
 
  * Since version <<32>> <<<maven-site-plugin:attach-descriptor>>> was removed from <<<plugins>>> section.
 
