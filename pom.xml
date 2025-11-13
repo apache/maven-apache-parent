@@ -97,10 +97,6 @@ under the License.
     <resourceBundleArtifact>apache-jar-resource-bundle</resourceBundleArtifact>
     <gpg.useagent>true</gpg.useagent>
     <minimalMavenBuildVersion>3.6.3</minimalMavenBuildVersion>
-    <minimalJavaBuildVersion>${maven.compiler.target}</minimalJavaBuildVersion>
-    <maven.compiler.source>${maven.compiler.target}</maven.compiler.source>
-    <!-- use version numbers without the "1." prefix (supported since javac 5) -->
-    <maven.compiler.target>8</maven.compiler.target>
     <!-- for surefire, failsafe and surefire-report -->
     <surefire.version>3.5.4</surefire.version>
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
