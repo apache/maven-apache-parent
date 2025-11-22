@@ -37,6 +37,9 @@ under the License.
   </skin>
 
   <custom>
+    <fluidoSkin>
+      <anchorJs />
+    </fluidoSkin>
     <matomo>
       <siteId>3</siteId>
       <url>https://analytics.apache.org/</url>
