@@ -48,8 +48,8 @@ Apache Software Foundation Parent POM
   ** <<url>>: {{<<<https://www.apache.org/>>>}}. You should override this.
     
   ** <<repositories>>: Optional: the pom adds the Apache snapshot
-     repository ({{<<<https://repository.apache.org/snapshots>>>}})
-     This only happens if the <<<apache.snapshots>>> property is set,
+     repository ({{<<<https://repository.apache.org/snapshots>>>}}). 
+     This only happens if the <<<apache.snapshots>>> property is set (set via CLI),
      or the <<<use-apache-snapshots>>> profile is active.
     
   ** <<distributionManagement>>: The POM sets up for releases to the Apache Nexus
@@ -238,10 +238,11 @@ Notices
 </build>
 +------+
 
- * Since version <<34>> <<<repositories>>> section has been moved to the <<<use-apache-snapshots>>> profile.
-
+ * Since version <<34>> <<<repositories>>> section has been moved to the <<<use-apache-snapshots>>> profile
+   
    Apache snapshot repository is now optional, and is only added when the profile is activated.
 
-   It can be activated by setting the <<<apache.snapshots>>> property or activating the <<<use-apache-snapshots>>> profile directly.
+   It can be activated by setting the <<<apache.snapshots>>> property (via CLI) or activating the <<<use-apache-snapshots>>> profile directly.
+   Activating from the POM is not possible.
 
  []
