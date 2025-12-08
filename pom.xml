@@ -341,6 +341,16 @@ under the License.
           <groupId>org.apache.rat</groupId>
           <artifactId>apache-rat-plugin</artifactId>
           <version>${version.apache-rat-plugin}</version>
+          <dependencies>
+            <!-- avoid - WARNING: Use of the three-letter time zone ID ... on JDK 25 -->
+            <!-- https://issues.apache.org/jira/browse/RAT-490 -->
+            <!-- TODO remove with next version of RAT -->
+            <dependency>
+              <groupId>org.apache.commons</groupId>
+              <artifactId>commons-lang3</artifactId>
+              <version>3.20.0</version>
+            </dependency>
+          </dependencies>
         </plugin>
       </plugins>
     </pluginManagement>
