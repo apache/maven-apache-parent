@@ -276,7 +276,6 @@ under the License.
             <autoVersionSubmodules>true</autoVersionSubmodules>
             <goals>deploy</goals>
             <releaseProfiles>apache-release</releaseProfiles>
-            <scmReleaseCommitComment>@{prefix} prepare release @{releaseLabel}</scmReleaseCommitComment>
           </configuration>
         </plugin>
         <!-- END SNIPPET: release-plugin-configuration -->
