@@ -86,6 +86,10 @@ Apache Software Foundation Parent POM
 
     []
 
+  ** <<releaseParallelPut>>: When doing a release, this property controls whether artifacts are uploaded in parallel (true) or sequentially (false).
+
+    Due to Nexus bug with parallel staging creation default is <<false>>.
+
  * <<pluginManagement>>: The plugin management section specifies versions
     of a list of plugins. See the {{{./plugin-management.html}Plugin Management report}} for
     the complete list with versions. 
