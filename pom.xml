@@ -25,7 +25,7 @@ under the License.
   <!-- for more information, see the documentation of this POM: http://maven.apache.org/pom/asf/ -->
   <groupId>org.apache</groupId>
   <artifactId>apache</artifactId>
-  <version>37-SNAPSHOT</version>
+  <version>37</version>
   <packaging>pom</packaging>
 
   <name>The Apache Software Foundation</name>
@@ -67,7 +67,7 @@ under the License.
     <connection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</connection>
     <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/maven-apache-parent.git</developerConnection>
     <url>https://github.com/apache/maven-apache-parent/tree/${project.scm.tag}</url>
-    <tag>HEAD</tag>
+    <tag>apache-37</tag>
   </scm>
 
   <distributionManagement>
@@ -106,7 +106,7 @@ under the License.
 
     <releaseParallelPut>false</releaseParallelPut>
 
-    <project.build.outputTimestamp>2026-01-03T12:11:23Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2026-01-09T19:00:20Z</project.build.outputTimestamp>
 
     <version.apache-rat-plugin>0.16.1</version.apache-rat-plugin>
     <version.apache-resource-bundles>1.7</version.apache-resource-bundles>
