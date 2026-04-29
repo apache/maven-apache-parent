@@ -104,8 +104,6 @@ under the License.
     <surefire.version>3.5.4</surefire.version>
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
 
-    <releaseParallelPut>false</releaseParallelPut>
-
     <project.build.outputTimestamp>2026-01-09T19:00:31Z</project.build.outputTimestamp>
 
     <version.apache-rat-plugin>0.16.1</version.apache-rat-plugin>
@@ -278,7 +276,6 @@ under the License.
             <autoVersionSubmodules>true</autoVersionSubmodules>
             <goals>deploy</goals>
             <releaseProfiles>apache-release</releaseProfiles>
-            <arguments>-Daether.connector.basic.parallelPut=${releaseParallelPut}</arguments>
           </configuration>
         </plugin>
         <!-- END SNIPPET: release-plugin-configuration -->
