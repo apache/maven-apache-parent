@@ -137,6 +137,7 @@ under the License.
     <version.maven-source-plugin>3.4.0</version.maven-source-plugin>
     <!-- for surefire, failsafe and surefire-report -->
     <version.maven-surefire>3.5.6</version.maven-surefire>
+    <version.tooling.atr>1.0.0-alpha-1</version.tooling.atr>
     <surefire.version>${version.maven-surefire}</surefire.version>
     <version.maven-war-plugin>3.5.1</version.maven-war-plugin>
   </properties>
@@ -526,6 +527,39 @@ under the License.
       </build>
     </profile>
     <!-- END SNIPPET: release-profile -->
+    <profile>
+      <id>push-to-atr</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.tooling</groupId>
+            <artifactId>atr-maven-plugin</artifactId>
+            <version>${version.tooling.atr}</version>
+            <executions>
+              <execution>
+                <id>atr-check-composing</id>
+                <goals>
+                  <goal>check-composing</goal>
+                </goals>
+              </execution>
+              <execution>
+                <id>upload-to-atr</id>
+                <goals>
+                  <goal>upload</goal>
+                </goals>
+                <configuration>
+                  <files>
+                    <file>${project.build.directory}/${project.artifactId}-${project.version}-source-release.zip</file>
+                    <file>${project.build.directory}/${project.artifactId}-${project.version}-source-release.zip.sha512</file>
+                    <file>${project.build.directory}/${project.artifactId}-${project.version}-source-release.zip.asc</file>
+                  </files>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
     <profile>
       <id>jdk8</id>
       <activation>
