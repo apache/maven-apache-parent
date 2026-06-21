@@ -204,6 +204,17 @@ The <<<apache-release>>> Profile
 
  Those files also end up in the staging repository and Maven Central.
 
+* The <<<push-to-atr>>> Profile
+
+ Since release 39, <<<push-to-atr>>> profile is provided to help upload built release content to
+ {{{https://tooling.apache.org/}Apache Tooling}}'s Trusted Releases platform, and compose the release
+ using {{{https://apache.github.io/tooling-atr-maven-plugin/}<<<atr-maven-plugin>>>}}.
+
+ See ATR's {{{https://release-test.apache.org/tutorial}tutorial}} for a quick introduction: you'll have to create a
+ project, for example using
+ {{{https://github.com/apache/infrastructure-asfyaml/blob/main/README.md#project}<<<project>>> entry in <<<.asf.yaml>>>}},
+ and start the release in ATR before composing.
+
 Settings Configuration
   
   You can have a look at the page in Apache website
