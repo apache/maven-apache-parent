@@ -32,7 +32,7 @@ under the License.
   <packaging>pom</packaging>
 
   <name>Apache Software Foundation Parent POM</name>
-  <description>This project consists of a POM that contains settings that are likely to be useful to any Apache project that is building and releasing code with Maven 2/3.</description>
+  <description>This project consists of a POM that contains settings that are likely to be useful to any Apache project that is building and releasing code with Maven.</description>
   <url>https://maven.apache.org/pom/asf/</url>
 
   <mailingLists>
