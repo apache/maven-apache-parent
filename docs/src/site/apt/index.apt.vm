@@ -210,10 +210,10 @@ The <<<apache-release>>> Profile
  {{{https://tooling.apache.org/}Apache Tooling}}'s Trusted Releases platform, and compose the release
  using {{{https://apache.github.io/tooling-atr-maven-plugin/}<<<atr-maven-plugin>>>}}.
 
- See ATR's {{{https://release-test.apache.org/tutorial}tutorial}} for a quick introduction: you'll have to create a
- project, for example using
- {{{https://github.com/apache/infrastructure-asfyaml/blob/main/README.md#project}<<<project>>> entry in <<<.asf.yaml>>>}},
- and start the release in ATR before composing.
+ See ATR's {{{https://release-test.apache.org/tutorial}tutorial}} for a quick introduction: check existing {{{https://release-test.apache.org/committees}committes in ATR}},
+ you may have to create a project or improve its configuration, for example using
+ {{{https://github.com/apache/infrastructure-asfyaml/blob/main/README.md#project}<<<project>>> entry in <<<.asf.yaml>>>}}.
+ Once project is ready, start the release in ATR before doing the staging release with Maven with <<<mvn release:perform -Ppush-to-atr>>>.
 
 Settings Configuration
   
