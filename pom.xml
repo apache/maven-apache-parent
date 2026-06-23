@@ -356,6 +356,11 @@ under the License.
             </dependency>
           </dependencies>
         </plugin>
+        <plugin>
+          <groupId>org.apache.tooling</groupId>
+          <artifactId>atr-maven-plugin</artifactId>
+          <version>${version.tooling.atr}</version>
+        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
@@ -534,7 +539,6 @@ under the License.
           <plugin>
             <groupId>org.apache.tooling</groupId>
             <artifactId>atr-maven-plugin</artifactId>
-            <version>${version.tooling.atr}</version>
             <executions>
               <execution>
                 <id>atr-check-composing</id>
