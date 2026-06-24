@@ -215,6 +215,15 @@ The <<<apache-release>>> Profile
  {{{https://github.com/apache/infrastructure-asfyaml/blob/main/README.md#project}<<<project>>> entry in <<<.asf.yaml>>>}}.
  Once project is ready, start the release in ATR before doing the staging release with Maven with <<<mvn release:perform -Ppush-to-atr>>>.
 
+ Remember that:
+
+ * ATR helps your VOTE tracking, but is optional and still in its alpha phase (soon {{{https://github.com/apache/tooling-trusted-releases/issues/512}beta}}),
+
+ * this <<<push-to-atr>>> profile is still alpha too, and optional too: you can upload files to ATR and compose your release by hand if anything goes unexpected:
+   feedback on success and failures is welcome.
+
+ []
+
 Settings Configuration
   
   You can have a look at the page in Apache website
