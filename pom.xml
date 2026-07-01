@@ -104,20 +104,33 @@ under the License.
 
     <releaseParallelPut>false</releaseParallelPut>
 
+    <!-- atr-release-type depends on sourceReleaseAssemblyDescriptor; may be zip or tar.gz -->
+    <atr-release-type>zip</atr-release-type>
+
     <project.build.outputTimestamp>2026-06-25T18:51:10Z</project.build.outputTimestamp>
 
-    <version.apache-rat-plugin>0.16.1</version.apache-rat-plugin>
+    <!-- common version for surefire, failsafe, and surefire-report plugins below -->
+    <surefire.version>3.5.6</surefire.version>
+    <!-- common version for the resource bundle descriptor dependency and resource bundle -->
     <version.apache-resource-bundles>1.8</version.apache-resource-bundles>
+    <!-- common version for maven-plugin and maven-plugin-report plugins below -->
+    <version.maven-plugin-tools>3.15.2</version.maven-plugin-tools>
+
+    <!-- the versions managed below refer to specific artifacts; to sync multiple to the -->
+    <!-- same version, set a property above here and use it below -->
+    <version.apache-rat-plugin>0.16.1</version.apache-rat-plugin>
+    <version.atr-maven-plugin>1.0.0-alpha-1</version.atr-maven-plugin>
     <version.checksum-maven-plugin>1.11</version.checksum-maven-plugin>
     <version.maven-antrun-plugin>3.2.0</version.maven-antrun-plugin>
     <version.maven-assembly-plugin>3.8.0</version.maven-assembly-plugin>
-    <version.maven-clean-plugin>3.5.0</version.maven-clean-plugin>
     <version.maven-checkstyle-plugin>3.6.0</version.maven-checkstyle-plugin>
+    <version.maven-clean-plugin>3.5.0</version.maven-clean-plugin>
     <version.maven-compiler-plugin>3.15.0</version.maven-compiler-plugin>
     <version.maven-dependency-plugin>3.11.0</version.maven-dependency-plugin>
     <version.maven-deploy-plugin>3.1.4</version.maven-deploy-plugin>
     <version.maven-ear-plugin>3.4.0</version.maven-ear-plugin>
     <version.maven-enforcer-plugin>3.6.3</version.maven-enforcer-plugin>
+    <version.maven-failsafe-plugin>${surefire.version}</version.maven-failsafe-plugin>
     <version.maven-fluido-skin>2.1.0</version.maven-fluido-skin>
     <version.maven-gpg-plugin>3.2.8</version.maven-gpg-plugin>
     <version.maven-help-plugin>3.5.1</version.maven-help-plugin>
@@ -125,7 +138,8 @@ under the License.
     <version.maven-invoker-plugin>3.10.1</version.maven-invoker-plugin>
     <version.maven-jar-plugin>3.5.0</version.maven-jar-plugin>
     <version.maven-javadoc-plugin>3.12.0</version.maven-javadoc-plugin>
-    <version.maven-plugin-tools>3.15.2</version.maven-plugin-tools>
+    <version.maven-plugin-plugin>${version.maven-plugin-tools}</version.maven-plugin-plugin>
+    <version.maven-plugin-report-plugin>${version.maven-plugin-tools}</version.maven-plugin-report-plugin>
     <version.maven-project-info-reports-plugin>3.9.0</version.maven-project-info-reports-plugin>
     <version.maven-release-plugin>3.3.1</version.maven-release-plugin>
     <version.maven-remote-resources-plugin>3.3.0</version.maven-remote-resources-plugin>
@@ -135,10 +149,8 @@ under the License.
     <version.maven-shade-plugin>3.6.2</version.maven-shade-plugin>
     <version.maven-site-plugin>3.22.0</version.maven-site-plugin>
     <version.maven-source-plugin>3.4.0</version.maven-source-plugin>
-    <!-- for surefire, failsafe and surefire-report -->
-    <version.maven-surefire>3.5.6</version.maven-surefire>
-    <version.tooling.atr>1.0.0-alpha-1</version.tooling.atr>
-    <surefire.version>${version.maven-surefire}</surefire.version>
+    <version.maven-surefire-plugin>${surefire.version}</version.maven-surefire-plugin>
+    <version.maven-surefire-report-plugin>${surefire.version}</version.maven-surefire-report-plugin>
     <version.maven-war-plugin>3.5.1</version.maven-war-plugin>
   </properties>
 
@@ -146,6 +158,11 @@ under the License.
     <pluginManagement>
       <plugins>
         <!-- set versions of common plugins for reproducibility, ordered alphabetically -->
+        <plugin>
+          <groupId>net.nicoulaj.maven.plugins</groupId>
+          <artifactId>checksum-maven-plugin</artifactId>
+          <version>${version.checksum-maven-plugin}</version>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-antrun-plugin</artifactId>
@@ -158,13 +175,13 @@ under the License.
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>${version.maven-clean-plugin}</version>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <version>${version.maven-checkstyle-plugin}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>${version.maven-checkstyle-plugin}</version>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>${version.maven-clean-plugin}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -194,7 +211,7 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-failsafe-plugin</artifactId>
-          <version>${version.maven-surefire}</version>
+          <version>${version.maven-failsafe-plugin}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -252,12 +269,12 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-plugin-plugin</artifactId>
-          <version>${version.maven-plugin-tools}</version>
+          <version>${version.maven-plugin-plugin}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-plugin-report-plugin</artifactId>
-          <version>${version.maven-plugin-tools}</version>
+          <version>${version.maven-plugin-report-plugin}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -305,6 +322,11 @@ under the License.
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>${version.maven-shade-plugin}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <version>${version.maven-site-plugin}</version>
         </plugin>
@@ -324,22 +346,17 @@ under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>${version.maven-surefire}</version>
+          <version>${version.maven-surefire-plugin}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>${version.maven-surefire}</version>
+          <version>${version.maven-surefire-report-plugin}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
           <version>${version.maven-war-plugin}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-shade-plugin</artifactId>
-          <version>${version.maven-shade-plugin}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.rat</groupId>
@@ -359,7 +376,7 @@ under the License.
         <plugin>
           <groupId>org.apache.tooling</groupId>
           <artifactId>atr-maven-plugin</artifactId>
-          <version>${version.tooling.atr}</version>
+          <version>${version.atr-maven-plugin}</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -491,7 +508,6 @@ under the License.
           <plugin>
             <groupId>net.nicoulaj.maven.plugins</groupId>
             <artifactId>checksum-maven-plugin</artifactId>
-            <version>${version.checksum-maven-plugin}</version>
             <executions>
               <execution>
                 <id>source-release-checksum</id>
@@ -553,9 +569,9 @@ under the License.
                 </goals>
                 <configuration>
                   <files>
-                    <file>${project.build.directory}/${project.artifactId}-${project.version}-source-release.zip</file>
-                    <file>${project.build.directory}/${project.artifactId}-${project.version}-source-release.zip.sha512</file>
-                    <file>${project.build.directory}/${project.artifactId}-${project.version}-source-release.zip.asc</file>
+                    <file>${project.build.directory}/${project.artifactId}-${project.version}-source-release.${atr-release-type}</file>
+                    <file>${project.build.directory}/${project.artifactId}-${project.version}-source-release.${atr-release-type}.sha512</file>
+                    <file>${project.build.directory}/${project.artifactId}-${project.version}-source-release.${atr-release-type}.asc</file>
                   </files>
                 </configuration>
               </execution>
