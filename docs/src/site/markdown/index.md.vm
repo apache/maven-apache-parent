@@ -1,272 +1,178 @@
- -----
- Apache Software Foundation Parent POM
- -----
- Benson Margulies
- Hervé Boutemy
- Karl Heinz Marbaise
- -----
- 2016-05-09
- -----
-
-~~ Licensed to the Apache Software Foundation (ASF) under one
-~~ or more contributor license agreements.  See the NOTICE file
-~~ distributed with this work for additional information
-~~ regarding copyright ownership.  The ASF licenses this file
-~~ to you under the Apache License, Version 2.0 (the
-~~ "License"); you may not use this file except in compliance
-~~ with the License.  You may obtain a copy of the License at
-~~
-~~   http://www.apache.org/licenses/LICENSE-2.0
-~~
-~~ Unless required by applicable law or agreed to in writing,
-~~ software distributed under the License is distributed on an
-~~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-~~ KIND, either express or implied.  See the License for the
-~~ specific language governing permissions and limitations
-~~ under the License.
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
 
-~~ NOTE: For help with the syntax of this file, see:
-~~ https://maven.apache.org/doxia/references/apt-format.html
+http://www.apache.org/licenses/LICENSE-2.0
 
-Apache Software Foundation Parent POM
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
 
-    This project consists of a POM that contains settings that are
-    likely to be useful to any Apache project that is building and
-    releasing code with Maven. By using this project as a parent,
-    a project gets these settings.
+# Apache Software Foundation Parent POM
 
-    Most projects will want to override some of these settings.
+This project consists of a POM that contains settings that are likely to be useful to any Apache project that is building and releasing code with Maven. By using this project as a parent, a project gets these settings.
 
-    The following is a list of the items configured in this POM:
+Most projects will want to override some of these settings.
 
- * Top-level project properties:
-    
-  ** <<license>>: {{{https://www.apache.org/licenses/LICENSE-2.0.txt}Apache-2.0}}.
-    
-  ** <<organization>>: ${project.organization.name}
-    
-  ** <<url>>: {{<<<https://www.apache.org/>>>}}. You should override this.
-    
-  ** <<repositories>>: Optional: the pom adds the Apache snapshot
-     repository ({{<<<https://repository.apache.org/snapshots>>>}}). 
-     This only happens if the <<<apache.snapshots>>> property is set (set via CLI),
-     or the <<<use-apache-snapshots>>> profile is active.
-    
-  ** <<distributionManagement>>: The POM sets up for releases to the Apache Nexus
-     instance at
-     {{<<<https://repository.apache.org/service/local/staging/deploy/maven2>>>}}
-     and snapshots to
-     {{<<<https://repository.apache.org/content/repositories/snapshots>>>}}.\
-     Note that there are <<<distMgmt(Releases|Snapshots)(Name|Url)>>> POM properties (<<<distMgmtReleasesName>>>, <<<distMgmtReleasesUrl>>>, <<<distMgmtSnapshotsName>>> and <<<distMgmtSnapshotsUrl>>>)
-     that you can override to change the names and locations.
-    
-  ** <<mailingLists>>: The POM sets up generic Apache announcement
-     lists. You should override this.
+The following is a list of the items configured in this POM:
 
-  ** <<javaVersion>>: Java version used for compilation, default value is <<$context.get("javaVersion")>>.
+- Top-level project properties:
+    - **license**: [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).
+    - **organization**: ${project.organization.name}
+    - **url**: [`https://www.apache.org/`](https://www.apache.org/). You should override this.
+    - **repositories**: Optional: the pom adds the Apache snapshot repository ([`https://repository.apache.org/snapshots`](https://repository.apache.org/snapshots)). This only happens if the `apache.snapshots` property is set (set via CLI), or the `use-apache-snapshots` profile is active.
+    - **distributionManagement**: The POM sets up for releases to the Apache Nexus instance at [`https://repository.apache.org/service/local/staging/deploy/maven2`](https://repository.apache.org/service/local/staging/deploy/maven2) and snapshots to [`https://repository.apache.org/content/repositories/snapshots`](https://repository.apache.org/content/repositories/snapshots).  
+        Note that there are `distMgmt(Releases|Snapshots)(Name|Url)` POM properties (`distMgmtReleasesName`, `distMgmtReleasesUrl`, `distMgmtSnapshotsName` and `distMgmtSnapshotsUrl`) that you can override to change the names and locations.
+    - **mailingLists**: The POM sets up generic Apache announcement lists. You should override this.
+    - **javaVersion**: Java version used for compilation, default value is **$context.get("javaVersion")**.
 
-    You can override this property in your project POM to set different Java version for compilation.
+        You can override this property in your project POM to set different Java version for compilation.
 
-    The <<<javaVersion>>> property is used to set the <<<maven.compiler.*>>> properties, so they should not be set directly in your project POM.
+        The `javaVersion` property is used to set the `maven.compiler.*` properties, so they should not be set directly in your project POM.
 
-    They will be set automatically according to the JDK used for the project build:
+        They will be set automatically according to the JDK used for the project build:
 
-    *** for JDK 8 and older
+        - for JDK 8 and older
 
-+------+
-  <maven.compiler.source>\${javaVersion}</maven.compiler.source>
-  <maven.compiler.target>\${javaVersion}</maven.compiler.target>
-+------+
+            ```unknown
+              <maven.compiler.source>\${javaVersion}</maven.compiler.source>
+              <maven.compiler.target>\${javaVersion}</maven.compiler.target>
+            ```
 
-    *** for JDK 9 and newer
+        - for JDK 9 and newer
 
-+------+
-  <maven.compiler.release>\${javaVersion}</maven.compiler.release>
-+------+
+            ```unknown
+              <maven.compiler.release>\${javaVersion}</maven.compiler.release>
+            ```
 
-    []
+    - **releaseParallelPut**: When doing a release, this property controls whether artifacts are uploaded in parallel (true) or sequentially (false).
 
-  ** <<releaseParallelPut>>: When doing a release, this property controls whether artifacts are uploaded in parallel (true) or sequentially (false).
+        Due to Nexus bug with parallel staging creation default is **false**.
 
-    Due to Nexus bug with parallel staging creation default is <<false>>.
+- **pluginManagement**: The plugin management section specifies versions of a list of plugins. See the [Plugin Management report](./plugin-management.html) for the complete list with versions. 
+    - There are used properties `version.<artifactId>` for defining each version of plugin, except:
+        - `version.apache-resource-bundles` is used for: _apache-jar-resource-bundle_ and _apache-source-release-assembly-descriptor_
+        - `version.maven-plugin-tools` is used for: _maven-plugin-annotations_, _maven-plugin-plugin_ and _maven-plugin-report-plugin_
+        - `version.maven-surefire` is used for: _maven-failsafe-plugin_, _maven-surefire-plugin_ and _maven-surefire-report-plugin_
+    - The jar plugin is set to add default specification and implementation entries.
+    - The resources plugin is set for $context.get("project.build.sourceEncoding").
+    - The release plugin is set, via the
+        - `<releaseProfiles>` configuration element, to enable the **apache-release** profile during `release:perform` execution
+        - enable `<autoVersionSubmodules>`
+- **plugins**: The plugins section configures three executions:
+    - maven-remote-resources-plugin for [org.apache.apache.resources:${resourceBundleArtifact}:$context.get("version.apache-resource-bundles")](/apache-resource-bundles/jar/).
+        - The value of **${resourceBundleArtifact}** is defined in a property called `resourceBundleArtifact`. Using the default value for this property will create a [Apache JAR Resource Bundle](/apache-resource-bundles/jar/)
+        - Changing the property value to **apache-jar-txt-resource-bundle** will create a [Apache JAR (.txt) Resource Bundle](/apache-resource-bundles/jar-txt/) instead
+    - maven-enforcer-plugin to check Maven and Java build prerequisites, configured via properties:
+        - `minimalMavenBuildVersion` property: default value is **Maven $context.get("minimalMavenBuildVersion")**
+        - `minimalJavaBuildVersion` property: default is `javaVersion` property value.
+- **Reproducible Builds**: since version 22 of this parent POM, managed plugins versions are expected to be compliant with [Reproducible Builds](https://reproducible-builds.org/).
 
- * <<pluginManagement>>: The plugin management section specifies versions
-    of a list of plugins. See the {{{./plugin-management.html}Plugin Management report}} for
-    the complete list with versions. 
+    To choose their own release timestamp in output archives, projects using this POM as parent should override with a property in their root POM:
 
-  ** There are used properties <<<version.\<artifactId\>>>> for defining each version of plugin, except:
+    ```unknown
+      <properties>
+        <project.build.outputTimestamp>10</project.build.outputTimestamp>
+      </properties>
+    ```
 
-   *** <<<version.apache-resource-bundles>>> is used for: <apache-jar-resource-bundle> and <apache-source-release-assembly-descriptor>
+    The value will be updated by Maven Release Plugin during releases. If a project wants to disable Reproducible Builds, just define the property value with any single non-numeric character.
 
-   *** <<<version.maven-plugin-tools>>> is used for: <maven-plugin-annotations>, <maven-plugin-plugin> and <maven-plugin-report-plugin>
+# The `apache-release` Profile
 
-   *** <<<version.maven-surefire>>> is used for: <maven-failsafe-plugin>, <maven-surefire-plugin> and <maven-surefire-report-plugin>
+As noted above, this pom configures the release plugin to enable the `apache-release` profile for all executions of the release plugin.
 
-   []
+The profile includes the following plugins:
 
-  ** The jar plugin is set to add default specification and implementation entries.
-    
-  ** The resources plugin is set for $context.get("project.build.sourceEncoding").
-    
-  ** The release plugin is set, via the
+- maven-assembly-plugin
 
-    *** <<<\<releaseProfiles\>>>> configuration element, to enable the <<apache-release>> profile during <<<release:perform>>> execution
+    [org.apache.apache.resources:apache-source-release-assembly-descriptor:$context.get("version.apache-resource-bundles")](/apache-resource-bundles/source-release/) is added as dependency, and an execution is configured with `source-release-assembly` id.  
+    The plugin is configured to take a `descriptorRef` name from the **sourceReleaseAssemblyDescriptor** property, which by default is set to `source-release` (zip only): you can override the property with `source-release-zip-tar` (both zip and tar) or `source-release-tar` (tar only) values.  
+    If you want to avoid this default assembly execution to provide your own mechanism to produce the source release archive, you can disable the execution by configuring `skipAssembly` parameter for this `source-release-assembly` execution id
 
-    *** enable <<<\<autoVersionSubmodules\>>>>
+- maven-source-plugin
 
-    []
+    Configured to build and attach a source jar.
 
- * <<plugins>>: The plugins section configures three executions:
-    
-  ** maven-remote-resources-plugin for {{{/apache-resource-bundles/jar/}org.apache.apache.resources:${resourceBundleArtifact}:$context.get("version.apache-resource-bundles")}}.
+- maven-javadoc-plugin
 
-    *** The value of <<${resourceBundleArtifact}>> is defined in a property called <<<resourceBundleArtifact>>>. Using the default value for this property will create a {{{/apache-resource-bundles/jar/}Apache JAR Resource Bundle}}
+    Configured to build and attach a javadoc jar.
 
-    *** Changing the property value to <<apache-jar-txt-resource-bundle>> will create a {{{/apache-resource-bundles/jar-txt/}Apache JAR (.txt) Resource Bundle}} instead
+- maven-gpg-plugin
 
-   []
+    Configured to sign everything.
 
-  ** maven-enforcer-plugin to check Maven and Java build prerequisites, configured via properties:
- 
-    *** <<<minimalMavenBuildVersion>>> property: default value is <<Maven $context.get("minimalMavenBuildVersion")>>
+    On developer workstations it expects GnuPG agent to be available to get passphrases, while on fully unattended (CI-like) workflows the use of `MAVEN_GPG_PASSPHRASE` environment variable use is recommended.
 
-    *** <<<minimalJavaBuildVersion>>> property: default is <<<javaVersion>>> property value.
+- checksum-maven-plugin
 
-    []
+    Configured to create a checksum file(s) for source release as required by [Apache release distribution policy](http://www.apache.org/dev/release-distribution#sigs-and-sums).
 
- * <<Reproducible Builds>>: since version 22 of this parent POM, managed plugins versions are expected to be compliant with {{{https://reproducible-builds.org/}Reproducible Builds}}.
+When doing a release with maven-release-plugin, this creates files in `target/checkout/target` ready to be copied to projects' [Apache `/dist/` release distribution](http://www.apache.org/dev/release-distribution) directory:
 
-   To choose their own release timestamp in output archives, projects using this POM as parent should override with a property in their root POM:
+- `\${artifactId}-\${version}-source-release.[zip|tar.gz]`: the source release archive(s)
+- `\${artifactId}-\${version}-source-release.[zip|tar.gz].sha512`: their checksum(s)
+- `\${artifactId}-\${version}-source-release.[zip|tar.gz].asc`: their signature(s)
 
-+------+
-  <properties>
-    <project.build.outputTimestamp>10</project.build.outputTimestamp>
-  </properties>
-+------+
+Those files also end up in the staging repository and Maven Central.
 
-   The value will be updated by Maven Release Plugin during releases. If a project wants to disable Reproducible Builds, just define
-   the property value with any single non-numeric character.
+The `push-to-atr` Profile
+-------------------------
 
- []
+Since release 39, `push-to-atr` profile is provided to help upload built release content to [Apache Tooling](https://tooling.apache.org/)'s Trusted Releases platform, and compose the release using [`atr-maven-plugin`](https://apache.github.io/tooling-atr-maven-plugin/).
 
-The <<<apache-release>>> Profile
+See ATR's [tutorial](https://release-test.apache.org/tutorial) for a quick introduction: check existing [committes in ATR](https://release-test.apache.org/committees), you may have to create a project or improve its configuration, for example using [`project` entry in `.asf.yaml`](https://github.com/apache/infrastructure-asfyaml/blob/main/README.md#project). Once project is ready, start the release in ATR before doing the staging release with Maven with `mvn release:perform -Ppush-to-atr`.
 
-   As noted above, this pom configures the release plugin to enable
-    the <<<apache-release>>> profile for all executions of the release
-    plugin.
+Remember that:
 
-   The profile includes the following plugins:
+- ATR helps your VOTE tracking, but is optional and still in its alpha phase (soon [beta](https://github.com/apache/tooling-trusted-releases/issues/512)),
+- this `push-to-atr` profile is still alpha too, and optional too: you can upload files to ATR and compose your release by hand if anything goes unexpected: feedback on success and failures is welcome.
+# Settings Configuration
 
- * maven-assembly-plugin
+You can have a look at the page in Apache website [Publishing Maven Artifacts](https://www.apache.org/dev/publishing-maven-artifacts.html).
 
-    {{{/apache-resource-bundles/source-release/}org.apache.apache.resources:apache-source-release-assembly-descriptor:$context.get("version.apache-resource-bundles")}}
-    is added as dependency, and an execution is configured with <<<source-release-assembly>>> id.\
-    The plugin is configured to take a <<<descriptorRef>>> name from the
-    <<sourceReleaseAssemblyDescriptor>> property, which by default is
-    set to <<<source-release>>> (zip only): you can override the property with
-    <<<source-release-zip-tar>>> (both zip and tar) or <<<source-release-tar>>> (tar only) values.\
-    If you want to avoid this default assembly execution to provide your own mechanism to produce the source release archive,
-    you can disable the execution by configuring <<<skipAssembly>>> parameter for this <<<source-release-assembly>>> execution id
+You can test your environment setup using `-Papache-release` with the command line.
 
- * maven-source-plugin
+# Notices
 
-   Configured to build and attach a source jar.
+- Since version **36**, the `javaVersion` property has been introduced to define the Java version used for the `maven.compiler.*` properties.
+- Since version **32** `maven-site-plugin:attach-descriptor` was removed from `plugins` section.
 
- * maven-javadoc-plugin
+    Publishing a site descriptor is only needed in project parent poms, child projects not need publish it.
 
-   Configured to build and attach a javadoc jar.
+    When you need publish site descriptor in your project you should add, like:
 
- * maven-gpg-plugin
+    ```unknown
+    <build>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <inherited>false</inherited>
+          <executions>
+            <execution>
+              <id>attach-descriptor</id>
+              <goals>
+                <goal>attach-descriptor</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </build>
+    ```
 
-   Configured to sign everything.
+- Since version **34** `repositories` section has been moved to the `use-apache-snapshots` profile
 
-   On developer workstations it expects GnuPG agent to be available to get passphrases,
-   while on fully unattended (CI-like) workflows the use of <<<MAVEN_GPG_PASSPHRASE>>> environment variable use is recommended.
+    Apache snapshot repository is now optional, and is only added when the profile is activated.
 
- * checksum-maven-plugin
-
-   Configured to create a checksum file(s) for source release as
-   required by {{{http://www.apache.org/dev/release-distribution#sigs-and-sums}Apache release distribution policy}}.
-
- []
-
-  When doing a release with maven-release-plugin, this creates files in <<<target/checkout/target>>> ready
-  to be copied to projects' {{{http://www.apache.org/dev/release-distribution}Apache <<</dist/>>> release distribution}}
-  directory:
-
- * <<<$\{artifactId\}-$\{version\}-source-release.[zip|tar.gz]>>>: the source release archive(s)
-
- * <<<$\{artifactId\}-$\{version\}-source-release.[zip|tar.gz].sha512>>>: their checksum(s)
-
- * <<<$\{artifactId\}-$\{version\}-source-release.[zip|tar.gz].asc>>>: their signature(s)
- 
- []
-
- Those files also end up in the staging repository and Maven Central.
-
-* The <<<push-to-atr>>> Profile
-
- Since release 39, <<<push-to-atr>>> profile is provided to help upload built release content to
- {{{https://tooling.apache.org/}Apache Tooling}}'s Trusted Releases platform, and compose the release
- using {{{https://apache.github.io/tooling-atr-maven-plugin/}<<<atr-maven-plugin>>>}}.
-
- See ATR's {{{https://release-test.apache.org/tutorial}tutorial}} for a quick introduction: check existing {{{https://release-test.apache.org/committees}committes in ATR}},
- you may have to create a project or improve its configuration, for example using
- {{{https://github.com/apache/infrastructure-asfyaml/blob/main/README.md#project}<<<project>>> entry in <<<.asf.yaml>>>}}.
- Once project is ready, start the release in ATR before doing the staging release with Maven with <<<mvn release:perform -Ppush-to-atr>>>.
-
- Remember that:
-
- * ATR helps your VOTE tracking, but is optional and still in its alpha phase (soon {{{https://github.com/apache/tooling-trusted-releases/issues/512}beta}}),
-
- * this <<<push-to-atr>>> profile is still alpha too, and optional too: you can upload files to ATR and compose your release by hand if anything goes unexpected:
-   feedback on success and failures is welcome.
-
- []
-
-Settings Configuration
-  
-  You can have a look at the page in Apache website
-  {{{https://www.apache.org/dev/publishing-maven-artifacts.html}Publishing Maven Artifacts}}.
-
-  You can test your environment setup using <<<-Papache-release>>> with the command line.
-
-Notices
-
- * Since version <<36>>, the <<<javaVersion>>> property has been introduced
-   to define the Java version used for the <<<maven.compiler.*>>> properties.
-
- * Since version <<32>> <<<maven-site-plugin:attach-descriptor>>> was removed from <<<plugins>>> section.
-
-   Publishing a site descriptor is only needed in project parent poms, child projects not need publish it.
-
-   When you need publish site descriptor in your project you should add, like:
-
-+------+
-<build>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-site-plugin</artifactId>
-      <inherited>false</inherited>
-      <executions>
-        <execution>
-          <id>attach-descriptor</id>
-          <goals>
-            <goal>attach-descriptor</goal>
-          </goals>
-        </execution>
-      </executions>
-    </plugin>
-  </plugins>
-</build>
-+------+
-
- * Since version <<34>> <<<repositories>>> section has been moved to the <<<use-apache-snapshots>>> profile
-   
-   Apache snapshot repository is now optional, and is only added when the profile is activated.
-
-   It can be activated by setting the <<<apache.snapshots>>> property (via CLI) or activating the <<<use-apache-snapshots>>> profile directly.
-   Activating from the POM is not possible.
-
- []
+    It can be activated by setting the `apache.snapshots` property (via CLI) or activating the `use-apache-snapshots` profile directly. Activating from the POM is not possible.
