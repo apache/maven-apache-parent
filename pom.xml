@@ -119,7 +119,7 @@ under the License.
     <!-- the versions managed below refer to specific artifacts; to sync multiple to the -->
     <!-- same version, set a property above here and use it below -->
     <version.apache-rat-plugin>0.18</version.apache-rat-plugin>
-    <version.atr-maven-plugin>1.0.0-alpha-1</version.atr-maven-plugin>
+    <version.atr-maven-plugin>1.0.0-beta-1</version.atr-maven-plugin>
     <version.checksum-maven-plugin>1.11</version.checksum-maven-plugin>
     <version.maven-antrun-plugin>3.2.0</version.maven-antrun-plugin>
     <version.maven-assembly-plugin>3.8.0</version.maven-assembly-plugin>
