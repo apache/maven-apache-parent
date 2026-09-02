@@ -120,7 +120,7 @@ under the License.
     <!-- same version, set a property above here and use it below -->
     <version.apache-rat-plugin>0.18</version.apache-rat-plugin>
     <version.atr-maven-plugin>1.0.0-beta-1</version.atr-maven-plugin>
-    <version.checksum-maven-plugin>1.11</version.checksum-maven-plugin>
+    <version.checksum-plugin3>0.2.2</version.checksum-plugin3>
     <version.maven-antrun-plugin>3.2.0</version.maven-antrun-plugin>
     <version.maven-assembly-plugin>3.8.0</version.maven-assembly-plugin>
     <version.maven-checkstyle-plugin>3.6.0</version.maven-checkstyle-plugin>
@@ -159,9 +159,9 @@ under the License.
       <plugins>
         <!-- set versions of common plugins for reproducibility, ordered alphabetically -->
         <plugin>
-          <groupId>net.nicoulaj.maven.plugins</groupId>
-          <artifactId>checksum-maven-plugin</artifactId>
-          <version>${version.checksum-maven-plugin}</version>
+          <groupId>eu.maveniverse.maven.plugins</groupId>
+          <artifactId>checksum-plugin3</artifactId>
+          <version>${version.checksum-plugin3}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -496,27 +496,20 @@ under the License.
           </plugin>
           <!-- calculate checksums of source release for Apache dist area -->
           <plugin>
-            <groupId>net.nicoulaj.maven.plugins</groupId>
-            <artifactId>checksum-maven-plugin</artifactId>
+            <groupId>eu.maveniverse.maven.plugins</groupId>
+            <artifactId>checksum-plugin3</artifactId>
             <executions>
               <execution>
                 <id>source-release-checksum</id>
                 <goals>
-                  <goal>artifacts</goal>
+                  <goal>project</goal>
                 </goals>
-                <!-- execute prior to maven-gpg-plugin:sign due to https://github.com/nicoulaj/checksum-maven-plugin/issues/112 -->
                 <phase>post-integration-test</phase>
                 <configuration>
-                  <algorithms>
-                    <algorithm>SHA-512</algorithm>
-                  </algorithms>
-                  <!-- https://maven.apache.org/apache-resource-bundles/#source-release-assembly-descriptor -->
-                  <includeClassifiers>source-release</includeClassifiers>
-                  <excludeMainArtifact>true</excludeMainArtifact>
-                  <csvSummary>false</csvSummary>
-                  <!-- attach SHA-512 checksum as well to upload to Maven Staging Repo,
-                       as this eases uploading from stage to dist and doesn't do harm in Maven Central -->
-                  <attachChecksums>true</attachChecksums>
+                  <alg>SHA-512</alg>
+                  <includedClassifiers>
+                    <includedClassifier>source-release</includedClassifier>
+                  </includedClassifiers>
                 </configuration>
               </execution>
             </executions>
