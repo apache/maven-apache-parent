@@ -110,7 +110,7 @@ under the License.
     <project.build.outputTimestamp>2026-06-25T18:51:10Z</project.build.outputTimestamp>
 
     <!-- common version for surefire, failsafe, and surefire-report plugins below -->
-    <surefire.version>3.5.6</surefire.version>
+    <surefire.version>3.6.0</surefire.version>
     <!-- common version for the resource bundle descriptor dependency and resource bundle -->
     <version.apache-resource-bundles>1.8</version.apache-resource-bundles>
     <!-- common version for maven-plugin and maven-plugin-report plugins below -->
