@@ -19,5 +19,4 @@
 
 _extends: maven-gh-actions-shared
 version-template: '$MAJOR'
-name-template: 'Apache Parent POM version $RESOLVED_VERSION'
 tag-template: 'apache-$RESOLVED_VERSION'
