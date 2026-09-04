@@ -121,6 +121,7 @@ under the License.
     <version.apache-rat-plugin>0.18</version.apache-rat-plugin>
     <version.atr-maven-plugin>1.0.0-beta-1</version.atr-maven-plugin>
     <version.checksum-maven-plugin>1.11</version.checksum-maven-plugin>
+    <version.cyclonedx-maven-plugin>2.9.3</version.cyclonedx-maven-plugin>
     <version.maven-antrun-plugin>3.2.0</version.maven-antrun-plugin>
     <version.maven-assembly-plugin>3.8.0</version.maven-assembly-plugin>
     <version.maven-checkstyle-plugin>3.6.0</version.maven-checkstyle-plugin>
@@ -368,6 +369,11 @@ under the License.
           <artifactId>atr-maven-plugin</artifactId>
           <version>${version.atr-maven-plugin}</version>
         </plugin>
+        <plugin>
+          <groupId>org.cyclonedx</groupId>
+          <artifactId>cyclonedx-maven-plugin</artifactId>
+          <version>${version.cyclonedx-maven-plugin}</version>
+        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
@@ -543,6 +549,43 @@ under the License.
       <build>
         <plugins>
           <plugin>
+            <groupId>org.cyclonedx</groupId>
+            <artifactId>cyclonedx-maven-plugin</artifactId>
+            <configuration>
+              <outputFormat>json</outputFormat>
+              <outputReactorProjects>false</outputReactorProjects>
+            </configuration>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>makeAggregateBom</goal>
+                </goals>
+                <phase>package</phase>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>net.nicoulaj.maven.plugins</groupId>
+            <artifactId>checksum-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>cyclonedx-checksum</id>
+                <goals>
+                  <goal>artifacts</goal>
+                </goals>
+                <phase>post-integration-test</phase>
+                <configuration>
+                  <algorithms>
+                    <algorithm>SHA-512</algorithm>
+                  </algorithms>
+                  <includeClassifiers>cyclonedx</includeClassifiers>
+                  <excludeMainArtifact>true</excludeMainArtifact>
+                  <csvSummary>false</csvSummary>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
             <groupId>org.apache.tooling</groupId>
             <artifactId>atr-maven-plugin</artifactId>
             <executions>
@@ -562,6 +605,9 @@ under the License.
                     <file>${project.build.directory}/${project.artifactId}-${project.version}-source-release.${atr-release-type}</file>
                     <file>${project.build.directory}/${project.artifactId}-${project.version}-source-release.${atr-release-type}.sha512</file>
                     <file>${project.build.directory}/${project.artifactId}-${project.version}-source-release.${atr-release-type}.asc</file>
+                    <file>${project.build.directory}/${project.artifactId}-${project.version}-cyclonedx.json</file>
+                    <file>${project.build.directory}/${project.artifactId}-${project.version}-cyclonedx.json.sha512</file>
+                    <file>${project.build.directory}/${project.artifactId}-${project.version}-cyclonedx.json.asc</file>
                   </files>
                 </configuration>
               </execution>
