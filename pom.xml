@@ -98,6 +98,10 @@ under the License.
     <gpg.useagent>true</gpg.useagent>
     <!-- java version used to to set maven.compiler.* -->
     <javaVersion>8</javaVersion>
+    <!-- maven-compiler-plugin and maven-javadoc-plugin only pass release to a JDK 9+ tool and fall
+         back to source/target on JDK 8 by themselves, so no JDK-activated profile is needed and the
+         value also holds when a toolchain JDK differs from the one running Maven (MNG-6943). -->
+    <maven.compiler.release>${javaVersion}</maven.compiler.release>
     <minimalMavenBuildVersion>3.9</minimalMavenBuildVersion>
     <minimalJavaBuildVersion>${javaVersion}</minimalJavaBuildVersion>
     <assembly.tarLongFileMode>posix</assembly.tarLongFileMode>
@@ -562,27 +566,6 @@ under the License.
           </plugin>
         </plugins>
       </build>
-    </profile>
-    <profile>
-      <id>jdk8</id>
-      <activation>
-        <jdk>[,9)</jdk>
-      </activation>
-      <properties>
-        <maven.compiler.source>${javaVersion}</maven.compiler.source>
-        <maven.compiler.target>${javaVersion}</maven.compiler.target>
-      </properties>
-    </profile>
-    <profile>
-      <id>jdk9+</id>
-      <activation>
-        <!-- this does not support toolchains, https://issues.apache.org/jira/browse/MNG-6943 -->
-        <jdk>[9,)</jdk>
-      </activation>
-      <properties>
-        <!-- https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-release.html, affects m-compiler-p and m-javadoc-p -->
-        <maven.compiler.release>${javaVersion}</maven.compiler.release>
-      </properties>
     </profile>
     <profile>
       <id>only-eclipse</id>
