@@ -35,24 +35,23 @@ The following is a list of the items configured in this POM:
     - **mailingLists**: The POM sets up generic Apache announcement lists. You should override this.
     - **javaVersion**: Java version used for compilation, default value is **$context.get("javaVersion")**.
 
-        You can override this property in your project POM to set different Java version for compilation.
+        Override this property in your project POM to compile for a different Java version.
 
-        The `javaVersion` property is used to set the `maven.compiler.*` properties, so they should not be set directly in your project POM.
+        The `javaVersion` property sets `maven.compiler.release`:
 
-        They will be set automatically according to the JDK used for the project build:
+        ```unknown
+          <maven.compiler.release>\${javaVersion}</maven.compiler.release>
+        ```
 
-        - for JDK 8 and older
+        On JDK 9 and newer, maven-compiler-plugin and maven-javadoc-plugin pass it as `--release`, which also
+        checks that the code only uses the API of that Java version. On JDK 8 they ignore it and use `source`
+        and `target`, which then come from the compiler plugin's own defaults unless your project sets them.
 
-            ```unknown
-              <maven.compiler.source>\${javaVersion}</maven.compiler.source>
-              <maven.compiler.target>\${javaVersion}</maven.compiler.target>
-            ```
-
-        - for JDK 9 and newer
-
-            ```unknown
-              <maven.compiler.release>\${javaVersion}</maven.compiler.release>
-            ```
+        Do not set `maven.compiler.source` or `maven.compiler.target` in your project POM to change the Java
+        version: with maven-compiler-plugin 3.x `release` silently takes precedence, and with 4.x javac rejects
+        the combination. Override `javaVersion` instead. Projects that need `source` and `target` semantics,
+        for example to use `sun.*` APIs, set `maven.compiler.release` to an empty value and then set `source`
+        and `target`; that needs maven-javadoc-plugin 3.12.1 or newer.
 
     - **releaseParallelPut**: When doing a release, this property controls whether artifacts are uploaded in parallel (true) or sequentially (false).
 
@@ -147,6 +146,7 @@ You can test your environment setup using `-Papache-release` with the command li
 
 # Notices
 
+- Since version **40**, `maven.compiler.release` is set unconditionally from `javaVersion` and the `jdk8` and `jdk9+` profiles are gone; JDK 8 builds no longer get `maven.compiler.source` and `maven.compiler.target` from this POM.
 - Since version **36**, the `javaVersion` property has been introduced to define the Java version used for the `maven.compiler.*` properties.
 - Since version **32** `maven-site-plugin:attach-descriptor` was removed from `plugins` section.
 
