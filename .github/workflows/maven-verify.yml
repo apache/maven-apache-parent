@@ -26,5 +26,12 @@ jobs:
     name: Verify
     uses: apache/maven-gh-actions-shared/.github/workflows/maven-verify.yml@v5
     with:
-      matrix-enabled: false
+      maven4-enabled: true
+      # no run-its profile here; Maven 4 refuses a profile that does not exist, Maven 3 only warned
+      ff-goal: verify
+      verify-goal: verify
+      # a POM-only project: one Maven 4 verify job next to the fail-fast build is enough (the 3.10 matrix
+      # entry on the same OS and JDK is skipped by the shared workflow as a duplicate of fail-fast)
+      os-matrix: '[ "ubuntu-latest" ]'
+      jdk-matrix: '[ "17" ]'
 
