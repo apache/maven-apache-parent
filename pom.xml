@@ -104,6 +104,10 @@ under the License.
 
     <releaseParallelPut>false</releaseParallelPut>
 
+    <!-- additional profiles to use for release preparation and release execution; comma-separated list -->
+    <releasePreparationProfiles/>
+    <releaseReleaseProfiles/>
+
     <!-- atr-release-type depends on sourceReleaseAssemblyDescriptor; may be zip or tar.gz -->
     <atr-release-type>zip</atr-release-type>
 
@@ -295,7 +299,8 @@ under the License.
           <configuration>
             <autoVersionSubmodules>true</autoVersionSubmodules>
             <goals>deploy</goals>
-            <releaseProfiles>apache-release</releaseProfiles>
+            <preparationProfiles>${releasePreparationProfiles}</preparationProfiles>
+            <releaseProfiles>apache-release,${releaseReleaseProfiles}</releaseProfiles>
             <arguments>-Daether.connector.basic.parallelPut=${releaseParallelPut}</arguments>
           </configuration>
         </plugin>
