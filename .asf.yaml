@@ -61,6 +61,7 @@ project:
       - build-management
     programming_languages:
       - Java
+    version_method: semver
   policy:
     announce_release_subject: '[ANNOUNCE] Apache Software Foundation Parent POM {{VERSION}}
       released'
@@ -68,8 +69,8 @@ project:
     start_vote_subject: '[VOTE] Release Apache Software Foundation Parent POM {{VERSION}}'
     start_vote_template_url: https://maven.apache.org/atr/templates/start_vote_template.txt
     finish_vote_template_url: https://maven.apache.org/atr/templates/finish_vote_template.txt
-    github_repository_name: maven-apache-parent
     download_path_suffix: pom
+    auto_archive_prior_release: true
     vote_recipients:
       to: dev@maven.apache.org
     announce_recipients:
@@ -79,3 +80,4 @@ project:
         - users@maven.apache.org
   features:
     atr_sync: true
+    atr_sync_mode: full
