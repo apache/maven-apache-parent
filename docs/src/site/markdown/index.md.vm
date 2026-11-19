@@ -58,6 +58,10 @@ The following is a list of the items configured in this POM:
 
         Due to Nexus bug with parallel staging creation default is **false**.
 
+    - **releasePreparationProfiles**: additional profiles to be activated during `release:prepare` execution.
+  
+    - **releaseReleaseProfiles**: additional profiles to be activated during `release:perform` execution.
+
 - **pluginManagement**: The plugin management section specifies versions of a list of plugins. See the [Plugin Management report](./plugin-management.html) for the complete list with versions. 
     - There are used properties `version.<artifactId>` for defining each version of plugin, except:
         - `version.apache-resource-bundles` is used for: _apache-jar-resource-bundle_ and _apache-source-release-assembly-descriptor_
@@ -138,6 +142,14 @@ Once project is ready, start the release in ATR before doing the staging release
 Remember that:
 
 - this `push-to-atr` profile is optional, you can upload files to ATR and compose your release by hand if anything goes unexpected: feedback on success and failures is welcome.
+
+You can set the following properties in project POM or settings.xml to enable ATR integration by default:
+```xml
+<properties>
+  <releasePreparationProfiles>push-to-atr</releasePreparationProfiles>
+  <releaseReleaseProfiles>push-to-atr</releaseReleaseProfiles>
+</properties>
+```
 
 # Settings Configuration
 
